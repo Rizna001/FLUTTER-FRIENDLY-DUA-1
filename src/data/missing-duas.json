@@ -1,0 +1,529 @@
+{
+  "categories": [
+    {
+      "id": "daily-prayer-duas",
+      "icon": "🕌",
+      "color": "teal",
+      "gradient": "from-teal-500 to-cyan-600",
+      "bg": "bg-teal-50",
+      "border": "border-teal-200",
+      "text": "text-teal-700",
+      "name": {
+        "en": "Duas After Every Prayer",
+        "ar": "أدعية بعد كل صلاة",
+        "ur": "ہر نماز کے بعد دعائیں",
+        "fr": "Duas après chaque prière",
+        "tr": "Her namazdan sonra dualar",
+        "id": "Doa setelah setiap shalat",
+        "bn": "প্রতি নামাজের পরে দোয়া",
+        "ms": "Doa selepas setiap solat",
+        "ta": "ஒவ்வொரு தொழுகைக்கு பின் துஆக்கள்",
+        "ml": "ഓരോ നമസ്കാരത്തിന് ശേഷം ദുആകൾ"
+      },
+      "duas": [
+        {
+          "id": "dp-1",
+          "title": { "en": "Istighfar after every prayer (3x)", "ar": "الاستغفار بعد كل صلاة", "ur": "ہر نماز کے بعد استغفار", "fr": "Istighfar après chaque prière", "tr": "Her namazdan sonra istiğfar", "id": "Istighfar setelah setiap shalat", "bn": "প্রতি নামাজের পরে ইস্তিগফার", "ms": "Istighfar selepas setiap solat", "ta": "ஒவ்வொரு தொழுகைக்கு பின் இஸ்திஃபார்", "ml": "ഓരോ നമസ്കാരത്തിന് ശേഷം ഇസ്തിഗ്ഫാർ" },
+          "arabic": "أَسْتَغْفِرُ اللَّهَ الَّذِي لَا إِلَهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ وَأَتُوبُ إِلَيْهِ",
+          "translation": {
+            "en": "I seek forgiveness of Allah, there is no god but He, the Ever-Living, the Self-Subsisting, and I repent to Him.",
+            "ar": "أستغفر الله الذي لا إله إلا هو الحي القيوم وأتوب إليه",
+            "ur": "میں اس اللہ سے مغفرت مانگتا ہوں جس کے سوا کوئی معبود نہیں، جو زندہ اور قائم رہنے والا ہے، اور میں اس کی طرف توبہ کرتا ہوں۔",
+            "fr": "Je demande pardon à Allah, il n'y a de dieu que Lui, le Vivant, le Sustenteur, et je me repens à Lui.",
+            "tr": "Allah'tan bağışlanma dilerim, O'ndan başka ilah yoktur, O Hayy ve Kayyûm'dur ve O'na tövbe ederim.",
+            "id": "Aku memohon ampun kepada Allah, tiada tuhan selain Dia, Yang Maha Hidup, Yang Maha Berdiri Sendiri, dan aku bertaubat kepada-Nya.",
+            "bn": "আমি আল্লাহর কাছে ক্ষমা চাই, তিনি ছাড়া কোনো ইলাহ নেই, যিনি চিরঞ্জীব, সর্বসত্তার ধারক, এবং আমি তাঁর কাছে তওবা করি।",
+            "ms": "Aku memohon ampun kepada Allah, tiada Tuhan selain Dia, Yang Maha Hidup, Yang Maha Berdiri Sendiri, dan aku bertaubat kepada-Nya.",
+            "ta": "அல்லாஹ்விடம் மன்னிப்பு கேட்கிறேன், அவனைத் தவிர வணக்கத்திற்குரியவர் இல்லை, அவன் என்றும் வாழ்பவன், அனைத்தையும் தாங்குபவன், அவனிடம் பாவமன்னிப்பு தேடுகிறேன்.",
+            "ml": "അല്ലാഹുവിനോട് പാപമോചനം ചോദിക്കുന്നു, അവനല്ലാതെ ആരാധനയർഹനായ ദൈവമില്ല, അവൻ നിത്യജീവനും സർവധാരണവുമുള്ളവൻ, ഞാൻ അവനോട് പശ്ചാത്തപിക്കുന്നു."
+          },
+          "reference": "Abu Dawud",
+          "times": 3
+        },
+        {
+          "id": "dp-2",
+          "title": { "en": "After Fajr Prayer", "ar": "بعد صلاة الفجر", "ur": "فجر کی نماز کے بعد", "fr": "Après la prière de Fajr", "tr": "Sabah namazından sonra", "id": "Setelah shalat Subuh", "bn": "ফজরের নামাজের পরে", "ms": "Selepas solat Subuh", "ta": "ஃபஜ்ர் தொழுகைக்கு பின்", "ml": "സുബ്‌ഹി നമസ്കാരത്തിന് ശേഷം" },
+          "arabic": "اللَّهُمَّ إِنِّي أَسْأَلُكَ عِلْمًا نَافِعًا وَرِزْقًا طَيِّبًا وَعَمَلًا مُتَقَبَّلًا",
+          "translation": {
+            "en": "O Allah, I ask You for beneficial knowledge, good provision, and accepted deeds.",
+            "ar": "اللهم إني أسألك علما نافعا ورزقا طيبا وعملا متقبلا",
+            "ur": "اے اللہ! میں تجھ سے نفع بخش علم، پاکیزہ رزق اور قبول شدہ عمل مانگتا ہوں۔",
+            "fr": "Ô Allah, je Te demande un savoir utile, une bonne subsistance et des œuvres acceptées.",
+            "tr": "Allah'ım! Senden faydalı ilim, güzel rızık ve kabul edilmiş amel istiyorum.",
+            "id": "Ya Allah, aku memohon kepada-Mu ilmu yang bermanfaat, rezeki yang baik, dan amal yang diterima.",
+            "bn": "হে আল্লাহ, আমি তোমার কাছে উপকারী জ্ঞান, ভালো রিযিক এবং কবুল আমল চাই।",
+            "ms": "Ya Allah, aku memohon kepada-Mu ilmu yang bermanfaat, rezeki yang baik, dan amal yang diterima.",
+            "ta": "இறைவா! உம்மிடம் பயனுள்ள அறிவு, நல்ல உபஜீவனம், ஏற்றுக்கொள்ளப்படும் செயல்களைக் கேட்கிறேன்.",
+            "ml": "അല്ലാഹുവേ, നിന്നോട് പ്രയോജനകരമായ അറിവ്, നല്ല ഉപജീവനം, അംഗീകരിക്കപ്പെട്ട പ്രവൃത്തികൾ ചോദിക്കുന്നു."
+          },
+          "reference": "Ibn Majah",
+          "times": 1
+        },
+        {
+          "id": "dp-3",
+          "title": { "en": "After Dhuhr Prayer", "ar": "بعد صلاة الظهر", "ur": "ظہر کی نماز کے بعد", "fr": "Après la prière de Dhuhr", "tr": "Öğle namazından sonra", "id": "Setelah shalat Dzuhur", "bn": "যোহরের নামাজের পরে", "ms": "Selepas solat Zohor", "ta": "ளுஹ்ர் தொழுகைக்கு பின்", "ml": "ൾഹ്‌ർ നമസ്കാരത്തിന് ശേഷം" },
+          "arabic": "اللَّهُمَّ إِنِّي أَسْأَلُكَ مُوجِبَاتِ رَحْمَتِكَ وَعَزَائِمَ مَغْفِرَتِكَ وَالْغَنِيمَةَ مِنْ كُلِّ بِرٍّ وَالسَّلَامَةَ مِنْ كُلِّ إِثْمٍ",
+          "translation": {
+            "en": "O Allah, I ask You for the causes of Your mercy, the means of Your forgiveness, the gain from every good deed, and safety from every sin.",
+            "ar": "اللهم إني أسألك موجبات رحمتك وعزائم مغفرتك والغبمة من كل بر والسلامة من كل إثم",
+            "ur": "اے اللہ! میں تجھ سے تیری رحمت کے موجبات، تیری مغفرت کے عزائم، ہر نیکی سے غنیمت اور ہر گناہ سے سلامتی مانگتا ہوں۔",
+            "fr": "Ô Allah, je Te demande les causes de Ta miséricorde, les moyens de Ton pardon, le gain de chaque bonne action et la sécurité de chaque péché.",
+            "tr": "Allah'ım! Senden rahmetinin sebeplerini, mağfiretinin vesilelerini, her iyilikten kazancı ve her günahtan selameti istiyorum.",
+            "id": "Ya Allah, aku memohon kepada-Mu sebab-sebab rahmat-Mu, sebab-sebab ampunan-Mu, keuntungan dari setiap kebaikan dan keselamatan dari setiap dosa.",
+            "bn": "হে আল্লাহ, আমি তোমার কাছে তোমার রহমতের কারণ, তোমার ক্ষমার উপায়, প্রতিটি নেক কাজ থেকে লাভ এবং প্রতিটি গুনাহ থেকে নিরাপত্তা চাই।",
+            "ms": "Ya Allah, aku memohon kepada-Mu sebab-sebab rahmat-Mu, sebab-sebab ampunan-Mu, keuntungan dari setiap kebaikan dan keselamatan dari setiap dosa.",
+            "ta": "இறைவா! உமது இரக்கத்தின் காரணங்களை, உமது மன்னிப்பின் வழிகளை, ஒவ்வொரு நற்செயலிலிருந்தும் லாபத்தையும், ஒவ்வொரு பாவத்திலிருந்தும் பாதுகாப்பையும் உம்மிடம் கேட்கிறேன்.",
+            "ml": "അല്ലാഹുവേ, നിന്റെ കാരുണ്യത്തിന്റെ കാരണങ്ങൾ, നിന്റെ പാപമോചനത്തിന്റെ മാർഗങ്ങൾ, ഓരോ നന്മയിൽ നിന്നുമുള്ള നേട്ടം, ഓരോ പാപത്തിൽ നിന്നുമുള്ള സുരക്ഷ എന്നിവ നിന്നോട് ചോദിക്കുന്നു."
+          },
+          "reference": "Traditional",
+          "times": 1
+        },
+        {
+          "id": "dp-4",
+          "title": { "en": "After Asr Prayer", "ar": "بعد صلاة العصر", "ur": "عصر کی نماز کے بعد", "fr": "Après la prière de Asr", "tr": "İkindi namazından sonra", "id": "Setelah shalat Ashar", "bn": "আসরের নামাজের পরে", "ms": "Selepas solat Asar", "ta": "அஸ்ர் தொழுகைக்கு பின்", "ml": "അസ്‌ർ നമസ്കാരത്തിന് ശേഷം" },
+          "arabic": "اللَّهُمَّ إِنَّ ذَنْبِي أَمْسَى مُسْتَجِيرًا بِعَفْوِكَ وَخَوْفِي أَمْسَى مُسْتَجِيرًا بِأَمْنِكَ وَفَقْرِي أَمْسَى مُسْتَجِيرًا بِغِنَاكَ وَذُلِّي أَمْسَى مُسْتَجِيرًا بِعِزِّكَ",
+          "translation": {
+            "en": "O Allah, my sin has sought refuge in Your pardon, my fear has sought refuge in Your safety, my poverty has sought refuge in Your richness, and my humiliation has sought refuge in Your honor.",
+            "ar": "اللهم إن ذنبي أمسى مستجيرا بعفوك وخوفي أمسى مستجيرا بأمنك وفقري أمسى مستجيرا بغناك وذلي أمسى مستجيرا بعزك",
+            "ur": "اے اللہ! میرا گناہ تیری معافی کی پناہ میں ہے، میرا خوف تیری امان کی پناہ میں ہے، میری غربت تیری غنا کی پناہ میں ہے، اور میری ذلت تیری عزت کی پناہ میں ہے۔",
+            "fr": "Ô Allah, mon péché a cherché refuge dans Ton pardon, ma peur a cherché refuge dans Ta sécurité, ma pauvreté a cherché refuge dans Ta richesse, et mon humiliation a cherché refuge dans Ton honneur.",
+            "tr": "Allah'ım! Günahım Senin affına sığındı, korkum Senin emniyetine sığındı, fakirliğim Senin zenginliğine sığındı ve zilretim Senin izzetine sığındı.",
+            "id": "Ya Allah, dosaku telah berlindung dengan ampunan-Mu, ketakutanku telah berlindung dengan keamanan-Mu, kefakiranku telah berlindung dengan kekayaan-Mu, dan kehinaanku telah berlindung dengan kemuliaan-Mu.",
+            "bn": "হে আল্লাহ, আমার গুনাহ তোমার ক্ষমার আশ্রয়ে, আমার ভয় তোমার নিরাপত্তার আশ্রয়ে, আমার দারিদ্র্য তোমার সম্পদের আশ্রয়ে, এবং আমার অপমান তোমার সম্মানের আশ্রয়ে।",
+            "ms": "Ya Allah, dosaku telah berlindung dengan ampunan-Mu, ketakutanku telah berlindung dengan keamanan-Mu, kefakiranku telah berlindung dengan kekayaan-Mu, dan kehinaanku telah berlindung dengan kemuliaan-Mu.",
+            "ta": "இறைவா, என் பாவம் உமது மன்னிப்பில் புகலடைந்துள்ளது, என் பயம் உமது பாதுகாப்பில் புகலடைந்துள்ளது, என் வறுமை உமது செல்வத்தில் புகலடைந்துள்ளது, என் இழிவு உமது கௌரவத்தில் புகலடைந்துள்ளது.",
+            "ml": "അല്ലാഹുവേ, എന്റെ പാപം നിന്റെ പാപമോചനത്തിൽ അഭയം തേടിയിരിക്കുന്നു, എന്റെ ഭയം നിന്റെ സുരക്ഷയിൽ അഭയം തേടിയിരിക്കുന്നു, എന്റെ ദാരിദ്ര്യം നിന്റെ ധനത്തിൽ അഭയം തേടിയിരിക്കുന്നു, എന്റെ അപമാനം നിന്റെ ബഹുമാനത്തിൽ അഭയം തേടിയിരിക്കുന്നു."
+          },
+          "reference": "Traditional",
+          "times": 1
+        },
+        {
+          "id": "dp-5",
+          "title": { "en": "After Maghrib Prayer", "ar": "بعد صلاة المغرب", "ur": "مغرب کی نماز کے بعد", "fr": "Après la prière de Maghrib", "tr": "Akşam namazından sonra", "id": "Setelah shalat Maghrib", "bn": "মাগরিবের নামাজের পরে", "ms": "Selepas solat Maghrib", "ta": "மக்ரிப் தொழுகைக்கு பின்", "ml": "മഗ്‌രിബ് നമസ്കാരത്തിന് ശേഷം" },
+          "arabic": "اللَّهُمَّ إِنِّي أَسْأَلُكَ مُوجِبَاتِ رَحْمَتِكَ وَعَزَائِمَ مَغْفِرَتِكَ وَالنَّجَاةَ مِنَ النَّارِ وَمِنْ كُلِّ بَلِيَّةٍ وَالْفَوْزَ بِالْجَنَّةِ وَالرِّضْوَانَ فِي دَارِ السَّلَامِ",
+          "translation": {
+            "en": "O Allah, I ask You for the causes of Your mercy, the means of Your forgiveness, safety from the Fire and from every calamity, attainment of Paradise, and Your pleasure in the Abode of Peace.",
+            "ar": "اللهم إني أسألك موجبات رحمتك وعزائم مغفرتك والنجاة من النار ومن كل بلية والفوز بالجنة والرضوان في دار السلام",
+            "ur": "اے اللہ! میں تجھ سے تیری رحمت کے موجبات، تیری مغفرت کے عزائم، آگ سے اور ہر مصیبت سے نجات، جنت کی کامیابی اور دار السلام میں رضا مانگتا ہوں۔",
+            "fr": "Ô Allah, je Te demande les causes de Ta miséricorde, les moyens de Ton pardon, le salut du Feu et de toute calamité, l'obtention du Paradis et Ton agrément dans la Demeure de la Paix.",
+            "tr": "Allah'ım! Senden rahmetinin sebeplerini, mağfiretinin vesilelerini, ateşten ve her beladan kurtuluşu, cennete ulaşmayı ve selamet yurdunda rızanı istiyorum.",
+            "id": "Ya Allah, aku memohon kepada-Mu sebab-sebab rahmat-Mu, sebab-sebab ampunan-Mu, keselamatan dari api neraka dan dari setiap bencana, kemenangan surga dan keridhaan di negeri keselamatan.",
+            "bn": "হে আল্লাহ, আমি তোমার কাছে তোমার রহমতের কারণ, তোমার ক্ষমার উপায়, আগুন থেকে এবং প্রতিটি বিপদ থেকে মুক্তি, জান্নাত লাভ এবং শান্তির আবাসে তোমার সন্তুষ্টি চাই।",
+            "ms": "Ya Allah, aku memohon kepada-Mu sebab-sebab rahmat-Mu, sebab-sebab ampunan-Mu, keselamatan dari api neraka dan dari setiap bencana, kemenangan syurga dan keredhaan di negeri keselamatan.",
+            "ta": "இறைவா, உமது இரக்கத்தின் காரணங்களை, உமது மன்னிப்பின் வழிகளை, நரகத்திலிருந்தும் எல்லா அனர்த்தங்களிலிருந்தும் தப்பிப்பை, சொர்க்கத்தை அடைவதை, சாந்தியின் இல்லத்தில் உமது திருப்தியையும் உம்மிடம் கேட்கிறேன்.",
+            "ml": "അല്ലാഹുവേ, നിന്റെ കാരുണ്യത്തിന്റെ കാരണങ്ങൾ, നിന്റെ പാപമോചനത്തിന്റെ മാർഗങ്ങൾ, നരകത്തിൽ നിന്നും എല്ലാ ദുരന്തങ്ങളിൽ നിന്നും രക്ഷ, സ്വർഗ്ഗത്തിന്റെ നേട്ടം, സമാധാനത്തിന്റെ ഭവനത്തിൽ നിന്റെ പ്രീതി എന്നിവ നിന്നോട് ചോദിക്കുന്നു."
+          },
+          "reference": "Traditional",
+          "times": 1
+        },
+        {
+          "id": "dp-6",
+          "title": { "en": "After Isha Prayer", "ar": "بعد صلاة العشاء", "ur": "عشاء کی نماز کے بعد", "fr": "Après la prière de Isha", "tr": "Yatsı namazından sonra", "id": "Setelah shalat Isya", "bn": "ইশার নামাজের পরে", "ms": "Selepas solat Isyak", "ta": "இஷா தொழுகைக்கு பின்", "ml": "ഇശാ നമസ്കാരത്തിന് ശേഷം" },
+          "arabic": "أَعُوذُ بِعِزَّةِ اللَّهِ وَقُدْرَتِهِ وَمَغْفِرَتِهِ وَرَحْمَتِهِ وَسُلْطَانِهِ مِنْ شَرِّ كُلِّ جَبَّارٍ عَنِيدٍ وَشَيْطَانٍ مَرِيدٍ",
+          "translation": {
+            "en": "I seek protection with the Honour of Allah, His Might, His Forgiveness, His Mercy, and His Authority from the evil of every insolent tyrant and the despised devil.",
+            "ar": "أعوذ بعزة الله وقدرته ومغفرته ورحمته وسلطانه من شر كل جبار عنيد وشيطان مريد",
+            "ur": "میں اللہ کی عزت، اس کی قدرت، اس کی مغفرت، اس کی رحمت اور اس کے اقتدار کی پناہ مانگتا ہوں ہر سرکش ظالم اور مردود شیطان کے شر سے۔",
+            "fr": "Je cherche protection avec l'Honneur d'Allah, Sa Puissance, Son Pardon, Sa Miséricorde et Son Autorité contre le mal de tout tyran insolent et du diable méprisé.",
+            "tr": "Her kibirli zalimin ve kovulmuş şeytanın şerrinden Allah'ın izzetine, kudretine, mağfiretine, rahmetine ve saltanatına sığınırım.",
+            "id": "Aku berlindung dengan Kemuliaan Allah, Kuasa-Nya, Ampunan-Nya, Rahmat-Nya, dan Kekuasaan-Nya dari kejahatan setiap tiran yang sombong dan setan yang terkutuk.",
+            "bn": "আমি আল্লাহর সম্মান, তাঁর ক্ষমতা, তাঁর ক্ষমা, তাঁর রহমত এবং তাঁর কর্তৃত্বের আশ্রয় চাই প্রতিটি অহংকারী জুলুমবাজ এবং অভিশপ্ত শয়তানের অনিষ্ট থেকে।",
+            "ms": "Aku berlindung dengan Kemuliaan Allah, Kuasa-Nya, Ampunan-Nya, Rahmat-Nya, dan Kekuasaan-Nya dari kejahatan setiap tiran yang sombong dan syaitan yang terkutuk.",
+            "ta": "ஒவ்வொரு அகந்தையுள்ள கொடுங்கோலன் மற்றும் வெறுக்கப்பட்ட ஷைத்தானின் தீமையிலிருந்து அல்லாஹ்வின் கௌரவம், அவனது வல்லமை, அவனது மன்னிப்பு, அவனது இரக்கம் மற்றும் அவனது அதிகாரத்தில் நான் புகலளிக்கிறேன்.",
+            "ml": "ഓരോ അഹങ്കാരിയായ അക്രമിയുടെയും നിന്ദിതനായ പിശാചിന്റെയും തിന്മയിൽ നിന്ന് അല്ലാഹുവിന്റെ ബഹുമാനത്തിലും ശക്തിയിലും പാപമോചനത്തിലും കാരുണ്യത്തിലും അധികാരത്തിലും ഞാൻ അഭയം തേടുന്നു."
+          },
+          "reference": "Traditional",
+          "times": 1
+        },
+        {
+          "id": "dp-7",
+          "title": { "en": "For Preservation of Faith", "ar": "لحفظ الإيمان", "ur": "ایمان کی حفاظت کے لیے", "fr": "Pour la préservation de la foi", "tr": "İmanın korunması için", "id": "Untuk menjaga iman", "bn": "ঈমানের হেফাজতের জন্য", "ms": "Untuk menjaga iman", "ta": "ஈமானை பாதுகாக்க", "ml": "ഈമാൻ സംരക്ഷിക്കാൻ" },
+          "arabic": "يَا أَللهُ يَا أَللهُ يَا أَللهُ الْأَمَانُ الْأَمَانُ الْأَمَانُ مِنْ زَوَالِ الْإِيمَانِ يَا دَائِمَ الْمَعْرُوفِ يَا قَدِيمَ الْإِحْسَانِ",
+          "translation": {
+            "en": "O Allah, O Allah, O Allah! Safety, safety, safety from the vanishing of faith. O the Eternally Known, O the Eternally Obliging.",
+            "ar": "يا الله يا الله يا الله الأمان الأمان الأمان من زوال الإيمان يا دائم المعروف يا قديم الإحسان",
+            "ur": "اے اللہ! اے اللہ! اے اللہ! ایمان کے زوال سے امان، امان، امان۔ اے ہمیشہ سے معروف، اے ہمیشہ سے احسان کرنے والے۔",
+            "fr": "Ô Allah, Ô Allah, Ô Allah! La sécurité, la sécurité, la sécurité contre la disparition de la foi. Ô l'Éternellement Connu, Ô l'Éternellement Obligeant.",
+            "tr": "Allah'ım, Allah'ım, Allah'ım! İmanın yok olmasından güvenlik, güvenlik, güvenlik. Ey Ezelî bilinen, Ey Ezelî iyilik yapan.",
+            "id": "Ya Allah, Ya Allah, Ya Allah! Keamanan, keamanan, keamanan dari hilangnya iman. Wahai Yang Maha Dikenal, Wahai Yang Maha Berbuat Baik.",
+            "bn": "হে আল্লাহ, হে আল্লাহ, হে আল্লাহ! ঈমানের বিনাশ থেকে নিরাপত্তা, নিরাপত্তা, নিরাপত্তা। হে চিরকাল পরিচিত, হে চিরকাল অনুগ্রহকারী।",
+            "ms": "Ya Allah, Ya Allah, Ya Allah! Keselamatan, keselamatan, keselamatan dari hilangnya iman. Wahai Yang Maha Dikenali, Wahai Yang Maha Berbuat Baik.",
+            "ta": "இறைவா, இறைவா, இறைவா! ஈமானின் அழிவிலிருந்து பாதுகாப்பு, பாதுகாப்பு, பாதுகாப்பு. என்றும் அறியப்பட்டவரே, என்றும் நன்மை செய்பவரே.",
+            "ml": "അല്ലാഹുവേ, അല്ലാഹുവേ, അല്ലാഹുവേ! ഈമാൻ നശിക്കുന്നതിൽ നിന്ന് സുരക്ഷ, സുരക്ഷ, സുരക്ഷ. എന്നും അറിയപ്പെടുന്നവനേ, എന്നും നന്മ ചെയ്യുന്നവനേ."
+          },
+          "reference": "Traditional",
+          "times": 1
+        },
+        {
+          "id": "dp-8",
+          "title": { "en": "For Thanks for Bounties", "ar": "لشكر النعم", "ur": "نعمتوں کا شکر", "fr": "Pour remercier des bienfaits", "tr": "Nimetlere şükür için", "id": "Untuk bersyukur atas nikmat", "bn": "নেয়ামতের শুকরিয়া", "ms": "Untuk bersyukur atas nikmat", "ta": "அருட்கொடைகளுக்கு நன்றி", "ml": "അനുഗ്രഹങ്ങൾക്ക് നന്ദി" },
+          "arabic": "الْحَمْدُ لِلَّهِ عَلَى كُلِّ نِعْمَةٍ كَانَتْ أَوْ هِيَ كَائِنَةٌ",
+          "translation": {
+            "en": "All praise is due to Allah for every bounty that was or shall be.",
+            "ar": "الحمد لله على كل نعمة كانت أو هي كائنة",
+            "ur": "ہر نعمت پر جو گزری یا جو آنے والی ہے تمام تعریفیں اللہ کے لیے ہیں۔",
+            "fr": "Toute louange est due à Allah pour chaque bienfait qui fut ou qui sera.",
+            "tr": "Olmuş veya olacak her nimet için hamd Allah'a mahsustur.",
+            "id": "Segala puji bagi Allah atas setiap nikmat yang telah ada atau yang akan ada.",
+            "bn": "যে নেয়ামত ছিল বা হবে তার প্রতিটি নেয়ামতের জন্য সমস্ত প্রশংসা আল্লাহর জন্য।",
+            "ms": "Segala puji bagi Allah atas setiap nikmat yang telah ada atau yang akan ada.",
+            "ta": "இருந்த அல்லது இருக்கும் ஒவ்வொரு அருட்கொடைக்கும் எல்லா புகழும் அல்லாஹ்வுக்கே.",
+            "ml": "ഉണ്ടായിരുന്ന അല്ലെങ്കിൽ ഉണ്ടാകാനിരിക്കുന്ന ഓരോ അനുഗ്രഹത്തിനും എല്ലാ സ്തുതിയും അല്ലാഹുവിനാണ്."
+          },
+          "reference": "Traditional",
+          "times": 7
+        }
+      ]
+    },
+    {
+      "id": "wealth-prosperity",
+      "icon": "💰",
+      "color": "yellow",
+      "gradient": "from-yellow-500 to-amber-600",
+      "bg": "bg-yellow-50",
+      "border": "border-yellow-200",
+      "text": "text-yellow-700",
+      "name": {
+        "en": "Wealth, Sustenance & Debts",
+        "ar": "الثروة والرزق والديون",
+        "ur": "دولت، رزق اور قرض",
+        "fr": "Richesse, Subsistance et Dettes",
+        "tr": "Zenginlik, Rızık ve Borçlar",
+        "id": "Kekayaan, Rezeki dan Hutang",
+        "bn": "সম্পদ, রিযিক ও ঋণ",
+        "ms": "Kekayaan, Rezeki dan Hutang",
+        "ta": "செல்வம், உபஜீவனம் மற்றும் கடன்கள்",
+        "ml": "സമ്പത്ത്, ഉപജീവനം, കടങ്ങൾ"
+      },
+      "duas": [
+        {
+          "id": "wp-1",
+          "title": { "en": "For Wealth & Prosperity", "ar": "للثروة والازدهار", "ur": "دولت اور خوشحالی کے لیے", "fr": "Pour la richesse et la prospérité", "tr": "Zenginlik ve refah için", "id": "Untuk kekayaan dan kemakmuran", "bn": "সম্পদ ও সমৃদ্ধির জন্য", "ms": "Untuk kekayaan dan kemakmuran", "ta": "செல்வம் மற்றும் செழிப்புக்கு", "ml": "സമ്പത്തിനും സമൃദ്ധിക്കും" },
+          "arabic": "يَا قَوِيُّ يَا غَنِيُّ يَا وَلِيُّ يَا مَلِيُّ",
+          "translation": {
+            "en": "O Mighty, O Self-Sufficient, O Guardian, O Absolute Authority.",
+            "ar": "يا قوي يا غني يا ولي يا ملي",
+            "ur": "اے طاقتور، اے بے نیاز، اے ولی، اے مطلق اختیار والے۔",
+            "fr": "Ô Puissant, Ô Suffisant, Ô Gardien, Ô Autorité Absolue.",
+            "tr": "Ey Güçlü, Ey Zengin, Ey Veli, Ey Mutlak Otorite.",
+            "id": "Wahai Yang Maha Kuat, Wahai Yang Maha Kaya, Wahai Yang Maha Melindungi, Wahai Yang Maha Berkuasa.",
+            "bn": "হে শক্তিশালী, হে অভাবমুক্ত, হে অভিভাবক, হে পরম কর্তৃত্বশীল।",
+            "ms": "Wahai Yang Maha Kuat, Wahai Yang Maha Kaya, Wahai Yang Maha Melindungi, Wahai Yang Maha Berkuasa.",
+            "ta": "ஓ வல்லமையுள்ளவரே, ஓ தன்னிறைவுள்ளவரே, ஓ பாதுகாவலரே, ஓ முழு அதிகாரமுள்ளவரே.",
+            "ml": "ശക്തനേ, സ്വയം പര്യാപ്തനേ, സംരക്ഷകനേ, സമ്പൂർണ്ണ അധികാരിയേ."
+          },
+          "reference": "Traditional",
+          "times": 12000
+        },
+        {
+          "id": "wp-2",
+          "title": { "en": "For Wealth (Daily 30x)", "ar": "للثروة يوميا 30 مرة", "ur": "دولت کے لیے روزانہ 30 بار", "fr": "Pour la richesse (30x par jour)", "tr": "Zenginlik için (günde 30x)", "id": "Untuk kekayaan (30x sehari)", "bn": "সম্পদের জন্য (দিনে 30 বার)", "ms": "Untuk kekayaan (30x sehari)", "ta": "செல்வத்திற்காக (தினம் 30 முறை)", "ml": "സമ്പത്തിനായി (ദിവസവും 30 തവണ)" },
+          "arabic": "سُبْحَانَ اللَّهِ الْعَظِيمِ وَبِحَمْدِهِ سُبْحَانَ اللَّهِ الْعَظِيمِ",
+          "translation": {
+            "en": "Glory be to Allah the Great with all His praise, Glory be to Allah the Great.",
+            "ar": "سبحان الله العظيم وبحمده سبحان الله العظيم",
+            "ur": "اللہ عظیم کی حمد کے ساتھ تسبیح، اللہ عظیم کی تسبیح۔",
+            "fr": "Gloire à Allah le Grand avec toute Sa louange, Gloire à Allah le Grand.",
+            "tr": "Hamdiyle birlikte Yüce Allah'ı tesbih ederim, Yüce Allah'ı tesbih ederim.",
+            "id": "Maha Suci Allah Yang Maha Agung dengan segala puji-Nya, Maha Suci Allah Yang Maha Agung.",
+            "bn": "সমস্ত প্রশংসাসহ মহান আল্লাহর পবিত্রতা, মহান আল্লাহর পবিত্রতা।",
+            "ms": "Maha Suci Allah Yang Maha Agung dengan segala puji-Nya, Maha Suci Allah Yang Maha Agung.",
+            "ta": "அவனது புகழுடன் மகத்தான அல்லாஹ் பரிசுத்தம், மகத்தான அல்லாஹ் பரிசுத்தம்.",
+            "ml": "അവന്റെ സ്തുതിയോടെ മഹാനായ അല്ലാഹു പരിശുദ്ധൻ, മഹാനായ അല്ലാഹു പരിശുദ്ധൻ."
+          },
+          "reference": "Traditional",
+          "times": 30
+        },
+        {
+          "id": "wp-3",
+          "title": { "en": "For Increase in Sustenance", "ar": "لزيادة الرزق", "ur": "رزق میں اضافے کے لیے", "fr": "Pour l'augmentation de la subsistance", "tr": "Rızkın artması için", "id": "Untuk peningkatan rezeki", "bn": "রিযিক বৃদ্ধির জন্য", "ms": "Untuk peningkatan rezeki", "ta": "உபஜீவனம் அதிகரிக்க", "ml": "ഉപജീവനം വർദ്ധിക്കാൻ" },
+          "arabic": "اللَّهُمَّ رَبَّ السَّمَاوَاتِ السَّبْعِ وَرَبَّ الْعَرْشِ الْعَظِيمِ اقْضِ عَنَّا الدَّيْنَ وَأَغْنِنَا مِنَ الْفَقْرِ",
+          "translation": {
+            "en": "O Allah, Lord of the seven heavens and Lord of the Great Throne, defray our debts and enrich us from poverty.",
+            "ar": "اللهم رب السماوات السبع ورب العرش العظيم اقض عنا الدين وأغننا من الفقر",
+            "ur": "اے اللہ! سات آسمانوں کے رب اور عظیم عرش کے رب، ہمارا قرض ادا فرما اور ہمیں غربت سے بے نیاز کر دے۔",
+            "fr": "Ô Allah, Seigneur des sept cieux et Seigneur du Trône Glorieux, acquitte nos dettes et enrichis-nous de la pauvreté.",
+            "tr": "Allah'ım! Yedi göklerin Rabbi ve Yüce Arş'ın Rabbi, borcumuzu öde ve bizi fakirlikten zengin kıl.",
+            "id": "Ya Allah, Tuhan tujuh langit dan Tuhan Arsy yang agung, lunaskan hutang kami dan kayakan kami dari kemiskinan.",
+            "bn": "হে আল্লাহ, সাত আকাশের রব এবং মহান আরশের রব, আমাদের ঋণ পরিশোধ করো এবং আমাদের দারিদ্র্য থেকে মুক্ত করো।",
+            "ms": "Ya Allah, Tuhan tujuh langit dan Tuhan Arasy yang agung, lunaskan hutang kami dan kayakan kami dari kemiskinan.",
+            "ta": "இறைவா, ஏழு வானங்களின் இறைவா மற்றும் பெரிய அர்ஷின் இறைவா, எங்கள் கடனை தீர்த்து, வறுமையிலிருந்து எங்களை செல்வமாக்குவாயாக.",
+            "ml": "അല്ലാഹുവേ, ഏഴ് ആകാശങ്ങളുടെ രക്ഷിതാവേ, മഹത്തായ അർഷിന്റെ രക്ഷിതാവേ, ഞങ്ങളുടെ കടം തീർക്കണമേ, ദാരിദ്ര്യത്തിൽ നിന്ന് ഞങ്ങളെ സമ്പന്നരാക്കണമേ."
+          },
+          "reference": "Traditional",
+          "times": 1
+        },
+        {
+          "id": "wp-4",
+          "title": { "en": "For Disbursement of Debts", "ar": "لقضاء الديون", "ur": "قرض کی ادائیگی کے لیے", "fr": "Pour le remboursement des dettes", "tr": "Borçların ödenmesi için", "id": "Untuk pelunasan hutang", "bn": "ঋণ পরিশোধের জন্য", "ms": "Untuk pelunasan hutang", "ta": "கடன்களை தீர்க்க", "ml": "കടങ്ങൾ വീട്ടാൻ" },
+          "arabic": "اللَّهُمَّ اكْفِنِي بِحَلَالِكَ عَنْ حَرَامِكَ وَأَغْنِنِي بِفَضْلِكَ عَمَّنْ سِوَاكَ يَا حَيُّ يَا قَيُّومُ",
+          "translation": {
+            "en": "O Allah, suffice me with what You have made lawful over what You have made unlawful, and enrich me by Your grace over anyone other than You, O Ever-Living, O Self-Subsisting.",
+            "ar": "اللهم اكفني بحلالك عن حرامك وأغنني بفضلك عمن سواك يا حي يا قيوم",
+            "ur": "اے اللہ! مجھے اپنے حلال سے اپنے حرام سے بے نیاز کر دے اور اپنے فضل سے اپنے سوا ہر ایک سے بے نیاز کر دے، اے زندہ، اے قائم۔",
+            "fr": "Ô Allah, suffis-moi par ce que Tu as rendu licite de ce que Tu as rendu illicite, et enrichis-moi par Ta grâce de quiconque autre que Toi, Ô Vivant, Ô Sustenteur.",
+            "tr": "Allah'ım! Haram kıldıklarından helal kıldıklarınla beni koru ve fazlınla Senden başkasından beni zengin kıl, Ey Hayy, Ey Kayyûm.",
+            "id": "Ya Allah, cukupkanlah aku dengan yang halal dari-Mu dari yang haram dari-Mu, dan kayakanlah aku dengan karunia-Mu dari selain Engkau, Wahai Yang Maha Hidup, Wahai Yang Maha Berdiri.",
+            "bn": "হে আল্লাহ, তোমার হারাম থেকে তোমার হালাল দিয়ে আমাকে যথেষ্ট করো এবং তোমার অনুগ্রহে তোমার বাইরে অন্যদের থেকে আমাকে সমৃদ্ধ করো, হে চিরঞ্জীব, হে আত্ম-প্রতিষ্ঠিত।",
+            "ms": "Ya Allah, cukupkanlah aku dengan yang halal dari-Mu dari yang haram dari-Mu, dan kayakanlah aku dengan kurnia-Mu dari selain Engkau, Wahai Yang Maha Hidup, Wahai Yang Maha Berdiri.",
+            "ta": "இறைவா, உமது ஹராமிலிருந்து உமது ஹலாலால் எனக்கு போதுமானதாக இருப்பாயாக, உமது அருளால் உம்மைத் தவிர மற்றவர்களிடமிருந்து என்னை செல்வமாக்குவாயாக, ஓ என்றும் வாழ்பவரே, ஓ தானே நிலைத்திருப்பவரே.",
+            "ml": "അല്ലാഹുവേ, നിന്റെ ഹറാമിൽ നിന്ന് നിന്റെ ഹലാൽ കൊണ്ട് എന്നെ പര്യാപ്തനാക്കണമേ, നിന്റെ അനുഗ്രഹം കൊണ്ട് നിന്നല്ലാതെ മറ്റുള്ളവരിൽ നിന്ന് എന്നെ സമ്പന്നനാക്കണമേ, നിത്യജീവാ, സ്വയം നിലനിൽക്കുന്നവ."
+          },
+          "reference": "Tirmidhi",
+          "times": 1
+        },
+        {
+          "id": "wp-5",
+          "title": { "en": "For Removal of Poverty & Worries", "ar": "لإزالة الفقر والهموم", "ur": "غربت اور فکروں کے خاتمے کے لیے", "fr": "Pour l'élimination de la pauvreté et des soucis", "tr": "Yoksulluk ve endişelerin giderilmesi için", "id": "Untuk menghilangkan kemiskinan dan kekhawatiran", "bn": "দারিদ্র্য ও চিন্তা দূর করার জন্য", "ms": "Untuk menghilangkan kemiskinan dan kebimbangan", "ta": "வறுமை மற்றும் கவலைகளை நீக்க", "ml": "ദാരിദ്ര്യവും ആശങ്കകളും നീക്കാൻ" },
+          "arabic": "لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ الْعَلِيِّ الْعَظِيمِ",
+          "translation": {
+            "en": "There is no power and strength except with Allah, the Most High, the Most Great.",
+            "ar": "لا حول ولا قوة إلا بالله العلي العظيم",
+            "ur": "اللہ عالی و عظیم کے سوا کوئی طاقت اور قوت نہیں۔",
+            "fr": "Il n'y a de puissance ni de force qu'en Allah, le Très Haut, le Très Grand.",
+            "tr": "Yüce ve Büyük Allah'tan başka güç ve kuvvet yoktur.",
+            "id": "Tiada daya dan kekuatan kecuali dengan Allah Yang Maha Tinggi lagi Maha Agung.",
+            "bn": "সর্বোচ্চ ও মহান আল্লাহ ছাড়া কোনো শক্তি ও ক্ষমতা নেই।",
+            "ms": "Tiada daya dan kekuatan kecuali dengan Allah Yang Maha Tinggi lagi Maha Agung.",
+            "ta": "மிக உயர்ந்த, மிகப் பெரிய அல்லாஹ்வைத் தவிர எந்த சக்தியும் வலிமையும் இல்லை.",
+            "ml": "അത്യുന്നതനും മഹാനുമായ അല്ലാഹുവല്ലാതെ ഒരു ശക്തിയും കഴിവും ഇല്ല."
+          },
+          "reference": "Bukhari, Muslim",
+          "times": 1
+        },
+        {
+          "id": "wp-6",
+          "title": { "en": "For Removing Worries", "ar": "لإزالة الهموم", "ur": "فکروں کے خاتمے کے لیے", "fr": "Pour éliminer les soucis", "tr": "Endişeleri gidermek için", "id": "Untuk menghilangkan kekhawatiran", "bn": "চিন্তা দূর করার জন্য", "ms": "Untuk menghilangkan kebimbangan", "ta": "கவலைகளை நீக்க", "ml": "ആശങ്കകൾ നീക്കാൻ" },
+          "arabic": "سُبْحَانَ اللَّهِ الْعَظِيمِ وَبِحَمْدِهِ أَسْتَغْفِرُ اللَّهَ وَأَسْأَلُهُ مِنْ فَضْلِهِ",
+          "translation": {
+            "en": "Glory be to Allah the Great with His praise. I seek forgiveness from Allah and ask Him from His bounty.",
+            "ar": "سبحان الله العظيم وبحمده أستغفر الله وأسأله من فضله",
+            "ur": "اللہ عظیم کی حمد کے ساتھ تسبیح، میں اللہ سے مغفرت مانگتا ہوں اور اس سے اس کا فضل مانگتا ہوں۔",
+            "fr": "Gloire à Allah le Grand avec Sa louange. Je demande pardon à Allah et Lui demande de Sa grâce.",
+            "tr": "Hamdiyle birlikte Yüce Allah'ı tesbih ederim. Allah'tan bağışlanma dilerim ve O'ndan lütfunu isterim.",
+            "id": "Maha Suci Allah Yang Maha Agung dengan puji-Nya. Aku memohon ampun kepada Allah dan memohon karunia-Nya.",
+            "bn": "তাঁর প্রশংসাসহ মহান আল্লাহর পবিত্রতা। আমি আল্লাহর কাছে ক্ষমা চাই এবং তাঁর অনুগ্রহ চাই।",
+            "ms": "Maha Suci Allah Yang Maha Agung dengan puji-Nya. Aku memohon ampun kepada Allah dan memohon karunia-Nya.",
+            "ta": "அவனது புகழுடன் மகத்தான அல்லாஹ் பரிசுத்தம். அல்லாஹ்விடம் மன்னிப்பு கேட்கிறேன், அவனது அருளை கேட்கிறேன்.",
+            "ml": "അവന്റെ സ്തുതിയോടെ മഹാനായ അല്ലാഹു പരിശുദ്ധൻ. ഞാൻ അല്ലാഹുവിനോട് പാപമോചനം ചോദിക്കുന്നു, അവന്റെ അനുഗ്രഹം ചോദിക്കുന്നു."
+          },
+          "reference": "Traditional",
+          "times": 10
+        },
+        {
+          "id": "wp-7",
+          "title": { "en": "For Warding off Calamities", "ar": "لدرء البلاء", "ur": "مصیبتوں کو دور کرنے کے لیے", "fr": "Pour éloigner les calamités", "tr": "Belaları uzaklaştırmak için", "id": "Untuk menolak bencana", "bn": "বিপদ দূর করার জন্য", "ms": "Untuk menolak bencana", "ta": "அனர்த்தங்களை தவிர்க்க", "ml": "ദുരന്തങ്ങൾ നീക്കാൻ" },
+          "arabic": "بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ وَلَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ",
+          "translation": {
+            "en": "In the name of Allah, the Most Gracious, the Most Merciful. There is no might and no power except with Allah.",
+            "ar": "بسم الله الرحمن الرحيم ولا حول ولا قوة إلا بالله",
+            "ur": "اللہ رحمان و رحیم کے نام سے۔ اللہ کے سوا کوئی طاقت اور قوت نہیں۔",
+            "fr": "Au nom d'Allah, le Tout Miséricordieux, le Très Miséricordieux. Il n'y a de puissance ni de force qu'en Allah.",
+            "tr": "Rahman ve Rahim olan Allah'ın adıyla. Allah'tan başka güç ve kuvvet yoktur.",
+            "id": "Dengan nama Allah Yang Maha Pengasih lagi Maha Penyayang. Tiada daya dan kekuatan kecuali dengan Allah.",
+            "bn": "পরম করুণাময়, অসীম দয়ালু আল্লাহর নামে। আল্লাহ ছাড়া কোনো শক্তি ও ক্ষমতা নেই।",
+            "ms": "Dengan nama Allah Yang Maha Pengasih lagi Maha Penyayang. Tiada daya dan kekuatan kecuali dengan Allah.",
+            "ta": "மிக கருணையுள்ள, மிக அன்புள்ள அல்லாஹ்வின் பெயரால். அல்லாஹ்வைத் தவிர எந்த சக்தியும் வலிமையும் இல்லை.",
+            "ml": "അതികാരുണികനും അതിദയാലുവുമായ അല്ലാഹുവിന്റെ നാമത്തിൽ. അല്ലാഹുവല്ലാതെ ഒരു ശക്തിയും കഴിവും ഇല്ല."
+          },
+          "reference": "Traditional",
+          "times": 100
+        },
+        {
+          "id": "wp-8",
+          "title": { "en": "For Safety from Drowning/Burning", "ar": "للحماية من الغرق والحرق", "ur": "ڈوبنے اور جلنے سے حفاظت کے لیے", "fr": "Pour la sécurité contre la noyade et le brûlure", "tr": "Boğulma ve yanmaktan korunmak için", "id": "Untuk keselamatan dari tenggelam/terbakar", "bn": "ডুবা ও পোড়া থেকে সুরক্ষার জন্য", "ms": "Untuk keselamatan dari lemas/terbakar", "ta": "மூழ்குவது/எரிவதிலிருந்து பாதுகாப்புக்கு", "ml": "മുങ്ങുന്നതിൽ/കത്തുന്നതിൽ നിന്ന് സംരക്ഷണത്തിന്" },
+          "arabic": "إِنَّ وَلِيِّيَ اللَّهُ الَّذِي نَزَّلَ الْكِتَابَ وَهُوَ يَتَوَلَّى الصَّالِحِينَ",
+          "translation": {
+            "en": "Verily my Protector is Allah, who sent down the Book and He protects the righteous.",
+            "ar": "إن وليي الله الذي نزل الكتاب وهو يتولى الصالحين",
+            "ur": "بے شک میرا حامی اللہ ہے جس نے کتاب نازل کی اور وہ نیکوں کی حفاظت کرتا ہے۔",
+            "fr": "Certes mon Protecteur est Allah, qui a fait descendre le Livre et Il protège les vertueux.",
+            "tr": "Şüphesiz benim koruyucum, Kitab'ı indiren Allah'tır ve O salihleri korur.",
+            "id": "Sesungguhnya Pelindungku adalah Allah yang telah menurunkan Al-Kitab dan Dia melindungi orang-orang saleh.",
+            "bn": "নিশ্চয়ই আমার রক্ষক আল্লাহ, যিনি গ্রন্থ নাযিল করেছেন এবং তিনি নেককারদের রক্ষা করেন।",
+            "ms": "Sesungguhnya Pelindungku adalah Allah yang telah menurunkan Al-Kitab dan Dia melindungi orang-orang saleh.",
+            "ta": "நிச்சயமாக என் பாதுகாவலன் அல்லாஹ், அவன் வேதாகமத்தை இறக்கியவன், அவன் நேர்மையானவர்களைப் பாதுகாக்கிறான்.",
+            "ml": "തീർച്ചയായും എന്റെ സംരക്ഷകൻ അല്ലാഹു ആണ്, അവൻ ഗ്രന്ഥം ഇറക്കിയവനും നല്ലവരെ സംരക്ഷിക്കുന്നവനുമാണ്."
+          },
+          "reference": "Quran 7:196",
+          "times": 1
+        },
+        {
+          "id": "wp-9",
+          "title": { "en": "For Recovery of Lost Things", "ar": "لاسترداد الأشياء المفقودة", "ur": "کھوئی ہوئی چیزیں واپس پانے کے لیے", "fr": "Pour récupérer les objets perdus", "tr": "Kayıp eşyaların bulunması için", "id": "Untuk menemukan barang yang hilang", "bn": "হারানো জিনিস উদ্ধারের জন্য", "ms": "Untuk mendapatkan barang yang hilang", "ta": "தொலைந்த பொருட்களை மீட்க", "ml": "നഷ്ടപ്പെട്ട വസ്തുക്കൾ കണ്ടെത്താൻ" },
+          "arabic": "بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ أَصْبَحْتُ فِي أَمَانِ اللَّهِ وَأَمْسَيْتُ فِي جِوَارِ اللَّهِ",
+          "translation": {
+            "en": "In the name of Allah, the Most Gracious, the Most Merciful. I have entered the morning in the protection of Allah and I shall enter the evening in the refuge of Allah.",
+            "ar": "بسم الله الرحمن الرحيم أصبحت في أمان الله وأمسيت في جوار الله",
+            "ur": "اللہ رحمان و رحیم کے نام سے۔ میں اللہ کی امان میں صبح میں داخل ہوا اور اللہ کی پناہ میں شام میں داخل ہوں گا۔",
+            "fr": "Au nom d'Allah, le Tout Miséricordieux, le Très Miséricordieux. Je suis entré dans le matin dans la protection d'Allah et j'entrerai dans le soir dans le refuge d'Allah.",
+            "tr": "Rahman ve Rahim olan Allah'ın adıyla. Sabaha Allah'ın emniyetinde girdim ve akşama Allah'ın himayesinde gireceğim.",
+            "id": "Dengan nama Allah Yang Maha Pengasih lagi Maha Penyayang. Aku memasuki pagi dalam perlindungan Allah dan aku akan memasuki sore dalam perlindungan Allah.",
+            "bn": "পরম করুণাময়, অসীম দয়ালু আল্লাহর নামে। আমি আল্লাহর নিরাপত্তায় সকালে প্রবেশ করেছি এবং আল্লাহর আশ্রয়ে সন্ধ্যায় প্রবেশ করব।",
+            "ms": "Dengan nama Allah Yang Maha Pengasih lagi Maha Penyayang. Aku memasuki pagi dalam perlindungan Allah dan aku akan memasuki petang dalam perlindungan Allah.",
+            "ta": "மிக கருணையுள்ள, மிக அன்புள்ள அல்லாஹ்வின் பெயரால். நான் அல்லாஹ்வின் பாதுகாப்பில் காலையை நுழைந்தேன், அல்லாஹ்வின் அடைக்கலத்தில் மாலையை நுழைவேன்.",
+            "ml": "അതികാരുണികനും അതിദയാലുവുമായ അല്ലാഹുവിന്റെ നാമത്തിൽ. ഞാൻ അല്ലാഹുവിന്റെ സംരക്ഷണത്തിൽ രാവിലെ പ്രവേശിച്ചു, അല്ലാഹുവിന്റെ അഭയത്തിൽ വൈകുന്നേരം പ്രവേശിക്കും."
+          },
+          "reference": "Traditional",
+          "times": 3
+        }
+      ]
+    },
+    {
+      "id": "protection-special",
+      "icon": "🛡️",
+      "color": "red",
+      "gradient": "from-red-500 to-rose-600",
+      "bg": "bg-red-50",
+      "border": "border-red-200",
+      "text": "text-red-700",
+      "name": {
+        "en": "Special Protection Duas",
+        "ar": "أدعية الحماية الخاصة",
+        "ur": "خاص حفاظتی دعائیں",
+        "fr": "Duas de protection spéciales",
+        "tr": "Özel korunma duaları",
+        "id": "Doa perlindungan khusus",
+        "bn": "বিশেষ সুরক্ষার দোয়া",
+        "ms": "Doa perlindungan khas",
+        "ta": "சிறப்பு பாதுகாப்பு துஆக்கள்",
+        "ml": "പ്രത്യേക സംരക്ഷണ ദുആകൾ"
+      },
+      "duas": [
+        {
+          "id": "sp-1",
+          "title": { "en": "For Protection from Hell", "ar": "للحماية من النار", "ur": "جہنم سے حفاظت کے لیے", "fr": "Pour la protection de l'Enfer", "tr": "Cehennemden korunmak için", "id": "Untuk perlindungan dari neraka", "bn": "জাহান্নাম থেকে সুরক্ষার জন্য", "ms": "Untuk perlindungan dari neraka", "ta": "நரகத்திலிருந்து பாதுகாப்புக்கு", "ml": "നരകത്തിൽ നിന്ന് സംരക്ഷിക്കാൻ" },
+          "arabic": "أَسْأَلُ اللَّهَ الْجَنَّةَ وَأَعُوذُ بِاللَّهِ مِنَ النَّارِ",
+          "translation": {
+            "en": "I ask Allah for Paradise and I seek protection of Allah from the Fire.",
+            "ar": "أسأل الله الجنة وأعوذ بالله من النار",
+            "ur": "میں اللہ سے جنت مانگتا ہوں اور اللہ کی پناہ مانگتا ہوں آگ سے۔",
+            "fr": "Je demande à Allah le Paradis et je cherche la protection d'Allah contre le Feu.",
+            "tr": "Allah'tan cenneti isterim ve Allah'a sığınırım ateşten.",
+            "id": "Aku memohon surga kepada Allah dan aku berlindung kepada Allah dari api neraka.",
+            "bn": "আমি আল্লাহর কাছে জান্নাত চাই এবং আল্লাহর আশ্রয় চাই আগুন থেকে।",
+            "ms": "Aku memohon syurga kepada Allah dan aku berlindung kepada Allah dari api neraka.",
+            "ta": "அல்லாஹ்விடம் சொர்க்கத்தை கேட்கிறேன், அல்லாஹ்விடம் நரகத்திலிருந்து புகலளிக்கிறேன்.",
+            "ml": "അല്ലാഹുവിനോട് സ്വർഗ്ഗം ചോദിക്കുന്നു, അല്ലാഹുവിനോട് നരകത്തിൽ നിന്ന് അഭയം തേടുന്നു."
+          },
+          "reference": "Abu Dawud",
+          "times": 7
+        },
+        {
+          "id": "sp-2",
+          "title": { "en": "For Safety from Enemy", "ar": "للحماية من العدو", "ur": "دشمن سے حفاظت کے لیے", "fr": "Pour la sécurité contre l'ennemi", "tr": "Düşmandan korunmak için", "id": "Untuk keselamatan dari musuh", "bn": "শত্রু থেকে সুরক্ষার জন্য", "ms": "Untuk keselamatan dari musuh", "ta": "எதிரியிடமிருந்து பாதுகாப்புக்கு", "ml": "ശത്രുവിൽ നിന്ന് സംരക്ഷിക്കാൻ" },
+          "arabic": "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَآلِ مُحَمَّدٍ وَاكْفِنِي ظَالِمِي وَانْتَقِمْ لِي مِنْهُمْ",
+          "translation": {
+            "en": "O Allah, send blessings upon Muhammad and the family of Muhammad, suffice me against my oppressors, and take revenge for me from them.",
+            "ar": "اللهم صل على محمد وآل محمد واكفني ظالمي وانتقم لي منهم",
+            "ur": "اے اللہ! محمد ﷺ اور آلِ محمد پر رحمت نازل فرما، میرے ظالموں سے میری کفایت فرما اور ان سے میرا بدلہ لے۔",
+            "fr": "Ô Allah, envoie des bénédictions sur Muhammad et la famille de Muhammad, suffit-moi contre mes oppresseurs et prends vengeance pour moi d'eux.",
+            "tr": "Allah'ım! Muhammed'e ve Muhammed'in ailesine rahmet et, zalimlere karşı beni koru ve onlardan benim intikamımı al.",
+            "id": "Ya Allah, limpahkanlah shalawat kepada Muhammad dan keluarga Muhammad, cukupkanlah aku dari penindasku, dan balaslah dendamku dari mereka.",
+            "bn": "হে আল্লাহ, মুহাম্মদ ও মুহাম্মদের পরিবারের উপর রহমত নাযিল করো, আমার জুলুমকারীদের থেকে আমাকে যথেষ্ট করো এবং তাদের কাছ থেকে আমার প্রতিশোধ নাও।",
+            "ms": "Ya Allah, limpahkah selawat kepada Muhammad dan keluarga Muhammad, cukupkanlah aku dari penindasku, dan balaslah dendamku dari mereka.",
+            "ta": "இறைவா, முஹம்மது மற்றும் முஹம்மதின் குடும்பத்தார் மீது ஸலவாத் கூறுவாயாக, என் ஒடுக்குமுறையாளர்களிடமிருந்து என்னை போதுமாக்குவாயாக, அவர்களிடமிருந்து எனக்காக பழிவாங்குவாயாக.",
+            "ml": "അല്ലാഹുവേ, മുഹമ്മദിന്റെയും മുഹമ്മദിന്റെ കുടുംബത്തിന്റെയും മേൽ സ്വലാത്ത് ചൊല്ലണമേ, എന്റെ അക്രമികളിൽ നിന്ന് എന്നെ മതിയാക്കണമേ, അവരിൽ നിന്ന് എനിക്ക് വേണ്ടി പ്രതികാരം ചെയ്യണമേ."
+          },
+          "reference": "Traditional",
+          "times": 1
+        },
+        {
+          "id": "sp-3",
+          "title": { "en": "For Protection of Self & Wealth", "ar": "لحماية النفس والمال", "ur": "جان اور مال کی حفاظت کے لیے", "fr": "Pour la protection de soi et des biens", "tr": "Can ve malın korunması için", "id": "Untuk perlindungan diri dan harta", "bn": "জীবন ও সম্পদের সুরক্ষার জন্য", "ms": "Untuk perlindungan diri dan harta", "ta": "உயிர் மற்றும் செல்வத்தின் பாதுகாப்புக்கு", "ml": "ജീവന്റെയും സ്വത്തിന്റെയും സംരക്ഷണത്തിന്" },
+          "arabic": "بِسْمِ اللَّهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلَا فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ",
+          "translation": {
+            "en": "In the name of Allah, with whose name nothing can harm on earth nor in the heaven, and He is the Hearing, the Knowing.",
+            "ar": "بسم الله الذي لا يضر مع اسمه شيء في الأرض ولا في السماء وهو السميع العليم",
+            "ur": "اللہ کے نام سے جس کے نام کے ساتھ زمین اور آسمان میں کوئی چیز نقصان نہیں پہنچا سکتی اور وہ سننے والا، جاننے والا ہے۔",
+            "fr": "Au nom d'Allah, avec le nom duquel rien ne peut nuire sur terre ni dans le ciel, et Il est l'Audient, l'Omniscient.",
+            "tr": "Yeryüzünde ve gökte O'nun ismiyle birlikte hiçbir şeyin zarar veremeyeceği Allah'ın adıyla, O işitendir, bilendir.",
+            "id": "Dengan nama Allah, yang dengan nama-Nya tidak ada sesuatu pun yang dapat membahayakan di bumi maupun di langit, dan Dia Maha Mendengar lagi Maha Mengetahui.",
+            "bn": "আল্লাহর নামে, যাঁর নামের সাথে পৃথিবীতে বা আকাশে কোনো কিছু ক্ষতি করতে পারে না, এবং তিনি শ্রবণকারী, জ্ঞানী।",
+            "ms": "Dengan nama Allah, yang dengan nama-Nya tidak ada sesuatu pun yang dapat membahayakan di bumi maupun di langit, dan Dia Maha Mendengar lagi Maha Mengetahui.",
+            "ta": "பூமியிலோ வானத்திலோ அவனது பெயருடன் எதுவும் தீங்கு விளைவிக்க முடியாத அல்லாஹ்வின் பெயரால், அவனே கேட்பவன், அறிபவன்.",
+            "ml": "ഭൂമിയിലോ ആകാശത്തോ അവന്റെ നാമത്തോടുകൂടി ഒരു വസ്തുവും ദ്രോഹം ചെയ്യാത്ത അല്ലാഹുവിന്റെ നാമത്തിൽ, അവൻ കേൾക്കുന്നവനും അറിയുന്നവനുമാണ്."
+          },
+          "reference": "Abu Dawud, Tirmidhi",
+          "times": 3
+        },
+        {
+          "id": "sp-4",
+          "title": { "en": "For Avoiding Bad Thoughts & Temptation", "ar": "لتجنب الأفكار السيئة والفتنة", "ur": "برے خیالات اور فتنے سے بچنے کے لیے", "fr": "Pour éviter les mauvaises pensées et la tentation", "tr": "Kötü düşüncelerden ve fitneden korunmak için", "id": "Untuk menghindari pikiran buruk dan godaan", "bn": "খারাপ চিন্তা ও প্রলোভন এড়াতে", "ms": "Untuk mengelakkan fikiran buruk dan godaan", "ta": "கெட்ட எண்ணங்கள் மற்றும் ஆசைகளை தவிர்க்க", "ml": "മോശം ചിന്തകളും പ്രലോഭനങ്ങളും ഒഴിവാക്കാൻ" },
+          "arabic": "مَا شَاءَ اللَّهُ لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ",
+          "translation": {
+            "en": "Whatever Allah wishes, it happens. There is no power and strength except with Allah.",
+            "ar": "ما شاء الله لا حول ولا قوة إلا بالله",
+            "ur": "اللہ جو چاہتا ہے وہی ہوتا ہے۔ اللہ کے سوا کوئی طاقت اور قوت نہیں۔",
+            "fr": "Ce qu'Allah veut se produit. Il n'y a de puissance ni de force qu'en Allah.",
+            "tr": "Allah ne dilerse o olur. Allah'tan başka güç ve kuvvet yoktur.",
+            "id": "Apa yang Allah kehendaki, itu terjadi. Tiada daya dan kekuatan kecuali dengan Allah.",
+            "bn": "আল্লাহ যা চান তাই হয়। আল্লাহ ছাড়া কোনো শক্তি ও ক্ষমতা নেই।",
+            "ms": "Apa yang Allah kehendaki, itu berlaku. Tiada daya dan kekuatan kecuali dengan Allah.",
+            "ta": "அல்லாஹ் நாடியது நடக்கும். அல்லாஹ்வைத் தவிர எந்த சக்தியும் வலிமையும் இல்லை.",
+            "ml": "അല്ലാഹു ഉദ്ദേശിക്കുന്നത് സംഭവിക്കുന്നു. അല്ലാഹുവല്ലാതെ ഒരു ശക്തിയും കഴിവും ഇല്ല."
+          },
+          "reference": "Quran 18:39",
+          "times": 3
+        },
+        {
+          "id": "sp-5",
+          "title": { "en": "For Avoiding Bad Dreams", "ar": "لتجنب الكوابيس", "ur": "برے خوابوں سے بچنے کے لیے", "fr": "Pour éviter les mauvais rêves", "tr": "Kötü rüyalardan korunmak için", "id": "Untuk menghindari mimpi buruk", "bn": "দুঃস্বপ্ন এড়াতে", "ms": "Untuk mengelakkan mimpi buruk", "ta": "கெட்ட கனவுகளை தவிர்க்க", "ml": "മോശം സ്വപ്നങ്ങൾ ഒഴിവാക്കാൻ" },
+          "arabic": "لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ يُحْيِي وَيُمِيتُ وَهُوَ حَيٌّ لَا يَمُوتُ",
+          "translation": {
+            "en": "There is no god but Allah alone, without partner. To Him belongs the dominion and to Him belongs all praise. He gives life and He causes death, and He is the Living who does not die.",
+            "ar": "لا إله إلا الله وحده لا شريك له له الملك وله الحمد يحيي ويميت وهو حي لا يموت",
+            "ur": "اللہ کے سوا کوئی معبود نہیں، وہ اکیلا ہے، اس کا کوئی شریک نہیں، بادشاہت اسی کی ہے اور تمام تعریف اسی کے لیے ہے، وہ زندہ کرتا ہے اور وہی مارتا ہے، اور وہ زندہ ہے نہیں مرتا۔",
+            "fr": "Il n'y a de dieu qu'Allah seul, sans associé. À Lui appartient la royauté et à Lui appartient toute louange. Il donne la vie et Il donne la mort, et Il est le Vivant qui ne meurt pas.",
+            "tr": "Allah'tan başka ilah yoktur, O tektir, ortağı yoktur. Mülk O'nundur, hamd O'nadır. O diriltir ve öldürür, O ölmeyen Hayy'dır.",
+            "id": "Tiada tuhan selain Allah Yang Maha Esa, tiada sekutu bagi-Nya. Bagi-Nya kerajaan dan bagi-Nya pujian. Dia menghidupkan dan mematikan, dan Dia Yang Hidup yang tidak mati.",
+            "bn": "আল্লাহ ছাড়া কোনো ইলাহ নেই, তিনি একক, তাঁর কোনো শরীক নেই। কর্তৃত্ব তাঁরই এবং সমস্ত প্রশংসা তাঁরই। তিনি জীবন দান করেন এবং মৃত্যু দান করেন, এবং তিনি চিরঞ্জীব যিনি মরেন না।",
+            "ms": "Tiada Tuhan selain Allah Yang Maha Esa, tiada sekutu bagi-Nya. Bagi-Nya kerajaan dan bagi-Nya pujian. Dia menghidupkan dan mematikan, dan Dia Yang Hidup yang tidak mati.",
+            "ta": "அல்லாஹ் தவிர வணக்கத்திற்குரியவர் இல்லை, அவன் ஒற்றையானவன், அவனுக்கு இணையில்லை. ஆளுகை அவனுக்கே, புகழ் அவனுக்கே. அவன் உயிர் கொடுக்கிறான், மரணம் அளிக்கிறான், அவன் சாகாத வாழ்வான்.",
+            "ml": "അല്ലാഹു അല്ലാതെ ആരാധനയർഹനായ ദൈവമില്ല, അവൻ ഒറ്റവനാണ്, അവന് പങ്കാളികളില്ല. ആധിപത്യം അവന്റേതാണ്, സ്തുതി അവന്റേതാണ്. അവൻ ജീവിപ്പിക്കുകയും കൊല്ലുകയും ചെയ്യുന്നു, അവൻ മരിക്കാത്ത ജീവനാണ്."
+          },
+          "reference": "Traditional",
+          "times": 10
+        },
+        {
+          "id": "sp-6",
+          "title": { "en": "For Protection from Grave Squeeze", "ar": "للحماية من ضغطة القبر", "ur": "قبر کی تنگی سے حفاظت کے لیے", "fr": "Pour la protection de l'étreinte de la tombe", "tr": "Kabir sıkışmasından korunmak için", "id": "Untuk perlindungan dari himpitan kubur", "bn": "কবরের সংকোচন থেকে সুরক্ষার জন্য", "ms": "Untuk perlindungan dari himpitan kubur", "ta": "கப்ரின் நெருக்கடியிலிருந்து பாதுகாப்புக்கு", "ml": "ഖബ്റിന്റെ ഞെരുക്കത്തിൽ നിന്ന് സംരക്ഷിക്കാൻ" },
+          "arabic": "اللَّهُمَّ بَاعِدْ بَيْنِي وَبَيْنَ خَطَايَايَ كَمَا بَاعَدْتَ بَيْنَ الْمَشْرِقِ وَالْمَغْرِبِ",
+          "translation": {
+            "en": "O Allah, distance me from my sins as You have distanced the East from the West.",
+            "ar": "اللهم باعد بيني وبين خطاياي كما باعدت بين المشرق والمغرب",
+            "ur": "اے اللہ! مجھے میرے گناہوں سے اتنا دور کر جتنا تو نے مشرق اور مغرب کو دور کیا ہے۔",
+            "fr": "Ô Allah, éloigne-moi de mes péchés comme Tu as éloigné l'Orient de l'Occident.",
+            "tr": "Allah'ım! Doğuyu Batı'dan uzaklaştırdığın gibi beni günahlarımdan uzaklaştır.",
+            "id": "Ya Allah, jauhkanlah aku dari dosa-dosaku sebagaimana Engkau menjauhkan timur dari barat.",
+            "bn": "হে আল্লাহ, তুমি পূর্বকে পশ্চিম থেকে দূরে সরিয়েছ তেমনি আমাকে আমার গুনাহ থেকে দূরে করো।",
+            "ms": "Ya Allah, jauhkanlah aku dari dosa-dosaku sebagaimana Engkau menjauhkan timur dari barat.",
+            "ta": "இறைவா, கிழக்கை மேற்கிலிருந்து நீ தூரமாக்கியது போல் என் பாவங்களிலிருந்து என்னை தூரமாக்குவாயாக.",
+            "ml": "അല്ലാഹുവേ, കിഴക്കിനെ പടിഞ്ഞാറിൽ നിന്ന് നീ അകറ്റിയതുപോലെ എന്റെ പാപങ്ങളിൽ നിന്ന് എന്നെ അകറ്റണമേ."
+          },
+          "reference": "Bukhari, Muslim",
+          "times": 1
+        },
+        {
+          "id": "sp-7",
+          "title": { "en": "For All Purposes (Comprehensive Dua)", "ar": "لجميع الأغراض", "ur": "تمام مقاصد کے لیے", "fr": "Pour tous les besoins", "tr": "Tüm amaçlar için", "id": "Untuk semua keperluan", "bn": "সকল উদ্দেশ্যে", "ms": "Untuk semua tujuan", "ta": "அனைத்து நோக்கங்களுக்கும்", "ml": "എല്ലാ ആവശ്യങ്ങൾക്കും" },
+          "arabic": "إِلَهِي بِأَخَصِّ صِفَاتِكَ وَبِعِزِّ جَلَالِكَ وَبِأَعْظَمِ أَسْمَائِكَ أَسْأَلُكَ زِيَادَةً فِي الْعِلْمِ وَصِحَّةً فِي الْجِسْمِ وَطُولًا فِي الْعُمُرِ فِي طَاعَتِكَ وَسَعَةً فِي الرِّزْقِ وَتَوْبَةً قَبْلَ الْمَوْتِ وَرَاحَةً عِنْدَ الْمَوْتِ وَمَغْفِرَةً بَعْدَ الْمَوْتِ",
+          "translation": {
+            "en": "O my God, by Your most special attributes, by the might of Your majesty, and by Your greatest names, I ask You for increase in knowledge, health of body, length of life in Your obedience, abundance in sustenance, repentance before death, ease at death, and forgiveness after death.",
+            "ar": "إلهي بأخص صفاتك وبعز جلالك وبأعظم أسمائك أسألك زيادة في العلم وصحة في الجسم وطولا في العمر في طاعتك وسعة في الرزق وتوبة قبل الموت وراحة عند الموت ومغفرة بعد الموت",
+            "ur": "اے میرے الہٰی! تیری خاص صفات، تیری جلال کی عزت اور تیرے عظیم ناموں کے واسطے سے میں تجھ سے علم میں اضافہ، جسم میں صحت، تیری اطاعت میں عمر میں طوالت، رزق میں وسعت، موت سے پہلے توبہ، موت کے وقت آرام اور موت کے بعد مغفرت مانگتا ہوں۔",
+            "fr": "Ô mon Dieu, par Tes attributs les plus spéciaux, par la puissance de Ta majesté et par Tes plus grands noms, je Te demande l'augmentation du savoir, la santé du corps, la longueur de la vie dans Ton obéissance, l'abondance de la subsistance, le repentir avant la mort, le repos à la mort et le pardon après la mort.",
+            "tr": "Ey ilahım, en özel sıfatlarınla, celalinin izzetiyle ve en büyük isimlerinle, Senden ilimde artış, bedende sağlık, itaatinde ömrün uzunluğu, rızıkta bolluk, ölüm öncesi tövbe, ölüm anında rahatlık ve ölüm sonrası bağışlanma istiyorum.",
+            "id": "Ya Tuhanku, dengan sifat-sifat-Mu yang paling khusus, dengan keagungan keagungan-Mu, dan dengan nama-nama-Mu yang paling agung, aku memohon kepada-Mu peningkatan ilmu, kesehatan tubuh, panjang umur dalam ketaatan-Mu, kelimpahan rezeki, taubat sebelum mati, kemudahan saat mati, dan ampunan setelah mati.",
+            "bn": "হে আমার ইলাহ, তোমার সবচেয়ে বিশেষ গুণাবলী, তোমার মহিমার প্রতাপ এবং তোমার সবচেয়ে মহান নামের মাধ্যমে, আমি তোমার কাছে জ্ঞান বৃদ্ধি, শরীরের সুস্থতা, তোমার আনুগত্যে দীর্ঘ জীবন, রিযিকে প্রাচুর্য, মৃত্যুর আগে তওবা, মৃত্যুকালে আরাম এবং মৃত্যুর পরে ক্ষমা চাই।",
+            "ms": "Ya Tuhanku, dengan sifat-sifat-Mu yang paling khusus, dengan keagungan keagungan-Mu, dan dengan nama-nama-Mu yang paling agung, aku memohon kepada-Mu peningkatan ilmu, kesehatan tubuh, panjang umur dalam ketaatan-Mu, kelimpahan rezeki, taubat sebelum mati, kemudahan saat mati, dan ampunan setelah mati.",
+            "ta": "என் இறைவா, உமது மிகச் சிறப்பான பண்புகளால், உமது மகிமையின் வல்லமையால், மற்றும் உமது மிகப் பெரிய பெயர்களால், அறிவு அதிகரிப்பு, உடல் நலம், உமது கீழ்ப்படிதலில் நீண்ட ஆயுள், உபஜீவனத்தில் செழிப்பு, மரணத்திற்கு முன் பாவமன்னிப்பு, மரணத்தின் போது இளைப்பாறுதல் மற்றும் மரணத்திற்கு பின் மன்னிப்பு உம்மிடம் கேட்கிறேன்.",
+            "ml": "എന്റെ ദൈവമേ, നിന്റെ ഏറ്റവും പ്രത്യേക ഗുണങ്ങളാൽ, നിന്റെ മഹത്വത്തിന്റെ ശക്തിയാൽ, നിന്റെ ഏറ്റവും മഹത്തായ നാമങ്ങളാൽ, അറിവിലെ വർദ്ധനവ്, ശരീരത്തിന്റെ ആരോഗ്യം, നിന്റെ അനുസരണത്തിൽ ആയുസ്സിന്റെ നീളം, ഉപജീവനത്തിന്റെ സമൃദ്ധി, മരണത്തിന് മുമ്പുള്ള പശ്ചാത്താപം, മരണസമയത്തെ ആശ്വാസം, മരണശേഷമുള്ള പാപമോചനം എന്നിവ നിന്നോട് ചോദിക്കുന്നു."
+          },
+          "reference": "Traditional",
+          "times": 1
+        }
+      ]
+    }
+  ]
+}

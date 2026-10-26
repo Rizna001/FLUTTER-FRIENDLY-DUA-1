@@ -7,6 +7,7 @@ import importantTextsData from './data/important-texts.json';
 import allRabbanaCategory from './data/allRabbanaCategory.json';
 import allSalawatsCategory from './data/allSalawatsCategory.json';
 import prophetNamesCategory from './data/prophet-names-category.json';
+import missingDuasData from './data/missing-duas.json';
 import { ThemeProvider, useTheme } from './contexts/ThemeContext';
 import { BookmarksProvider, useBookmarks } from './contexts/BookmarksContext';
 import { NotificationsProvider } from './contexts/NotificationsContext';
@@ -34,7 +35,8 @@ const mergedCategories = [
   ...(importantTextsData.categories || []),
   ...(allRabbanaCategory.categories || []),
   ...(allSalawatsCategory.categories || []),
-  ...(prophetNamesCategory.categories || [])
+  ...(prophetNamesCategory.categories || []),
+  ...(missingDuasData.categories || [])
 ];
 const duasData = { categories: mergedCategories, languages: originalData.languages };
 
