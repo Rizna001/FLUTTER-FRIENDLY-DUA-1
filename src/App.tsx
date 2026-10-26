@@ -3,6 +3,7 @@ import expandedData from './data/expanded-duas.json';
 import originalData from './data/duas.json';
 import additionalData from './data/additional-duas.json';
 import prayerDuasData from './data/prayer-duas.json';
+import importantTextsData from './data/important-texts.json';
 import { ThemeProvider, useTheme } from './contexts/ThemeContext';
 import { BookmarksProvider, useBookmarks } from './contexts/BookmarksContext';
 import { NotificationsProvider } from './contexts/NotificationsContext';
@@ -17,13 +18,16 @@ import AsmaUlAnbiyaView from './components/AsmaUlAnbiyaView';
 import DailyProgress from './components/DailyProgress';
 import SalahTracker from './components/SalahTracker';
 import DuaReminder from './components/DuaReminder';
+import TasbeehCounter from './components/TasbeehCounter';
+import ImportantTextViews from './components/ImportantTextViews';
 
 // Merge all data sources
 const mergedCategories = [
   ...(originalData.categories || []), 
   ...(expandedData.categories || []),
   ...(additionalData.categories || []),
-  ...(prayerDuasData.categories || [])
+  ...(prayerDuasData.categories || []),
+  ...(importantTextsData.categories || [])
 ];
 const duasData = { categories: mergedCategories, languages: originalData.languages };
 
@@ -60,6 +64,7 @@ function AppContent() {
   const [showLanguageMenu, setShowLanguageMenu] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
   const [viewMode, setViewMode] = useState<ViewMode>('categories');
+  const [showImportantTexts, setShowImportantTexts] = useState(false);
   const { isDark } = useTheme();
   const { bookmarks } = useBookmarks();
 
@@ -157,6 +162,13 @@ function AppContent() {
           </div>
         )}
 
+        {/* Tasbeeh Counter */}
+        {viewMode === 'categories' && !selectedCategory && !selectedDua && (
+          <div className="mb-8">
+            <TasbeehCounter language={language} />
+          </div>
+        )}
+
         {/* Categories Grid */}
         {viewMode === 'categories' && !selectedCategory && !selectedDua && (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
@@ -185,8 +197,13 @@ function AppContent() {
           <AsmaUlAnbiyaView language={language} onBack={() => setSelectedCategory(null)} />
         )}
 
+        {/* Important Islamic Texts View */}
+        {selectedCategory && !selectedDua && selectedCategory.id === 'important-texts' && (
+          <ImportantTextViews language={language} onBack={() => setSelectedCategory(null)} />
+        )}
+
         {/* Regular Category View */}
-        {selectedCategory && !selectedDua && selectedCategory.id !== 'asma-ul-husna-complete' && selectedCategory.id !== 'asma-ul-anbiya-complete' && (
+        {selectedCategory && !selectedDua && selectedCategory.id !== 'asma-ul-husna-complete' && selectedCategory.id !== 'asma-ul-anbiya-complete' && selectedCategory.id !== 'important-texts' && (
           <div>
             <button
               onClick={() => setSelectedCategory(null)}
