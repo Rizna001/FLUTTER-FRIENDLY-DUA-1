@@ -1,15 +1,19 @@
 import { useState, useMemo } from 'react';
 import expandedData from './data/expanded-duas.json';
 import originalData from './data/duas.json';
+import { ThemeProvider, useTheme } from './contexts/ThemeContext';
+import { BookmarksProvider, useBookmarks } from './contexts/BookmarksContext';
+import { NotificationsProvider } from './contexts/NotificationsContext';
+import CategoryCard from './components/CategoryCard';
+import DuaDetail from './components/DuaDetail';
+import Header from './components/Header';
+import SearchBar from './components/SearchBar';
+import Settings from './components/Settings';
+import BookmarksView from './components/BookmarksView';
 
 // Merge both data sources
 const mergedCategories = [...(originalData.categories || []), ...(expandedData.categories || [])];
 const duasData = { categories: mergedCategories, languages: originalData.languages };
-import CategoryCard from './components/CategoryCard';
-import DuaDetail from './components/DuaDetail';
-
-import Header from './components/Header';
-import SearchBar from './components/SearchBar';
 
 type LanguageCode = 'en' | 'ar' | 'ur' | 'fr' | 'tr' | 'id' | 'bn' | 'ms' | 'ta' | 'ml';
 
@@ -34,12 +38,18 @@ interface Category {
   duas: Dua[];
 }
 
-export default function App() {
+type ViewMode = 'categories' | 'bookmarks';
+
+function AppContent() {
   const [selectedCategory, setSelectedCategory] = useState<Category | null>(null);
   const [selectedDua, setSelectedDua] = useState<Dua | null>(null);
   const [language, setLanguage] = useState<LanguageCode>('en');
   const [searchQuery, setSearchQuery] = useState('');
   const [showLanguageMenu, setShowLanguageMenu] = useState(false);
+  const [showSettings, setShowSettings] = useState(false);
+  const [viewMode, setViewMode] = useState<ViewMode>('categories');
+  const { isDark } = useTheme();
+  const { bookmarks } = useBookmarks();
 
   const categories: Category[] = duasData.categories as Category[];
   const languages = duasData.languages;
@@ -60,32 +70,62 @@ export default function App() {
 
   const currentLanguage = languages.find(l => l.code === language) || languages[0];
 
+  const handleDuaClickFromBookmarks = (dua: any, categoryId: string) => {
+    const category = categories.find(c => c.id === categoryId);
+    if (category) {
+      setSelectedCategory(category);
+      setSelectedDua(dua);
+      setViewMode('categories');
+    }
+  };
+
+  const bannerText = {
+    en: 'Select a category to view duas',
+    ar: 'اختر فئة لعرض الأدعية',
+    ur: 'دعائیں دیکھنے کے لیے ایک زمرہ منتخب کریں',
+    fr: 'Sélectionnez une catégorie pour voir les duas',
+    tr: 'Duaları görmek için bir kategori seçin',
+    id: 'Pilih kategori untuk melihat doa',
+    bn: 'দোয়া দেখতে একটি বিভাগ নির্বাচন করুন',
+    ms: 'Pilih kategori untuk melihat doa',
+    ta: 'துஆக்களைப் பார்க்க ஒரு வகையைத் தேர்ந்தெடுக்கவும்',
+    ml: 'ദുആകൾ കാണാൻ ഒരു വിഭാഗം തിരഞ്ഞെടുക്കുക',
+  };
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-emerald-50">
-      <Header language={language} languages={languages} showLanguageMenu={showLanguageMenu} setShowLanguageMenu={setShowLanguageMenu} setLanguage={setLanguage} currentLanguage={currentLanguage} />
+    <div className={`min-h-screen transition-colors duration-300 ${
+      isDark 
+        ? 'bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900' 
+        : 'bg-gradient-to-br from-slate-50 via-white to-emerald-50'
+    }`}>
+      <Header 
+        language={language} 
+        languages={languages} 
+        showLanguageMenu={showLanguageMenu} 
+        setShowLanguageMenu={setShowLanguageMenu} 
+        setLanguage={setLanguage} 
+        currentLanguage={currentLanguage}
+        onSettingsClick={() => setShowSettings(true)}
+        viewMode={viewMode}
+        setViewMode={setViewMode}
+        bookmarksCount={bookmarks.length}
+      />
       
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Search Bar */}
         <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} language={language} />
 
-        {/* Language Info Banner */}
-        <div className="mb-8 text-center">
-          <p className="text-sm text-gray-500">
-            {language === 'en' ? 'Select a category to view duas' : 
-             language === 'ar' ? 'اختر فئة لعرض الأدعية' :
-             language === 'ur' ? 'دعائیں دیکھنے کے لیے ایک زمرہ منتخب کریں' :
-             language === 'fr' ? 'Sélectionnez une catégorie pour voir les duas' :
-             language === 'tr' ? 'Duaları görmek için bir kategori seçin' :
-             language === 'id' ? 'Pilih kategori untuk melihat doa' :
-             language === 'bn' ? 'দোয়া দেখতে একটি বিভাগ নির্বাচন করুন' :
-             language === 'ms' ? 'Pilih kategori untuk melihat doa' :
-             language === 'ta' ? 'துஆக்களைப் பார்க்க ஒரு வகையைத் தேர்ந்தெடுக்கவும்' :
-             'ദുആകൾ കാണാൻ ഒരു വിഭാഗം തിരഞ്ഞെടുക്കുക'}
-          </p>
-        </div>
+        {/* View Mode Toggle */}
+        {viewMode === 'categories' && !selectedCategory && !selectedDua && (
+          <div className="mb-8 text-center">
+            <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
+              {bannerText[language as keyof typeof bannerText] || bannerText.en}
+            </p>
+          </div>
+        )}
 
         {/* Categories Grid */}
-        {!selectedCategory && !selectedDua && (
+        {viewMode === 'categories' && !selectedCategory && !selectedDua && (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
             {filteredCategories.map((category) => (
               <CategoryCard
@@ -98,17 +138,26 @@ export default function App() {
           </div>
         )}
 
+        {/* Bookmarks View */}
+        {viewMode === 'bookmarks' && !selectedCategory && !selectedDua && (
+          <BookmarksView language={language} onDuaClick={handleDuaClickFromBookmarks} />
+        )}
+
         {/* Category View */}
         {selectedCategory && !selectedDua && (
           <div>
             <button
               onClick={() => setSelectedCategory(null)}
-              className="mb-6 flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors"
+              className={`mb-6 flex items-center gap-2 transition-colors ${
+                isDark ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'
+              }`}
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
-              <span>{language === 'en' ? 'Back to Categories' : language === 'ar' ? 'العودة للفئات' : language === 'ur' ? 'زمرہ جات پر واپس' : language === 'fr' ? 'Retour aux Catégories' : language === 'tr' ? 'Kategorilere Dön' : language === 'id' ? 'Kembali ke Kategori' : language === 'bn' ? 'বিভাগে ফিরে যান' : language === 'ms' ? 'Kembali ke Kategori' : language === 'ta' ? 'வகைகளுக்குத் திரும்பு' : 'വിഭാഗങ്ങളിലേക്ക് മടങ്ങുക'}</span>
+              <span>
+                {language === 'en' ? 'Back to Categories' : language === 'ar' ? 'العودة للفئات' : language === 'ur' ? 'زمرہ جات پر واپس' : language === 'fr' ? 'Retour aux Catégories' : language === 'tr' ? 'Kategorilere Dön' : language === 'id' ? 'Kembali ke Kategori' : language === 'bn' ? 'বিভাগে ফিরে যান' : language === 'ms' ? 'Kembali ke Kategori' : language === 'ta' ? 'வகைகளுக்குத் திரும்பு' : 'വിഭാഗങ്ങളിലേക്ക് മടങ്ങുക'}
+              </span>
             </button>
             
             {/* Category Header */}
@@ -128,29 +177,29 @@ export default function App() {
                 <div
                   key={dua.id}
                   onClick={() => setSelectedDua(dua)}
-                  className={`${selectedCategory.bg} ${selectedCategory.border} border rounded-xl p-5 cursor-pointer hover:shadow-md transition-all duration-200 hover:scale-[1.01]`}
+                  className={`${isDark ? 'bg-slate-800 border-slate-700 hover:border-slate-600' : `${selectedCategory.bg} ${selectedCategory.border} hover:shadow-md`} border rounded-xl p-5 cursor-pointer transition-all duration-200 hover:scale-[1.01]`}
                 >
                   <div className="flex items-start gap-4">
                     <div className={`w-8 h-8 rounded-full bg-gradient-to-r ${selectedCategory.gradient} flex items-center justify-center text-white text-sm font-bold flex-shrink-0`}>
                       {index + 1}
                     </div>
                     <div className="flex-1 min-w-0">
-                      <h3 className={`font-semibold ${selectedCategory.text} text-lg mb-1`}>
+                      <h3 className={`font-semibold ${isDark ? 'text-white' : selectedCategory.text} text-lg mb-1`}>
                         {dua.title[language] || dua.title.en}
                       </h3>
-                      <p className="text-gray-600 text-sm line-clamp-2">
+                      <p className={`${isDark ? 'text-gray-400' : 'text-gray-600'} text-sm line-clamp-2`}>
                         {dua.translation[language] || dua.translation.en}
                       </p>
                       <div className="flex items-center gap-3 mt-2">
-                        <span className="text-xs text-gray-400">{dua.reference}</span>
+                        <span className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>{dua.reference}</span>
                         {dua.times > 1 && (
-                          <span className="text-xs bg-white/80 px-2 py-0.5 rounded-full text-gray-500">
+                          <span className={`text-xs ${isDark ? 'bg-slate-700 text-gray-400' : 'bg-white/80 text-gray-500'} px-2 py-0.5 rounded-full`}>
                             ×{dua.times}
                           </span>
                         )}
                       </div>
                     </div>
-                    <svg className="w-5 h-5 text-gray-400 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className={`w-5 h-5 flex-shrink-0 mt-1 ${isDark ? 'text-gray-500' : 'text-gray-400'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
                   </div>
@@ -172,9 +221,9 @@ export default function App() {
       </main>
 
       {/* Footer */}
-      <footer className="mt-16 py-8 border-t border-gray-100">
+      <footer className={`mt-16 py-8 border-t ${isDark ? 'border-slate-800' : 'border-gray-100'}`}>
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <p className="text-gray-400 text-sm">
+          <p className={`text-sm ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>
             {language === 'en' ? 'All duas are from authentic sources (Quran & Sunnah)' :
              language === 'ar' ? 'جميع الأدعية من مصادر صحيحة (القرآن والسنة)' :
              language === 'ur' ? 'تمام دعائیں مستند مصادر سے ہیں (قرآن و سنت)' :
@@ -186,9 +235,24 @@ export default function App() {
              language === 'ta' ? 'அனைத்து துஆக்களும் நம்பகமான ஆதாரங்களிலிருந்து (குர்ஆன் & சுன்னா)' :
              'എല്ലാ ദുആകളും ആധികാരികമായ ഉറവിടങ്ങളിൽ നിന്നാണ് (ഖുർആനും സുന്നത്തും)'}
           </p>
-          <p className="text-gray-300 text-xs mt-2">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ</p>
+          <p className={`text-xs mt-2 ${isDark ? 'text-gray-600' : 'text-gray-300'}`}>بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ</p>
         </div>
       </footer>
+
+      {/* Settings Modal */}
+      <Settings isOpen={showSettings} onClose={() => setShowSettings(false)} language={language} />
     </div>
+  );
+}
+
+export default function App() {
+  return (
+    <ThemeProvider>
+      <BookmarksProvider>
+        <NotificationsProvider>
+          <AppContent />
+        </NotificationsProvider>
+      </BookmarksProvider>
+    </ThemeProvider>
   );
 }

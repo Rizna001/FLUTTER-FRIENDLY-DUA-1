@@ -1,4 +1,7 @@
 import { useState } from 'react';
+import { useTheme } from '../contexts/ThemeContext';
+import { useBookmarks } from '../contexts/BookmarksContext';
+import AudioPlayer from './AudioPlayer';
 
 export default function DuaDetail({
   dua,
@@ -13,6 +16,9 @@ export default function DuaDetail({
 }) {
   const [copied, setCopied] = useState(false);
   const [fontSize, setFontSize] = useState<'sm' | 'md' | 'lg' | 'xl'>('lg');
+  const [bookmarkAnimating, setBookmarkAnimating] = useState(false);
+  const { isDark } = useTheme();
+  const { isBookmarked, toggleBookmark } = useBookmarks();
 
   const arabicFontSize = {
     sm: 'text-2xl',
@@ -27,6 +33,23 @@ export default function DuaDetail({
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
+
+  const handleBookmark = () => {
+    setBookmarkAnimating(true);
+    toggleBookmark({
+      id: dua.id,
+      categoryId: category.id,
+      title: dua.title,
+      arabic: dua.arabic,
+      translation: dua.translation,
+      reference: dua.reference,
+      times: dua.times,
+      bookmarkedAt: Date.now(),
+    });
+    setTimeout(() => setBookmarkAnimating(false), 400);
+  };
+
+  const isCurrentlyBookmarked = isBookmarked(dua.id);
 
   const reciteLabel = language === 'en' ? 'Recite' :
     language === 'ar' ? 'اقرأ' :
@@ -66,7 +89,9 @@ export default function DuaDetail({
       {/* Back Button */}
       <button
         onClick={onBack}
-        className="mb-6 flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors"
+        className={`mb-6 flex items-center gap-2 transition-colors ${
+          isDark ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'
+        }`}
       >
         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -75,12 +100,36 @@ export default function DuaDetail({
       </button>
 
       {/* Dua Card */}
-      <div className="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
+      <div className={`rounded-2xl shadow-xl border overflow-hidden ${
+        isDark ? 'bg-slate-800 border-slate-700' : 'bg-white border-gray-100'
+      }`}>
         {/* Header */}
         <div className={`bg-gradient-to-r ${category.gradient} p-6 text-white`}>
-          <div className="flex items-center gap-3 mb-2">
-            <span className="text-2xl">{category.icon}</span>
-            <span className="text-sm text-white/80">{category.name[language] || category.name.en}</span>
+          <div className="flex items-center justify-between mb-2">
+            <div className="flex items-center gap-3">
+              <span className="text-2xl">{category.icon}</span>
+              <span className="text-sm text-white/80">{category.name[language] || category.name.en}</span>
+            </div>
+            {/* Bookmark Button */}
+            <button
+              onClick={handleBookmark}
+              className={`p-2 rounded-full transition-all ${
+                isCurrentlyBookmarked 
+                  ? 'bg-white/30 hover:bg-white/40' 
+                  : 'bg-white/10 hover:bg-white/20'
+              } ${bookmarkAnimating ? 'animate-heart' : ''}`}
+              title={isCurrentlyBookmarked ? 'Remove bookmark' : 'Add bookmark'}
+            >
+              {isCurrentlyBookmarked ? (
+                <svg className="w-6 h-6 text-yellow-300" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M5 4a2 2 0 012-2h6a2 2 0 012 2v14l-5-2.5L5 18V4z" />
+                </svg>
+              ) : (
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
+                </svg>
+              )}
+            </button>
           </div>
           <h2 className="text-xl font-bold">{dua.title[language] || dua.title.en}</h2>
           <div className="flex items-center gap-3 mt-2">
@@ -90,9 +139,9 @@ export default function DuaDetail({
         </div>
 
         {/* Arabic Text */}
-        <div className="p-6 border-b border-gray-100">
+        <div className={`p-6 border-b ${isDark ? 'border-slate-700' : 'border-gray-100'}`}>
           <div className="flex items-center justify-between mb-4">
-            <span className="text-xs font-medium text-gray-400 uppercase tracking-wider">
+            <span className={`text-xs font-medium uppercase tracking-wider ${isDark ? 'text-gray-400' : 'text-gray-400'}`}>
               {language === 'en' ? 'Arabic Text' : language === 'ar' ? 'النص العربي' : language === 'ur' ? 'عربی متن' : language === 'fr' ? 'Texte Arabe' : language === 'tr' ? 'Arapça Metin' : language === 'id' ? 'Teks Arab' : language === 'bn' ? 'আরবি টেক্সট' : language === 'ms' ? 'Teks Arab' : language === 'ta' ? 'அரபி உரை' : 'അറബിക് പാഠം'}
             </span>
             {/* Font Size Controls */}
@@ -103,46 +152,50 @@ export default function DuaDetail({
                   onClick={() => setFontSize(size)}
                   className={`w-7 h-7 rounded-md text-xs font-bold transition-colors ${
                     fontSize === size
-                      ? 'bg-emerald-100 text-emerald-700'
-                      : 'text-gray-400 hover:text-gray-600 hover:bg-gray-100'
+                      ? isDark ? 'bg-emerald-900 text-emerald-300' : 'bg-emerald-100 text-emerald-700'
+                      : isDark ? 'text-gray-400 hover:text-gray-200 hover:bg-slate-700' : 'text-gray-400 hover:text-gray-600 hover:bg-gray-100'
                   }`}
                 >
-                  {size === 'sm' ? 'A' : size === 'md' ? 'A' : size === 'lg' ? 'A' : 'A'}
-                  <span className="sr-only">{size}</span>
+                  A
                 </button>
               ))}
             </div>
           </div>
           <p
             dir="rtl"
-            className={`${arabicFontSize[fontSize]} leading-loose text-center font-arabic text-gray-800 py-4`}
+            className={`${arabicFontSize[fontSize]} leading-loose text-center font-arabic ${isDark ? 'text-gray-100' : 'text-gray-800'} py-4`}
             style={{ fontFamily: "'Amiri', 'Traditional Arabic', 'Noto Naskh Arabic', serif" }}
           >
             {dua.arabic}
           </p>
         </div>
 
+        {/* Audio Player */}
+        <div className={`p-4 border-b ${isDark ? 'border-slate-700' : 'border-gray-100'}`}>
+          <AudioPlayer arabicText={dua.arabic} language={language} />
+        </div>
+
         {/* Translation */}
-        <div className="p-6 border-b border-gray-100 bg-gray-50/50">
-          <span className="text-xs font-medium text-gray-400 uppercase tracking-wider mb-3 block">
+        <div className={`p-6 border-b ${isDark ? 'border-slate-700 bg-slate-900/50' : 'border-gray-100 bg-gray-50/50'}`}>
+          <span className={`text-xs font-medium uppercase tracking-wider mb-3 block ${isDark ? 'text-gray-400' : 'text-gray-400'}`}>
             {language === 'en' ? 'Translation' : language === 'ar' ? 'الترجمة' : language === 'ur' ? 'ترجمہ' : language === 'fr' ? 'Traduction' : language === 'tr' ? 'Çeviri' : language === 'id' ? 'Terjemahan' : language === 'bn' ? 'অনুবাদ' : language === 'ms' ? 'Terjemahan' : language === 'ta' ? 'மொழிபெயர்ப்பு' : 'വിവർത്തനം'}
           </span>
-          <p className="text-gray-700 text-lg leading-relaxed">
+          <p className={`text-lg leading-relaxed ${isDark ? 'text-gray-200' : 'text-gray-700'}`}>
             {dua.translation[language] || dua.translation.en}
           </p>
         </div>
 
         {/* Actions */}
-        <div className="p-4 flex items-center justify-between bg-white">
+        <div className={`p-4 flex items-center justify-between ${isDark ? 'bg-slate-800' : 'bg-white'}`}>
           <div className="flex items-center gap-2">
-            <span className="text-xs text-gray-400">{dua.reference}</span>
+            <span className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-400'}`}>{dua.reference}</span>
           </div>
           <button
             onClick={handleCopy}
             className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all ${
               copied
-                ? 'bg-emerald-100 text-emerald-700'
-                : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                ? isDark ? 'bg-emerald-900 text-emerald-300' : 'bg-emerald-100 text-emerald-700'
+                : isDark ? 'bg-slate-700 text-gray-200 hover:bg-slate-600' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
             }`}
           >
             {copied ? (
@@ -172,6 +225,7 @@ export default function DuaDetail({
 
 function DuaCounter({ language, targetTimes }: { language: string; targetTimes: number }) {
   const [count, setCount] = useState(0);
+  const { isDark } = useTheme();
 
   const label = language === 'en' ? 'Dua Counter' :
     language === 'ar' ? 'عداد الذكر' :
@@ -185,12 +239,16 @@ function DuaCounter({ language, targetTimes }: { language: string; targetTimes: 
     'ദുആ എണ്ണി';
 
   return (
-    <div className="mt-6 bg-white rounded-2xl shadow-lg border border-gray-100 p-6 text-center">
-      <h3 className="text-sm font-medium text-gray-500 mb-4">{label}</h3>
+    <div className={`mt-6 rounded-2xl shadow-lg border p-6 text-center ${
+      isDark ? 'bg-slate-800 border-slate-700' : 'bg-white border-gray-100'
+    }`}>
+      <h3 className={`text-sm font-medium mb-4 ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{label}</h3>
       <div className="flex items-center justify-center gap-6">
         <button
           onClick={() => setCount(Math.max(0, count - 1))}
-          className="w-12 h-12 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center text-gray-600 transition-colors"
+          className={`w-12 h-12 rounded-full flex items-center justify-center transition-colors ${
+            isDark ? 'bg-slate-700 hover:bg-slate-600 text-gray-300' : 'bg-gray-100 hover:bg-gray-200 text-gray-600'
+          }`}
         >
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 12H4" />
@@ -198,15 +256,17 @@ function DuaCounter({ language, targetTimes }: { language: string; targetTimes: 
         </button>
         
         <div className="text-center">
-          <div className={`text-4xl font-bold ${count >= targetTimes ? 'text-emerald-500' : 'text-gray-800'}`}>
+          <div className={`text-4xl font-bold ${count >= targetTimes ? 'text-emerald-500' : isDark ? 'text-white' : 'text-gray-800'}`}>
             {count}
           </div>
-          <div className="text-xs text-gray-400 mt-1">/ {targetTimes}</div>
+          <div className={`text-xs mt-1 ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>/ {targetTimes}</div>
         </div>
 
         <button
           onClick={() => setCount(count + 1)}
-          className="w-12 h-12 rounded-full bg-emerald-100 hover:bg-emerald-200 flex items-center justify-center text-emerald-600 transition-colors"
+          className={`w-12 h-12 rounded-full flex items-center justify-center transition-colors ${
+            isDark ? 'bg-emerald-900 hover:bg-emerald-800 text-emerald-300' : 'bg-emerald-100 hover:bg-emerald-200 text-emerald-600'
+          }`}
         >
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
@@ -216,7 +276,7 @@ function DuaCounter({ language, targetTimes }: { language: string; targetTimes: 
 
       <button
         onClick={() => setCount(0)}
-        className="mt-4 text-xs text-gray-400 hover:text-gray-600 transition-colors"
+        className={`mt-4 text-xs transition-colors ${isDark ? 'text-gray-500 hover:text-gray-300' : 'text-gray-400 hover:text-gray-600'}`}
       >
         {language === 'en' ? 'Reset' : language === 'ar' ? 'إعادة' : language === 'ur' ? 'ری سیٹ' : language === 'fr' ? 'Réinitialiser' : language === 'tr' ? 'Sıfırla' : language === 'id' ? 'Reset' : language === 'bn' ? 'রিসেট' : language === 'ms' ? 'Reset' : language === 'ta' ? 'மீட்டமை' : 'പുനഃക്രമീകരിക്കുക'}
       </button>
