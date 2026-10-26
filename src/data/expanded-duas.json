@@ -345,6 +345,230 @@
           "times": 1
         }
       ]
+    },
+    {
+      "id": "hajj-umrah",
+      "icon": "🕋",
+      "color": "amber",
+      "gradient": "from-amber-500 to-yellow-600",
+      "bg": "bg-amber-50",
+      "border": "border-amber-200",
+      "text": "text-amber-700",
+      "name": { "en": "Hajj & Umrah", "ar": "الحج والعمرة", "ur": "حج اور عمرہ", "fr": "Hajj et Omra", "tr": "Hac ve Umre", "id": "Haji dan Umrah", "bn": "হজ ও উমরাহ", "ms": "Haji dan Umrah", "ta": "ஹஜ் & உம்ரா", "ml": "ഹജ്ജും ഉംറയും" },
+      "duas": [
+        {
+          "id": "hu-1",
+          "title": { "en": "Talbiyah", "ar": "التلبية", "ur": "تلبیہ", "fr": "Talbiyah", "tr": "Telbiye", "id": "Talbiyah", "bn": "তালবিয়াহ", "ms": "Talbiyah", "ta": "தல்பியா", "ml": "തൽബിയ" },
+          "arabic": "لَبَّيْكَ اللَّهُمَّ لَبَّيْكَ، لَبَّيْكَ لاَ شَرِيكَ لَكَ لَبَّيْكَ، إِنَّ الْحَمْدَ وَالنِّعْمَةَ لَكَ وَالْمُلْكَ، لاَ شَرِيكَ لَكَ",
+          "translation": { "en": "Here I am at Your service, O Allah, here I am. Here I am, You have no partner, here I am. Verily all praise and blessings are Yours, and all sovereignty, You have no partner.", "ar": "لبيك اللهم لبيك، لبيك لا شريك لك لبيك، إن الحمد والنعمة لك والملك، لا شريك لك", "ur": "میں حاضر ہوں اے اللہ! میں حاضر ہوں، تیرا کوئی شریک نہیں، میں حاضر ہوں، بے شک تمام تعریف اور نعمت تیرے لیے ہے اور بادشاہت تیری ہے، تیرا کوئی شریک نہیں۔", "fr": "Me voici à Ton service, ô Allah, me voici. Me voici, Tu n'as pas d'associé, me voici. Certes, toute louange et grâce sont à Toi, ainsi que la souveraineté, Tu n'as pas d'associé.", "tr": "Emrindeyim Allah'ım, emrindeyim. Emrindeyim, Senin ortağın yoktur, emrindeyim. Şüphesiz hamd, nimet ve mülk Sanadır, ortağın yoktur.", "id": "Aku penuhi panggilan-Mu ya Allah, aku penuhi panggilan-Mu. Aku penuhi panggilan-Mu, tiada sekutu bagi-Mu, aku penuhi panggilan-Mu. Sesungguhnya segala puji, nikmat dan kerajaan adalah milik-Mu, tiada sekutu bagi-Mu.", "bn": "আমি হাজির হলাম হে আল্লাহ! আমি হাজির হলাম। আমি হাজির হলাম, তোমার কোনো শরীক নেই, আমি হাজির হলাম। নিশ্চয়ই সমস্ত প্রশংসা, নেয়ামত ও কর্তৃত্ব তোমারই, তোমার কোনো শরীক নেই।", "ms": "Aku penuhi panggilan-Mu ya Allah, aku penuhi panggilan-Mu. Aku penuhi panggilan-Mu, tiada sekutu bagi-Mu, aku penuhi panggilan-Mu. Sesungguhnya segala puji, nikmat dan kerajaan adalah milik-Mu, tiada sekutu bagi-Mu.", "ta": "நான் உமக்கு பதிலளிக்கிறேன் இறைவா, நான் பதிலளிக்கிறேன். நான் பதிலளிக்கிறேன், உமக்கு இணையில்லை, நான் பதிலளிக்கிறேன். நிச்சயமாக எல்லா புகழும், அருளும், ஆளுகையும் உமக்கே, உமக்கு இணையில்லை.", "ml": "ഞാൻ നിന്റെ വിളിക്ക് ഉത്തരം നൽകുന്നു അല്ലാഹുവേ, ഞാൻ ഉത്തരം നൽകുന്നു. ഞാൻ ഉത്തരം നൽകുന്നു, നിനക്ക് പങ്കാളികളില്ല, ഞാൻ ഉത്തരം നൽകുന്നു. തീർച്ചയായും എല്ലാ സ്തുതിയും അനുഗ്രഹവും ആധിപത്യവും നിന്റേതാണ്, നിനക്ക് പങ്കാളികളില്ല." },
+          "reference": "Bukhari 2/20",
+          "times": 1
+        },
+        {
+          "id": "hu-2",
+          "title": { "en": "When Seeing the Ka'bah", "ar": "عند رؤية الكعبة", "ur": "کعبہ دیکھنے پر", "fr": "En Voyant la Ka'bah", "tr": "Kabe'yi Görünce", "id": "Saat Melihat Ka'bah", "bn": "কাবা দেখার সময়", "ms": "Apabila Melihat Kaabah", "ta": "கஃபாவை காணும்போது", "ml": "കഅ്ബ കാണുമ്പോൾ" },
+          "arabic": "اللَّهُمَّ زِدْ هَٰذَا الْبَيْتَ تَشْرِيفًا وَتَعْظِيمًا وَتَكْرِيمًا وَمَهَابَةً",
+          "translation": { "en": "O Allah, increase this House in honor, greatness, nobility and reverence.", "ar": "اللهم زد هذا البيت تشريفا وتعظيما وتكريما ومهابة", "ur": "اے اللہ! اس گھر کی عزت، عظمت، کرامت اور ہیبت میں اضافہ فرما۔", "fr": "Ô Allah, augmente cette Maison en honneur, grandeur, noblesse et révérence.", "tr": "Allah'ım! Bu evin şeref, büyüklük, ikram ve heybetini artır.", "id": "Ya Allah, tambahkanlah kehormatan, keagungan, kemuliaan dan kebesaran rumah ini.", "bn": "হে আল্লাহ, এই ঘরের সম্মান, মহত্ত্ব, মর্যাদা ও ভীতি বৃদ্ধি করো।", "ms": "Ya Allah, tambahkanlah kehormatan, keagungan, kemuliaan dan kebesaran rumah ini.", "ta": "இறைவா! இந்த இல்லத்தின் மரியாதை, பெருமை, கௌரவம் மற்றும் பயபக்தியை அதிகரிப்பாயாக.", "ml": "അല്ലാഹുവേ, ഈ ഗൃഹത്തിന്റെ ബഹുമാനവും മഹത്വവും ആദരവും ഭക്തിയും വർധിപ്പിക്കണമേ." },
+          "reference": "Traditional",
+          "times": 1
+        },
+        {
+          "id": "hu-3",
+          "title": { "en": "Between Rukn al-Yamani and Black Stone", "ar": "بين الركن اليماني والحجر الأسود", "ur": "رکن یمانی اور حجر اسود کے درمیان", "fr": "Entre le Coin Yamani et la Pierre Noire", "tr": "Rüknü'l-Yemani ile Hacerü'l-Esved Arasında", "id": "Antara Rukun Yamani dan Hajar Aswad", "bn": "রুকনুল ইয়ামানী ও হাজরে আসওয়াদের মধ্যে", "ms": "Antara Rukun Yamani dan Hajar Aswad", "ta": "ருக்னுல் யமானி மற்றும் ஹஜருல் அஸ்வத் இடையில்", "ml": "റുക്നുൽ യമാനിയും ഹജറുൽ അസ്വദും ഇടയിൽ" },
+          "arabic": "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ",
+          "translation": { "en": "Our Lord, give us in this world that which is good and in the Hereafter that which is good, and protect us from the punishment of the Fire.", "ar": "ربنا آتنا في الدنيا حسنة وفي الآخرة حسنة وقنا عذاب النار", "ur": "اے ہمارے رب! ہمیں دنیا میں بھی بھلائی عطا فرما اور آخرت میں بھی بھلائی عطا فرما اور ہمیں آتش جہنم کے عذاب سے بچا۔", "fr": "Notre Seigneur, donne-nous le bien dans ce monde et le bien dans l'au-delà, et protège-nous du châtiment du Feu.", "tr": "Rabbimiz! Bize dünyada da iyilik ver, ahirette de iyilik ver ve bizi ateş azabından koru.", "id": "Tuhan kami, berilah kami kebaikan di dunia dan kebaikan di akhirat, dan lindungilah kami dari siksa api neraka.", "bn": "হে আমাদের রব, আমাদের দুনিয়াতেও কল্যাণ দাও এবং আখিরাতেও কল্যাণ দাও এবং আমাদের আগুনের শাস্তি থেকে রক্ষা করো।", "ms": "Tuhan kami, berilah kami kebaikan di dunia dan kebaikan di akhirat, dan lindungilah kami dari siksa api neraka.", "ta": "எங்கள் இறைவா! இவ்வுலகில் நன்மையை அளிப்பாயாக, மறுமையில் நன்மையை அளிப்பாயாக, நரக வேதனையிலிருந்து எங்களை காப்பாற்றுவாயாக.", "ml": "ഞങ്ങളുടെ രക്ഷിതാവേ, ഈ ലോകത്ത് നന്മയും പരലോകത്ത് നന്മയും ഞങ്ങൾക്ക് നൽകണമേ, നരകശിക്ഷയിൽനിന്ന് ഞങ്ങളെ സംരക്ഷിക്കണമേ." },
+          "reference": "Quran 2:201, Abu Dawud",
+          "times": 1
+        },
+        {
+          "id": "hu-4",
+          "title": { "en": "At Safa and Marwah", "ar": "عند الصفا والمروة", "ur": "صفا اور مروہ پر", "fr": "À Safa et Marwah", "tr": "Safa ve Merve'de", "id": "Di Safa dan Marwah", "bn": "সাফা ও মারওয়ায়", "ms": "Di Safa dan Marwah", "ta": "ஸஃபா மற்றும் மர்வாவில்", "ml": "സ്വഫാ-മർവയിൽ" },
+          "arabic": "إِنَّ الصَّفَا وَالْمَرْوَةَ مِنْ شَعَائِرِ اللهِ، أَبْدَأُ بِمَا بَدَأَ اللهُ بِهِ",
+          "translation": { "en": "Indeed, Safa and Marwah are among the symbols of Allah. I begin with what Allah began with.", "ar": "إن الصفا والمروة من شعائر الله، أبدأ بما بدأ الله به", "ur": "بے شک صفا اور مروہ اللہ کی نشانیوں میں سے ہیں، میں اس چیز سے شروع کرتا ہوں جس سے اللہ نے شروع کیا۔", "fr": "Certes, Safa et Marwah font partie des symboles d'Allah. Je commence par ce qu'Allah a commencé.", "tr": "Şüphesiz Safa ve Merve Allah'ın şiarlarındandır. Allah'ın başladığıyla başlarım.", "id": "Sesungguhnya Safa dan Marwah adalah sebagian dari syiar Allah. Aku mulai dengan apa yang Allah mulai.", "bn": "নিশ্চয়ই সাফা ও মারওয়া আল্লাহর নিদর্শনসমূহের অন্তর্ভুক্ত। আমি সেই বিষয় দিয়ে শুরু করি যা দিয়ে আল্লাহ শুরু করেছেন।", "ms": "Sesungguhnya Safa dan Marwah adalah sebahagian daripada syiar Allah. Aku mulakan dengan apa yang Allah mulakan.", "ta": "நிச்சயமாக ஸஃபா மற்றும் மர்வா அல்லாஹ்வின் அடையாளங்களில் உள்ளன. அல்லாஹ் தொடங்கியதை நான் தொடங்குகிறேன்.", "ml": "തീർച്ചയായും സ്വഫായും മർവയും അല്ലാഹുവിന്റെ ചിഹ്നങ്ങളിൽപ്പെട്ടതാണ്. അല്ലാഹു തുടങ്ങിയതിൽനിന്ന് ഞാൻ തുടങ്ങുന്നു." },
+          "reference": "Muslim 2/889",
+          "times": 1
+        },
+        {
+          "id": "hu-5",
+          "title": { "en": "At Arafat", "ar": "بعرفة", "ur": "عرفہ میں", "fr": "À Arafat", "tr": "Arafat'ta", "id": "Di Arafah", "bn": "আরাফাতে", "ms": "Di Arafah", "ta": "அரஃபாவில்", "ml": "അറഫാത്തിൽ" },
+          "arabic": "لاَ إِلَٰهَ إِلاَّ اللهُ وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ",
+          "translation": { "en": "There is no god but Allah alone, without partner. To Him belongs the dominion and to Him belongs all praise, and He is over all things omnipotent.", "ar": "لا إله إلا الله وحده لا شريك له، له الملك وله الحمد، وهو على كل شيء قدير", "ur": "اللہ کے سوا کوئی معبود نہیں، وہ اکیلا ہے، اس کا کوئی شریک نہیں، بادشاہت اسی کی ہے اور تمام تعریف اسی کے لیے ہے اور وہ ہر چیز پر قادر ہے۔", "fr": "Il n'y a de dieu qu'Allah seul, sans associé. À Lui appartient la royauté et à Lui appartient toute louange, et Il est Omnipotent sur toute chose.", "tr": "Allah'tan başka ilah yoktur, O tektir, ortağı yoktur. Mülk O'nundur, hamd O'nadır ve O her şeye kadirdir.", "id": "Tiada tuhan selain Allah Yang Maha Esa, tiada sekutu bagi-Nya. Bagi-Nya kerajaan dan bagi-Nya pujian, dan Dia Maha Kuasa atas segala sesuatu.", "bn": "আল্লাহ ছাড়া কোনো ইলাহ নেই, তিনি একক, তাঁর কোনো শরীক নেই। কর্তৃত্ব তাঁরই এবং সমস্ত প্রশংসা তাঁরই এবং তিনি সব কিছুর উপর সর্বশক্তিমান।", "ms": "Tiada Tuhan selain Allah Yang Maha Esa, tiada sekutu bagi-Nya. Bagi-Nya kerajaan dan bagi-Nya pujian, dan Dia Maha Kuasa atas segala sesuatu.", "ta": "அல்லாஹ் தவிர வணக்கத்திற்குரியவர் இல்லை, அவன் ஒற்றையானவன், அவனுக்கு இணையில்லை. ஆளுகை அவனுக்கே, புகழ் அவனுக்கே, அவன் எல்லாப் பொருட்களின் மீதும் வல்லமையுள்ளவன்.", "ml": "അല്ലാഹു അല്ലാതെ ആരാധനയർഹനായ ദൈവമില്ല, അവൻ ഒറ്റവനാണ്, അവന് പങ്കാളികളില്ല. ആധിപത്യം അവന്റേതാണ്, സ്തുതി അവന്റേതാണ്, അവൻ എല്ലാറ്റിന്മേലും സർവശക്തനാണ്." },
+          "reference": "Tirmidhi 5/504",
+          "times": 1
+        }
+      ]
+    },
+    {
+      "id": "debt-poverty",
+      "icon": "💰",
+      "color": "yellow",
+      "gradient": "from-yellow-400 to-orange-500",
+      "bg": "bg-yellow-50",
+      "border": "border-yellow-200",
+      "text": "text-yellow-700",
+      "name": { "en": "Debt & Poverty", "ar": "الدين والفقر", "ur": "قرض اور غربت", "fr": "Dette et Pauvreté", "tr": "Borç ve Yoksulluk", "id": "Hutang dan Kemiskinan", "bn": "ঋণ ও দারিদ্র্য", "ms": "Hutang dan Kemiskinan", "ta": "கடன் & வறுமை", "ml": "കടവും ദാരിദ്ര്യവും" },
+      "duas": [
+        {
+          "id": "dp-1",
+          "title": { "en": "Dua for Paying Off Debt", "ar": "دعاء قضاء الدين", "ur": "قرض ادا کرنے کی دعا", "fr": "Doua pour Payer la Dette", "tr": "Borç Ödeme Duası", "id": "Doa Melunasi Hutang", "bn": "ঋণ পরিশোধের দোয়া", "ms": "Doa Melunaskan Hutang", "ta": "கடனை தீர்க்கும் துஆ", "ml": "കടം വീട്ടാനുള്ള ദുആ" },
+          "arabic": "اللَّهُمَّ اكْفِنِي بِحَلاَلِكَ عَنْ حَرَامِكَ، وَأَغْنِنِي بِفَضْلِكَ عَمَّنْ سِوَاكَ",
+          "translation": { "en": "O Allah, suffice me with what You have made lawful over what You have made unlawful, and enrich me by Your grace over anyone other than You.", "ar": "اللهم اكفني بحلالك عن حرامك وأغنني بفضلك عمن سواك", "ur": "اے اللہ! مجھے اپنے حلال سے اپنے حرام سے بے نیاز کر دے اور اپنے فضل سے اپنے سوا ہر ایک سے بے نیاز کر دے۔", "fr": "Ô Allah, suffis-moi par ce que Tu as rendu licite de ce que Tu as rendu illicite, et enrichis-moi par Ta grâce de quiconque autre que Toi.", "tr": "Allah'ım! Haram kıldıklarından helal kıldıklarınla beni koru ve fazlınla Senden başkasından beni zengin kıl.", "id": "Ya Allah, cukupkanlah aku dengan yang halal dari-Mu dari yang haram dari-Mu, dan kayakanlah aku dengan karunia-Mu dari selain Engkau.", "bn": "হে আল্লাহ, তোমার হালাল দ্বারা তোমার হারাম থেকে আমাকে যথেষ্ট করো এবং তোমার অনুগ্রহ দ্বারা তোমার বাইরে অন্যদের থেকে আমাকে সমৃদ্ধ করো।", "ms": "Ya Allah, cukupkanlah aku dengan yang halal dari-Mu dari yang haram dari-Mu, dan kayakanlah aku dengan kurnia-Mu dari selain Engkau.", "ta": "இறைவா! உமது ஹராமிலிருந்து உமது ஹலாலால் எனக்கு போதுமானதாக இருப்பாயாக, மேலும் உமது அருளால் உம்மைத் தவிர மற்றவர்களிடமிருந்து எனனை செல்வமாக்குவாயாக.", "ml": "അല്ലാഹുവേ, നിന്റെ ഹറാമിൽനിന്ന് നിന്റെ ഹലാൽകൊണ്ട് എന്നെ പര്യാപ്തനാക്കണമേ, നിന്റെ അനുഗ്രഹംകൊണ്ട് നിന്നല്ലാതെ മറ്റുള്ളവരിൽനിന്ന് എന്നെ സമ്പന്നനാക്കണമേ." },
+          "reference": "Tirmidhi 5/526",
+          "times": 1
+        },
+        {
+          "id": "dp-2",
+          "title": { "en": "Seeking Refuge from Debt", "ar": "الاستعاذة من الدين", "ur": "قرض سے پناہ", "fr": "Chercher Refuge contre la Dette", "tr": "Borçtan Korunma", "id": "Berlindung dari Hutang", "bn": "ঋণ থেকে আশ্রয়", "ms": "Berlindung dari Hutang", "ta": "கடனிலிருந்து புகலடைதல்", "ml": "കടത്തിൽനിന്ന് അഭയം തേടുന്നു" },
+          "arabic": "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْهَمِّ وَالْحَزَنِ، وَالْعَجْزِ وَالْكَسَلِ، وَالْبُخْلِ وَالْجُبْنِ، وَضَلَعِ الدَّيْنِ وَغَلَبَةِ الرِّجَالِ",
+          "translation": { "en": "O Allah, I seek refuge in You from anxiety and sorrow, weakness and laziness, miserliness and cowardice, the burden of debts and from being overpowered by men.", "ar": "اللهم إني أعوذ بك من الهم والحزن والعجز والكسل والبخل والجبن وضلع الدين وغلبة الرجال", "ur": "اے اللہ! میں تیری پناہ مانگتا ہوں فکر اور غم سے، کمزوری اور سستی سے، کنجوسی اور بزدلی سے، قرض کے بوجھ سے اور لوگوں کے غلبہ سے۔", "fr": "Ô Allah, je cherche refuge auprès de Toi contre l'anxiété et le chagrin, la faiblesse et la paresse, l'avarice et la lâcheté, le fardeau des dettes et la domination des hommes.", "tr": "Allah'ım! Sıkıntı ve üzüntüden, acizlik ve tembellikten, cimrilik ve korkaklıktan, borç yükünden ve insanların galibiyetinden Sana sığınırım.", "id": "Ya Allah, aku berlindung kepada-Mu dari kecemasan dan kesedihan, kelemahan dan kemalasan, kekikiran dan kepengecutan, beban hutang dan dikuasai oleh manusia.", "bn": "হে আল্লাহ, আমি চিন্তা ও দুঃখ, দুর্বলতা ও অলসতা, কার্পণ্য ও কাপুরুষতা, ঋণের বোঝা এবং মানুষের প্রাধান্য থেকে তোমার আশ্রয় চাই।", "ms": "Ya Allah, aku berlindung kepada-Mu dari kebimbangan dan kesedihan, kelemahan dan kemalasan, kedekut dan pengecut, beban hutang dan dikuasai oleh manusia.", "ta": "இறைவா! கவலை, துக்கம், பலவீனம், சோம்பல், கஞ்சத்தனம், கோழைத்தனம், கடன் சுமை மற்றும் மனிதர்களின் ஆதிக்கத்திலிருந்து உம்மிடம் புகலளிக்கிறேன்.", "ml": "അല്ലാഹുവേ, വ്യാകുലത, ദുഃഖം, ദൗർബല്യം, മടിയ, പിശുക്ക്, ഭീരുത്വം, കടബാധ്യതയുടെ ഭാരം, മനുഷ്യരുടെ ആധിപത്യം എന്നിവയിൽനിന്ന് ഞാൻ നിന്നോട് അഭയം തേടുന്നു." },
+          "reference": "Bukhari 7/158",
+          "times": 1
+        }
+      ]
+    },
+    {
+      "id": "children-newborn",
+      "icon": "👶",
+      "color": "pink",
+      "gradient": "from-pink-400 to-rose-500",
+      "bg": "bg-pink-50",
+      "border": "border-pink-200",
+      "text": "text-pink-700",
+      "name": { "en": "Children & Newborn", "ar": "الأطفال والمولود", "ur": "بچے اور نومولود", "fr": "Enfants et Nouveau-né", "tr": "Çocuklar ve Yeni Doğan", "id": "Anak & Bayi Baru Lahir", "bn": "শিশু ও নবজাতক", "ms": "Kanak-kanak & Bayi Baru Lahir", "ta": "குழந்தைகள் & புதிய பிறப்பு", "ml": "കുട്ടികളും നവജാതശിശുവും" },
+      "duas": [
+        {
+          "id": "cn-1",
+          "title": { "en": "Dua for Newborn (Tahnik)", "ar": "دعاء المولود الجديد", "ur": "نومولود کے لیے دعا", "fr": "Doua pour le Nouveau-né", "tr": "Yeni Doğan İçin Dua", "id": "Doa untuk Bayi Baru Lahir", "bn": "নবজাতকের জন্য দোয়া", "ms": "Doa untuk Bayi Baru Lahir", "ta": "புதிய பிறப்புக்கான துஆ", "ml": "നവജാതശിശുവിനുള്ള ദുആ" },
+          "arabic": "بَارَكَ اللهُ لَكَ فِي الْمَوْهُوبِ لَكَ، وَشَكَرْتَ الْوَاهِبَ، وَبَلَغَ أَشُدَّهُ، وَرُزِقْتَ بِرَّهُ",
+          "translation": { "en": "May Allah bless you in what He has given you, and may you thank the Giver, and may the child reach maturity, and may you be granted his righteousness.", "ar": "بارك الله لك في الموهوب لك وشكرت الواهب وبلغ أشده ورزقت بره", "ur": "اللہ تعالیٰ تمہیں جو عطا کیا ہے اس میں برکت دے، تم دینے والے کا شکر ادا کرو، وہ جوان ہو جائے اور تمہیں اس کی نیکی نصیب ہو۔", "fr": "Qu'Allah te bénisse dans ce qu'Il t'a donné, et que tu remercies le Donateur, et que l'enfant atteigne la maturité, et que tu sois gratifié de sa piété.", "tr": "Allah sana verdiği şeyde bereket versin, Verene şükredesin, çocuk erginliğe erişsin ve onun iyiliğine nail olasın.", "id": "Semoga Allah memberkahimu dalam apa yang Dia berikan kepadamu, dan semoga engkau bersyukur kepada Pemberi, dan semoga anak mencapai kedewasaan, dan semoga engkau dikaruniai kebaikannya.", "bn": "আল্লাহ তোমাকে যা দিয়েছেন তাতে বরকত দান করুন, তুমি দাতার শুকরিয়া আদায় করো, সে প্রাপ্তবয়স্ক হোক এবং তুমি তার নেকি লাভ করো।", "ms": "Semoga Allah memberkatimu dalam apa yang Dia berikan kepadamu, dan semoga engkau bersyukur kepada Pemberi, dan semoga anak mencapai kedewasaan, dan semoga engkau dikurniakan kebaikannya.", "ta": "அல்லாஹ் உமக்கு அளித்ததில் உமக்கு அருள்புரிவானாக, நீர் கொடுப்பவருக்கு நன்றி செலுத்துவீராக, அந்த குழந்தை பருவமடையட்டும், அவனது நன்மை உமக்கு கிடைக்கட்டும்.", "ml": "അല്ലാഹു നിനക്ക് നൽകിയതിൽ നിനക്ക് അനുഗ്രഹം നൽകട്ടെ, നീ ദാതാവിന് നന്ദി പറയട്ടെ, കുഞ്ഞ് പക്വത പ്രാപിക്കട്ടെ, അവന്റെ നന്മ നിനക്ക് ലഭിക്കട്ടെ." },
+          "reference": "Ibn Sunni, Amal al-Yawm",
+          "times": 1
+        },
+        {
+          "id": "cn-2",
+          "title": { "en": "Dua for Righteous Children", "ar": "دعاء للذرية الصالحة", "ur": "نیک اولاد کی دعا", "fr": "Doua pour une Descendance Pieuse", "tr": "Salih Evlat Duası", "id": "Doa Anak yang Saleh", "bn": "সৎ সন্তানের দোয়া", "ms": "Doa Anak yang Soleh", "ta": "நல்ல பிள்ளைகளுக்கான துஆ", "ml": "സദ്ഗുണമുള്ള മക്കൾക്കുള്ള ദുആ" },
+          "arabic": "رَبِّ اجْعَلْنِي مُقِيمَ الصَّلاَةِ وَمِنْ ذُرِّيَّتِي رَبَّنَا وَتَقَبَّلْ دُعَاءِ",
+          "translation": { "en": "My Lord, make me an establisher of prayer, and from my descendants. Our Lord, and accept my supplication.", "ar": "رب اجعلني مقيم الصلاة ومن ذريتي ربنا وتقبل دعاء", "ur": "اے میرے رب! مجھے اور میری نسل سے نماز قائم کرنے والا بنا اور اے ہمارے رب! میری دعا قبول فرما۔", "fr": "Mon Seigneur, fais de moi un établisseur de la prière, et de ma descendance. Notre Seigneur, et accepte ma supplication.", "tr": "Rabbim! Beni ve neslimden namazı dosdoğru kılanlardan eyle. Rabbimiz! Duamı kabul et.", "id": "Tuhanku, jadikanlah aku dan keturunanku orang yang tetap mendirikan shalat. Ya Tuhan kami, perkenankanlah doaku.", "bn": "হে আমার রব, আমাকে এবং আমার বংশধরদেরকে নামায় কায়েমকারী করো। হে আমাদের রব, আমার দোয়া কবুল করো।", "ms": "Tuhanku, jadikanlah aku dan keturunanku orang yang tetap mendirikan solat. Ya Tuhan kami, perkenankanlah doaku.", "ta": "என் இறைவா! என்னையும் என் சந்ததியையும் தொழுகையை நிலைநாட்டுபவர்களாக ஆக்குவாயாக. எங்கள் இறைவா, என் பிரார்த்தனையை ஏற்றுக்கொள்வாயாக.", "ml": "എന്റെ രക്ഷിതാവേ, എന്നെയും എന്റെ സന്തതിയെയും നമസ്കാരം നിലനിർത്തുന്നവരാക്കണമേ. ഞങ്ങളുടെ രക്ഷിതാവേ, എന്റെ പ്രാർത്ഥന സ്വീകരിക്കണമേ." },
+          "reference": "Quran 14:40",
+          "times": 1
+        }
+      ]
+    },
+    {
+      "id": "marriage-wedding",
+      "icon": "💍",
+      "color": "rose",
+      "gradient": "from-rose-400 to-pink-600",
+      "bg": "bg-rose-50",
+      "border": "border-rose-200",
+      "text": "text-rose-700",
+      "name": { "en": "Marriage & Wedding", "ar": "الزفاف والزواج", "ur": "شادی اور نکاح", "fr": "Mariage et Noces", "tr": "Evlilik ve Düğün", "id": "Pernikahan & Pernikahan", "bn": "বিবাহ ও বিয়ে", "ms": "Perkahwinan & Pernikahan", "ta": "திருமணம் & திருமண விழா", "ml": "വിവാഹവും കല്യാണവും" },
+      "duas": [
+        {
+          "id": "mw-1",
+          "title": { "en": "Dua for Newlyweds", "ar": "دعاء للمتزوجين", "ur": "نومسلم جوڑے کے لیے دعا", "fr": "Doua pour les Jeunes Mariés", "tr": "Yeni Evliler İçin Dua", "id": "Doa untuk Pengantin Baru", "bn": "নবদম্পতির জন্য দোয়া", "ms": "Doa untuk Pengantin Baru", "ta": "புதிய தம்பதியருக்கான துஆ", "ml": "നവവധൂവരന്മാർക്കുള്ള ദുആ" },
+          "arabic": "بَارَكَ اللهُ لَكَ، وَبَارَكَ عَلَيْكَ، وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ",
+          "translation": { "en": "May Allah bless you, and shower His blessings upon you, and join you both together in goodness.", "ar": "بارك الله لك وبارك عليك وجمع بينكما في خير", "ur": "اللہ تمہیں برکت دے، تم پر اپنی برکت نازل کرے اور تم دونوں کو خیر میں جمع کرے۔", "fr": "Qu'Allah te bénisse, et déverse Ses bénédictions sur toi, et vous unisse tous les deux dans le bien.", "tr": "Allah sana bereket versin, üzerine bereketler yağdırsın ve ikinizi hayırda bir araya getirsin.", "id": "Semoga Allah memberkahimu, dan mencurahkan berkah-Nya atasmu, dan menyatukan kalian berdua dalam kebaikan.", "bn": "আল্লাহ তোমাকে বরকত দান করুন, তোমার উপর তাঁর বরকত নাযিল করুন এবং তোমাদের উভয়কে কল্যাণে একত্রিত করুন।", "ms": "Semoga Allah memberkatimu, dan mencurahkan berkat-Nya atasmu, dan menyatukan kalian berdua dalam kebaikan.", "ta": "அல்லாஹ் உமக்கு அருள்புரிவானாக, உமது மீது அவனது அருளை பொழிவானாக, உங்கள் இருவரையும் நன்மையில் ஒன்றிணைப்பானாக.", "ml": "അല്ലാഹു നിനക്ക് അനുഗ്രഹം നൽകട്ടെ, നിന്റെ മേൽ അവന്റെ അനുഗ്രഹങ്ങൾ ചൊരിയട്ടെ, നിങ്ങൾ രണ്ട് പേരെയും നന്മയിൽ ഒന്നിപ്പിക്കട്ടെ." },
+          "reference": "Abu Dawud 2/205",
+          "times": 1
+        },
+        {
+          "id": "mw-2",
+          "title": { "en": "Wedding Night Dua", "ar": "دعاء ليلة الدخلة", "ur": "شب زفاف کی دعا", "fr": "Doua de la Nuit de Noces", "tr": "Düğün Gecesi Duası", "id": "Doa Malam Pengantin", "bn": "বিয়ের রাতের দোয়া", "ms": "Doa Malam Pengantin", "ta": "திருமண இரவு துஆ", "ml": "വിവാഹ രാത്രി ദുആ" },
+          "arabic": "اللَّهُمَّ إِنِّي أَسْأَلُكَ خَيْرَهَا وَخَيْرَ مَا جَبَلْتَهَا عَلَيْهِ، وَأَعُوذُ بِكَ مِنْ شَرِّهَا وَشَرِّ مَا جَبَلْتَهَا عَلَيْهِ",
+          "translation": { "en": "O Allah, I ask You for the goodness of her and the goodness of what You have created her upon, and I seek refuge in You from the evil of her and the evil of what You have created her upon.", "ar": "اللهم إني أسألك خيرها وخير ما جبلتها عليه وأعوذ بك من شرها وشر ما جبلتها عليه", "ur": "اے اللہ! میں تجھ سے اس کی بھلائی اور جس فطرت پر تو نے اسے بنایا ہے اس کی بھلائی مانگتا ہوں اور اس کی برائی اور جس فطرت پر تو نے اسے بنایا ہے اس کی برائی سے تیری پناہ مانگتا ہوں۔", "fr": "Ô Allah, je Te demande le bien d'elle et le bien de ce sur quoi Tu l'as créée, et je cherche refuge auprès de Toi contre le mal d'elle et le mal de ce sur quoi Tu l'as créée.", "tr": "Allah'ım! Ondan ve onu yarattığın fıtratın hayrını senden isterim ve ondan ve onu yarattığın fıtratın şerrinden Sana sığınırım.", "id": "Ya Allah, aku memohon kepada-Mu kebaikannya dan kebaikan apa yang Engkau ciptakan padanya, dan aku berlindung kepada-Mu dari keburukannya dan keburukan apa yang Engkau ciptakan padanya.", "bn": "হে আল্লাহ, আমি তোমার কাছে তার মঙ্গল এবং তুমি তাকে যে স্বভাবে সৃষ্টি করেছ তার মঙ্গল চাই এবং তার অমঙ্গল এবং তুমি তাকে যে স্বভাবে সৃষ্টি করেছ তার অমঙ্গল থেকে তোমার আশ্রয় চাই।", "ms": "Ya Allah, aku memohon kepada-Mu kebaikannya dan kebaikan apa yang Engkau ciptakan padanya, dan aku berlindung kepada-Mu dari keburukannya dan keburukan apa yang Engkau ciptakan padanya.", "ta": "இறைவா! அவளது நன்மையையும் நீர் அவளைப் படைத்த இயல்பின் நன்மையையும் உம்மிடம் கேட்கிறேன், அவளது தீமையிலிருந்தும் நீர் அவளைப் படைத்த இயல்பின் தீமையிலிருந்தும் உம்மிடம் புகலளிக்கிறேன்.", "ml": "അല്ലാഹുവേ, അവളുടെ നന്മയും നീ അവളെ സൃഷ്ടിച്ച സ്വഭാവത്തിന്റെ നന്മയും ഞാൻ നിന്നോട് ചോദിക്കുന്നു, അവളുടെ തിന്മയിൽനിന്നും നീ അവളെ സൃഷ്ടിച്ച സ്വഭാവത്തിന്റെ തിന്മയിൽനിന്നും ഞാൻ നിന്നോട് അഭയം തേടുന്നു." },
+          "reference": "Abu Dawud 2/206",
+          "times": 1
+        }
+      ]
+    },
+    {
+      "id": "clothes-appearance",
+      "icon": "👔",
+      "color": "blue",
+      "gradient": "from-blue-400 to-indigo-500",
+      "bg": "bg-blue-50",
+      "border": "border-blue-200",
+      "text": "text-blue-700",
+      "name": { "en": "Clothes & Appearance", "ar": "الملابس والمظهر", "ur": "کپڑے اور حلیہ", "fr": "Vêtements et Apparence", "tr": "Kıyafet ve Görünüm", "id": "Pakaian & Penampilan", "bn": "পোশাক ও চেহারা", "ms": "Pakaian & Penampilan", "ta": "ஆடை & தோற்றம்", "ml": "വസ്ത്രവും രൂപവും" },
+      "duas": [
+        {
+          "id": "ca-1",
+          "title": { "en": "Wearing New Clothes", "ar": "لبس الثوب الجديد", "ur": "نیا کپڑا پہنتے وقت", "fr": "Porter des Vêtements Neufs", "tr": "Yeni Kıyafet Giyerken", "id": "Memakai Pakaian Baru", "bn": "নতুন জামা পরার সময়", "ms": "Memakai Pakaian Baru", "ta": "புதிய ஆடை அணியும்போது", "ml": "പുതിയ വസ്ത്രം ധരിക്കുമ്പോൾ" },
+          "arabic": "الْحَمْدُ لِلَّهِ الَّذِي كَسَانِي هَٰذَا وَرَزَقَنِيهِ مِنْ غَيْرِ حَوْلٍ مِنِّي وَلاَ قُوَّةٍ",
+          "translation": { "en": "All praise is for Allah who has clothed me with this and provided it for me without any might or power from myself.", "ar": "الحمد لله الذي كساني هذا ورزقنيه من غير حول مني ولا قوة", "ur": "تمام تعریفیں اللہ کے لیے ہیں جس نے مجھے یہ پہنایا اور اسے میرے لیے رزق بنایا بغیر میرے کسی طاقت اور زور کے۔", "fr": "Toute louange est pour Allah qui m'a vêtu de ceci et me l'a fourni sans aucune force ni puissance de ma part.", "tr": "Bana bunu giydiren ve benim hiçbir gücüm ve kuvvetim olmaksızın bana rızık olarak veren Allah'a hamdolsun.", "id": "Segala puji bagi Allah yang telah memakaikanku ini dan memberinya rezeki kepadaku tanpa daya dan kekuatan dariku.", "bn": "সমস্ত প্রশংসা আল্লাহর যিনি আমাকে এটি পরিয়েছেন এবং আমার কোনো শক্তি ও ক্ষমতা ছাড়াই আমাকে এটি রিযিক দিয়েছেন।", "ms": "Segala puji bagi Allah yang telah memakaikanku ini dan memberinya rezeki kepadaku tanpa daya dan kekuatan dariku.", "ta": "என் எந்த சக்தியும் வலிமையும் இல்லாமல் இதை எனக்கு அணியச் செய்து, எனக்கு அருளிய அல்லாஹ்வுக்கே எல்லா புகழும்.", "ml": "എന്റെ യാതൊരു ശക്തിയും കഴിവും കൂടാതെ ഇത് എന്നെ ധരിപ്പിക്കുകയും എനിക്ക് ഉപജീവനം നൽകുകയും ചെയ്ത അല്ലാഹുവിന് എല്ലാ സ്തുതിയും." },
+          "reference": "Abu Dawud 4/41, Tirmidhi 5/503",
+          "times": 1
+        },
+        {
+          "id": "ca-2",
+          "title": { "en": "Looking in the Mirror", "ar": "النظر في المرآة", "ur": "آئینے میں دیکھتے وقت", "fr": "Se Regarder dans le Miroir", "tr": "Aynaya Bakarken", "id": "Berkaca", "bn": "আয়নায় দেখার সময়", "ms": "Melihat di Cermin", "ta": "கண்ணாடியை பார்க்கும்போது", "ml": "കണ്ണാടിയിൽ നോക്കുമ്പോൾ" },
+          "arabic": "اللَّهُمَّ أَنْتَ حَسَّنْتَ خَلْقِي فَحَسِّنْ خُلُقِي",
+          "translation": { "en": "O Allah, just as You have made my outward appearance beautiful, make my character beautiful too.", "ar": "اللهم أنت حسنت خلقي فحسن خلقي", "ur": "اے اللہ! جیسا تو نے میری صورت کو خوبصورت بنایا ہے میرے اخلاق کو بھی خوبصورت بنا دے۔", "fr": "Ô Allah, tout comme Tu as embelli mon apparence extérieure, embellis aussi mon caractère.", "tr": "Allah'ım! Dış görünüşümü güzel kıldığın gibi, ahlakımı da güzel kıl.", "id": "Ya Allah, sebagaimana Engkau telah memperindah rupaku, perindah pula akhlakku.", "bn": "হে আল্লাহ, তুমি যেমন আমার বাহ্যিক রূপকে সুন্দর করেছ, তেমনি আমার চরিত্রকেও সুন্দর করো।", "ms": "Ya Allah, sebagaimana Engkau telah memperindahkan rupaku, perindahkan pula akhlakku.", "ta": "இறைவா! நீர் என் வெளித்தோற்றத்தை அழகாக்கியது போல், என் ஒழுக்கத்தையும் அழகாக்குவாயாக.", "ml": "അല്ലാഹുവേ, നീ എന്റെ ബാഹ്യരൂപം സുന്ദരമാക്കിയതുപോലെ എന്റെ സ്വഭാവവും സുന്ദരമാക്കണമേ." },
+          "reference": "Ahmad 2/175",
+          "times": 1
+        }
+      ]
+    },
+    {
+      "id": "market-business",
+      "icon": "🏪",
+      "color": "emerald",
+      "gradient": "from-emerald-400 to-teal-500",
+      "bg": "bg-emerald-50",
+      "border": "border-emerald-200",
+      "text": "text-emerald-700",
+      "name": { "en": "Market & Business", "ar": "السوق والتجارة", "ur": "بازار اور تجارت", "fr": "Marché et Commerce", "tr": "Pazar ve Ticaret", "id": "Pasar & Bisnis", "bn": "বাজার ও ব্যবসা", "ms": "Pasar & Perniagaan", "ta": "சந்தை & வணிகம்", "ml": "ചന്തയും വ്യാപാരവും" },
+      "duas": [
+        {
+          "id": "mb-1",
+          "title": { "en": "Entering the Market", "ar": "دخول السوق", "ur": "بازار میں داخل ہونا", "fr": "Entrer au Marché", "tr": "Pazara Girerken", "id": "Masuk Pasar", "bn": "বাজারে প্রবেশ", "ms": "Masuk Pasar", "ta": "சந்தைக்குள் நுழையும்போது", "ml": "ചന്തയിൽ പ്രവേശിക്കുമ്പോൾ" },
+          "arabic": "لاَ إِلَٰهَ إِلاَّ اللهُ وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ، يُحْيِي وَيُمِيتُ، وَهُوَ حَيٌّ لاَ يَمُوتُ، بِيَدِهِ الْخَيْرُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ",
+          "translation": { "en": "There is no god but Allah alone, without partner. To Him belongs the dominion and to Him belongs all praise. He gives life and He causes death. He is the Living who does not die. In His hand is all goodness, and He is over all things omnipotent.", "ar": "لا إله إلا الله وحده لا شريك له، له الملك وله الحمد، يحيي ويميت، وهو حي لا يموت، بيده الخير، وهو على كل شيء قدير", "ur": "اللہ کے سوا کوئی معبود نہیں، وہ اکیلا ہے، اس کا کوئی شریک نہیں، بادشاہت اسی کی ہے اور تمام تعریف اسی کے لیے ہے، وہ زندہ کرتا ہے اور وہی مارتا ہے، وہ زندہ ہے نہیں مرتا، بھلائی اس کے ہاتھ میں ہے اور وہ ہر چیز پر قادر ہے۔", "fr": "Il n'y a de dieu qu'Allah seul, sans associé. À Lui appartient la royauté et à Lui appartient toute louange. Il donne la vie et Il donne la mort. Il est le Vivant qui ne meurt pas. Dans Sa main est tout bien, et Il est Omnipotent sur toute chose.", "tr": "Allah'tan başka ilah yoktur, O tektir, ortağı yoktur. Mülk O'nundur, hamd O'nadır. O diriltir ve öldürür. O, ölmeyen Hayy'dır. Hayır O'nun elindedir ve O her şeye kadirdir.", "id": "Tiada tuhan selain Allah Yang Maha Esa, tiada sekutu bagi-Nya. Bagi-Nya kerajaan dan bagi-Nya pujian. Dia menghidupkan dan mematikan. Dia Yang Hidup yang tidak mati. Di tangan-Nya segala kebaikan, dan Dia Maha Kuasa atas segala sesuatu.", "bn": "আল্লাহ ছাড়া কোনো ইলাহ নেই, তিনি একক, তাঁর কোনো শরীক নেই। কর্তৃত্ব তাঁরই এবং সমস্ত প্রশংসা তাঁরই। তিনি জীবন দান করেন এবং মৃত্যু দান করেন। তিনি চিরঞ্জীব যিনি মরেন না। সকল কল্যাণ তাঁর হাতে এবং তিনি সব কিছুর উপর সর্বশক্তিমান।", "ms": "Tiada Tuhan selain Allah Yang Maha Esa, tiada sekutu bagi-Nya. Bagi-Nya kerajaan dan bagi-Nya pujian. Dia menghidupkan dan mematikan. Dia Yang Hidup yang tidak mati. Di tangan-Nya segala kebaikan, dan Dia Maha Kuasa atas segala sesuatu.", "ta": "அல்லாஹ் தவிர வணக்கத்திற்குரியவர் இல்லை, அவன் ஒற்றையானவன், அவனுக்கு இணையில்லை. ஆளுகை அவனுக்கே, புகழ் அவனுக்கே. அவன் உயிர் கொடுக்கிறான், மரணம் அளிக்கிறான். அவன் சாகாத வாழ்வான். எல்லா நன்மையும் அவன் கையில், அவன் எல்லாப் பொருட்களின் மீதும் வல்லமையுள்ளவன்.", "ml": "അല്ലാഹു അല്ലാതെ ആരാധനയർഹനായ ദൈവമില്ല, അവൻ ഒറ്റവനാണ്, അവന് പങ്കാളികളില്ല. ആധിപത്യം അവന്റേതാണ്, സ്തുതി അവന്റേതാണ്. അവൻ ജീവിപ്പിക്കുകയും കൊല്ലുകയും ചെയ്യുന്നു. അവൻ മരിക്കാത്ത ജീവനാണ്. എല്ലാ നന്മയും അവന്റെ കൈയിലാണ്, അവൻ എല്ലാറ്റിന്മേലും സർവശക്തനാണ്." },
+          "reference": "Tirmidhi 5/503",
+          "times": 1
+        }
+      ]
+    },
+    {
+      "id": "good-character",
+      "icon": "🌟",
+      "color": "violet",
+      "gradient": "from-violet-400 to-purple-600",
+      "bg": "bg-violet-50",
+      "border": "border-violet-200",
+      "text": "text-violet-700",
+      "name": { "en": "Good Character", "ar": "حسن الخلق", "ur": "اخلاق", "fr": "Bon Caractère", "tr": "Güzel Ahlak", "id": "Akhlak Mulia", "bn": "সুন্দর চরিত্র", "ms": "Akhlak Mulia", "ta": "நல்ல ஒழுக்கம்", "ml": "സദ്സ്വഭാവം" },
+      "duas": [
+        {
+          "id": "gc-1",
+          "title": { "en": "Dua for Good Character", "ar": "دعاء حسن الخلق", "ur": "اچھے اخلاق کی دعا", "fr": "Doua pour un Bon Caractère", "tr": "Güzel Ahlak Duası", "id": "Doa Akhlak Mulia", "bn": "সুন্দর চরিত্রের দোয়া", "ms": "Doa Akhlak Mulia", "ta": "நல்ல ஒழுக்கத்திற்கான துஆ", "ml": "സദ്സ്വഭാവത്തിനുള്ള ദുആ" },
+          "arabic": "اللَّهُمَّ اهْدِنِي لأَحْسَنِ الأَخْلاَقِ لاَ يَهْدِي لأَحْسَنِهَا إِلاَّ أَنْتَ، وَاصْرِفْ عَنِّي سَيِّئَهَا لاَ يَصْرِفُ عَنِّي سَيِّئَهَا إِلاَّ أَنْتَ",
+          "translation": { "en": "O Allah, guide me to the best of character, none can guide to it except You. And turn away from me evil character, none can turn it away from me except You.", "ar": "اللهم اهدني لأحسن الأخلاق لا يهدي لأحسنها إلا أنت، واصرف عني سيئها لا يصرف عني سيئها إلا أنت", "ur": "اے اللہ! مجھے بہترین اخلاق کی ہدایت دے، تیرے سوا کوئی بہترین اخلاق کی ہدایت نہیں دے سکتا، اور مجھ سے برے اخلاق دور فرما، تیرے سوا کوئی برے اخلاق دور نہیں کر سکتا۔", "fr": "Ô Allah, guide-moi vers le meilleur des caractères, nul ne peut y guider sauf Toi. Et éloigne de moi le mauvais caractère, nul ne peut l'éloigner de moi sauf Toi.", "tr": "Allah'ım! Beni en güzel ahlaka hidayet et, ona Senden başka hidayet eden yoktur. Kötü ahlaktan beni uzak tut, ondan beni uzak tutan Senden başka yoktur.", "id": "Ya Allah, tunjukilah aku kepada akhlak yang terbaik, tiada yang dapat menunjukinya kecuali Engkau. Dan palingkanlah dariku akhlak yang buruk, tiada yang dapat memalingkannya dariku kecuali Engkau.", "bn": "হে আল্লাহ, আমাকে সর্বোত্তম চরিত্রের পথ দেখাও, তোমার বাতীত কেউ তা দেখাতে পারে না, এবং আমার কাছ থেকে খারাপ চরিত্র দূর করো, তোমার বাতীত কেউ তা দূর করতে পারে না।", "ms": "Ya Allah, tunjukilah aku kepada akhlak yang terbaik, tiada yang dapat menunjukinya kecuali Engkau. Dan palingkanlah dariku akhlak yang buruk, tiada yang dapat memalingkannya dariku kecuali Engkau.", "ta": "இறைவா! சிறந்த ஒழுக்கத்திற்கு எனக்கு நெறி காட்டுவாயாக, உம்மைத் தவிர வேறு யாரும் அதற்கு நெறிகாட்ட இயலாது, மேலும் கெட்ட ஒழுக்கத்தை என்னிடமிருந்து திருப்புவாயாக, உம்மைத் தவிர வேறு யாரும் அதை என்னிடமிருந்து திருப்ப இயலாது.", "ml": "അല്ലാഹുവേ, ഉത്തമമായ സ്വഭാവത്തിലേക്ക് എന്നെ നയിക്കണമേ, അതിലേക്ക് നയിക്കാൻ നിന്നല്ലാതെ ആർക്കും കഴിയില്ല, മോശമായ സ്വഭാവം എന്നിൽനിന്ന് തിരിച്ചുകളയണമേ, അത് എന്നിൽനിന്ന് തിരിച്ചുകളയാൻ നിന്നല്ലാതെ ആർക്കും കഴിയില്ല." },
+          "reference": "Muslim 1/534",
+          "times": 1
+        }
+      ]
+    },
+    {
+      "id": "ummah",
+      "icon": "🌍",
+      "color": "teal",
+      "gradient": "from-teal-400 to-cyan-600",
+      "bg": "bg-teal-50",
+      "border": "border-teal-200",
+      "text": "text-teal-700",
+      "name": { "en": "For the Ummah", "ar": "للأمة", "ur": "امت کے لیے", "fr": "Pour la Ummah", "tr": "Ümmet İçin", "id": "Untuk Umat", "bn": "উম্মাহর জন্য", "ms": "Untuk Ummah", "ta": "உம்மாவுக்காக", "ml": "ഉമ്മത്തിനായി" },
+      "duas": [
+        {
+          "id": "um-1",
+          "title": { "en": "Dua for the Muslim Ummah", "ar": "دعاء للأمة الإسلامية", "ur": "اسلامی امت کے لیے دعا", "fr": "Doua pour la Ummah Musulmane", "tr": "Müslüman Ümmet İçin Dua", "id": "Doa untuk Umat Islam", "bn": "মুসলিম উম্মাহর জন্য দোয়া", "ms": "Doa untuk Umat Islam", "ta": "முஸ்லிம் உம்மாவுக்கான துஆ", "ml": "മുസ്ലിം ഉമ്മത്തിനുള്ള ദുആ" },
+          "arabic": "رَبَّنَا اغْفِرْ لَنَا وَلإِخْوَانِنَا الَّذِينَ سَبَقُونَا بِالإِيمَانِ وَلاَ تَجْعَلْ فِي قُلُوبِنَا غِلاًّ لِلَّذِينَ آمَنُوا رَبَّنَا إِنَّكَ رَءُوفٌ رَحِيمٌ",
+          "translation": { "en": "Our Lord, forgive us and our brothers who preceded us in faith, and do not put in our hearts any resentment toward those who have believed. Our Lord, indeed You are Kind and Merciful.", "ar": "ربنا اغفر لنا ولإخواننا الذين سبقونا بالإيمان ولا تجعل في قلوبنا غلا للذين آمنوا ربنا إنك رءوف رحيم", "ur": "اے ہمارے رب! ہمیں بخش دے اور ہمارے ان بھائیوں کو بھی جو ایمان میں ہم سے پہلے گزر چکے ہیں اور ایمان والوں کے لیے ہمارے دلوں میں کوئی کینہ نہ ڈال، اے ہمارے رب! بے شک تو نہایت مہربان، رحم کرنے والا ہے۔", "fr": "Notre Seigneur, pardonne-nous et à nos frères qui nous ont précédés dans la foi, et ne mets dans nos cœurs aucune rancune envers ceux qui ont cru. Notre Seigneur, Tu es certes Compatissant et Miséricordieux.", "tr": "Rabbimiz! Bizi ve bizden önce iman eden kardeşlerimizi bağışla ve kalplerimizde iman edenlere karşı hiçbir kin bırakma. Rabbimiz! Şüphesiz Sen çok şefkatli, çok merhametlisin.", "id": "Tuhan kami, ampunilah kami dan saudara-saudara kami yang telah beriman sebelum kami, dan janganlah Engkau membiarkan kedengkian dalam hati kami terhadap orang-orang yang beriman. Tuhan kami, sesungguhnya Engkau Maha Pengasih lagi Maha Penyayang.", "bn": "হে আমাদের রব, আমাদের এবং আমাদের পূর্বে ঈমান আনা ভাইদের ক্ষমা করো এবং যারা ঈমান এনেছে তাদের প্রতি আমাদের অন্তরে কোনো বিদ্বেষ রেখো না। হে আমাদের রব, নিশ্চয়ই তুমি দয়ালু, করুণাময়।", "ms": "Tuhan kami, ampunilah kami dan saudara-saudara kami yang telah beriman sebelum kami, dan janganlah Engkau membiarkan kedengkian dalam hati kami terhadap orang-orang yang beriman. Tuhan kami, sesungguhnya Engkau Maha Pengasih lagi Maha Penyayang.", "ta": "எங்கள் இறைவா! எங்களையும் எங்களுக்கு முன்னர் ஈமான் கொண்டு சென்ற எங்கள் சகோதரர்களையும் மன்னிப்பாயாக, ஈமான் கொண்டவர்கள் மீது எங்கள் இதயங்களில் எந்த வெறுப்பையும் வைக்காதே. எங்கள் இறைவா, நிச்சயமாக நீர் மிகவும் இரக்கமுள்ளவன், கருணையுள்ளவன்.", "ml": "ഞങ്ങളുടെ രക്ഷിതാവേ, ഞങ്ങളെയും ഞങ്ങൾക്ക് മുമ്പ് വിശ്വസിച്ച ഞങ്ങളുടെ സഹോദരന്മാരെയും പൊറുക്കണമേ, വിശ്വസിച്ചവരോട് ഞങ്ങളുടെ ഹൃദയങ്ങളിൽ ഒരു വിദ്വേഷവും ഉണ്ടാക്കരുതേ. ഞങ്ങളുടെ രക്ഷിതാവേ, തീർച്ചയായും നീ അതിദയാലുവും കാരുണ്യവാനുമാണ്." },
+          "reference": "Quran 59:10",
+          "times": 1
+        }
+      ]
     }
   ]
 }
