@@ -198,11 +198,11 @@ function AppContent() {
         )}
 
         {/* Special Views for Asma ul Husna and Asma ul Anbiya */}
-        {selectedCategory && !selectedDua && selectedCategory.id === 'asma-ul-husna-complete' && (
+        {selectedCategory && !selectedDua && selectedCategory.id === 'asma-ul-husna' && (
           <AsmaUlHusnaView language={language} onBack={() => setSelectedCategory(null)} />
         )}
 
-        {selectedCategory && !selectedDua && selectedCategory.id === 'asma-ul-anbiya-complete' && (
+        {selectedCategory && !selectedDua && selectedCategory.id === 'asma-ul-anbiya' && (
           <AsmaUlAnbiyaView language={language} onBack={() => setSelectedCategory(null)} />
         )}
 
@@ -217,7 +217,7 @@ function AppContent() {
         )}
 
         {/* Regular Category View */}
-        {selectedCategory && !selectedDua && selectedCategory.id !== 'asma-ul-husna-complete' && selectedCategory.id !== 'asma-ul-anbiya-complete' && selectedCategory.id !== 'important-texts' && selectedCategory.id !== 'prophet-names-meanings' && (
+        {selectedCategory && !selectedDua && selectedCategory.id !== 'asma-ul-husna' && selectedCategory.id !== 'asma-ul-anbiya' && selectedCategory.id !== 'important-texts' && selectedCategory.id !== 'prophet-names-meanings' && (
           <div>
             <button
               onClick={() => setSelectedCategory(null)}

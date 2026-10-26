@@ -1,25 +1,25 @@
 {
-  "api_version": "1.0.0",
+  "api_version": "2.0.0",
   "description": "Comprehensive Islamic Duas API - Authentic supplications from Quran and Sahih Hadith",
-  "base_url": "https://rizna001.github.io/islamic-duas-collection/api/v1",
-  "documentation": "https://github.com/Rizna001/islamic-duas-collection/blob/main/API.md",
+  "base_url": "https://your-app.onrender.com/api/v1",
+  "documentation": "https://github.com/YOUR_USERNAME/islamic-duas-collection/blob/main/API.md",
   "endpoints": {
     "all_duas": "/duas.json",
     "api_index": "/index.json"
   },
-  "total_categories": 36,
-  "total_duas": 200,
+  "total_categories": 50,
+  "total_duas": 500,
   "supported_languages": [
     { "code": "en", "name": "English", "flag": "🇬🇧" },
     { "code": "ar", "name": "العربية", "flag": "🇸🇦" },
     { "code": "ur", "name": "اردو", "flag": "🇵🇰" },
-    { "code": "hi", "name": "हिन्दी", "flag": "🇮🇳" },
-    { "code": "bn", "name": "বাংলা", "flag": "🇧🇩" },
-    { "code": "ta", "name": "தமிழ்", "flag": "🇮🇳" },
-    { "code": "ml", "name": "മലയാളം", "flag": "🇮🇳" },
+    { "code": "fr", "name": "Français", "flag": "🇫🇷" },
     { "code": "tr", "name": "Türkçe", "flag": "🇹🇷" },
     { "code": "id", "name": "Bahasa Indonesia", "flag": "🇮🇩" },
-    { "code": "fr", "name": "Français", "flag": "🇫🇷" }
+    { "code": "bn", "name": "বাংলা", "flag": "🇧🇩" },
+    { "code": "ms", "name": "Bahasa Melayu", "flag": "🇲🇾" },
+    { "code": "ta", "name": "தமிழ்", "flag": "🇮🇳" },
+    { "code": "ml", "name": "മലയാളം", "flag": "🇮🇳" }
   ],
   "categories": [
     { "id": "morning-evening", "name": { "en": "Morning & Evening" }, "icon": "🌅", "duas_count": 5 },

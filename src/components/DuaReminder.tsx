@@ -162,10 +162,12 @@ export default function DuaReminder({ language }: DuaReminderProps) {
               </select>
             </div>
 
-            {newReminder.frequency === 'custom' && (
+            {(newReminder.frequency === 'weekly' || newReminder.frequency === 'custom') && (
               <div>
                 <label className={`block text-sm font-medium mb-2 ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
-                  {label.days}
+                  {newReminder.frequency === 'weekly' 
+                    ? (language === 'en' ? 'Select Day of Week' : language === 'ar' ? 'اختر يوم الأسبوع' : language === 'ur' ? 'ہفتے کا دن منتخب کریں' : 'Select Day of Week')
+                    : label.days}
                 </label>
                 <div className="flex flex-wrap gap-2">
                   {dayOptions.map((day) => (
