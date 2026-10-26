@@ -1,6 +1,7 @@
 import { useState, useMemo } from 'react';
 import expandedData from './data/expanded-duas.json';
 import originalData from './data/duas.json';
+import additionalData from './data/additional-duas.json';
 import { ThemeProvider, useTheme } from './contexts/ThemeContext';
 import { BookmarksProvider, useBookmarks } from './contexts/BookmarksContext';
 import { NotificationsProvider } from './contexts/NotificationsContext';
@@ -11,8 +12,12 @@ import SearchBar from './components/SearchBar';
 import Settings from './components/Settings';
 import BookmarksView from './components/BookmarksView';
 
-// Merge both data sources
-const mergedCategories = [...(originalData.categories || []), ...(expandedData.categories || [])];
+// Merge all data sources
+const mergedCategories = [
+  ...(originalData.categories || []), 
+  ...(expandedData.categories || []),
+  ...(additionalData.categories || [])
+];
 const duasData = { categories: mergedCategories, languages: originalData.languages };
 
 type LanguageCode = 'en' | 'ar' | 'ur' | 'fr' | 'tr' | 'id' | 'bn' | 'ms' | 'ta' | 'ml';
