@@ -5,9 +5,21 @@ interface NotificationsContextType {
   toggleNotifications: () => void;
   notificationTime: string;
   setNotificationTime: (time: string) => void;
+  notificationSound: string;
+  setNotificationSound: (sound: string) => void;
   lastNotification: string | null;
   requestPermission: () => Promise<boolean>;
+  playSound: () => void;
 }
+
+const NOTIFICATION_SOUNDS = [
+  { id: 'adhan', name: 'Adhan', file: 'adhan.mp3' },
+  { id: 'bell', name: 'Bell', file: 'bell.mp3' },
+  { id: 'chime', name: 'Chime', file: 'chime.mp3' },
+  { id: 'default', name: 'Default', file: 'default.mp3' },
+  { id: 'gentle', name: 'Gentle', file: 'gentle.mp3' },
+  { id: 'none', name: 'No Sound', file: '' },
+];
 
 const NotificationsContext = createContext<NotificationsContextType | undefined>(undefined);
 
@@ -26,6 +38,13 @@ export function NotificationsProvider({ children }: { children: ReactNode }) {
     return '08:00';
   });
 
+  const [notificationSound, setNotificationSoundState] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return localStorage.getItem('notificationSound') || 'adhan';
+    }
+    return 'adhan';
+  });
+
   const [lastNotification, setLastNotification] = useState<string | null>(() => {
     if (typeof window !== 'undefined') {
       return localStorage.getItem('lastNotification');
@@ -40,6 +59,10 @@ export function NotificationsProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     localStorage.setItem('notificationTime', notificationTime);
   }, [notificationTime]);
+
+  useEffect(() => {
+    localStorage.setItem('notificationSound', notificationSound);
+  }, [notificationSound]);
 
   useEffect(() => {
     if (lastNotification) {
@@ -62,9 +85,43 @@ export function NotificationsProvider({ children }: { children: ReactNode }) {
       }
     };
 
-    const interval = setInterval(checkNotification, 60000); // Check every minute
+    const interval = setInterval(checkNotification, 60000);
     return () => clearInterval(interval);
   }, [notificationsEnabled, notificationTime, lastNotification]);
+
+  const playSound = () => {
+    // Play notification sound using Web Audio API
+    const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
+    const oscillator = audioContext.createOscillator();
+    const gainNode = audioContext.createGain();
+    
+    oscillator.connect(gainNode);
+    gainNode.connect(audioContext.destination);
+    
+    // Different sounds based on selection
+    if (notificationSound === 'adhan') {
+      oscillator.frequency.value = 440;
+      oscillator.type = 'sine';
+    } else if (notificationSound === 'bell') {
+      oscillator.frequency.value = 800;
+      oscillator.type = 'triangle';
+    } else if (notificationSound === 'chime') {
+      oscillator.frequency.value = 600;
+      oscillator.type = 'sine';
+    } else if (notificationSound === 'gentle') {
+      oscillator.frequency.value = 300;
+      oscillator.type = 'sine';
+    } else {
+      oscillator.frequency.value = 440;
+      oscillator.type = 'sine';
+    }
+    
+    gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+    gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.5);
+    
+    oscillator.start(audioContext.currentTime);
+    oscillator.stop(audioContext.currentTime + 0.5);
+  };
 
   const requestPermission = async (): Promise<boolean> => {
     if (!('Notification' in window)) {
@@ -110,6 +167,13 @@ export function NotificationsProvider({ children }: { children: ReactNode }) {
     }
   };
 
+  const setNotificationSound = (sound: string) => {
+    setNotificationSoundState(sound);
+    if (sound !== 'none') {
+      playSound();
+    }
+  };
+
   const sendDailyNotification = () => {
     const duas = [
       { title: 'Morning Remembrance', text: 'أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلَّهِ' },
@@ -125,6 +189,10 @@ export function NotificationsProvider({ children }: { children: ReactNode }) {
       randomDua.text,
       '🤲'
     );
+    
+    if (notificationSound !== 'none') {
+      playSound();
+    }
   };
 
   const showNotification = (title: string, body: string, icon: string = '🤲') => {
@@ -145,8 +213,11 @@ export function NotificationsProvider({ children }: { children: ReactNode }) {
       toggleNotifications,
       notificationTime,
       setNotificationTime,
+      notificationSound,
+      setNotificationSound,
       lastNotification,
       requestPermission,
+      playSound,
     }}>
       {children}
     </NotificationsContext.Provider>
@@ -158,3 +229,5 @@ export function useNotifications() {
   if (!context) throw new Error('useNotifications must be used within NotificationsProvider');
   return context;
 }
+
+export { NOTIFICATION_SOUNDS };
