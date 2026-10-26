@@ -9,9 +9,9 @@ interface AudioPlayerProps {
 export default function AudioPlayer({ arabicText, language }: AudioPlayerProps) {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isSupported, setIsSupported] = useState(true);
-  const [speed, setSpeed] = useState(0.8);
+  const [speed, setSpeed] = useState(0.7);
   const [voices, setVoices] = useState<SpeechSynthesisVoice[]>([]);
-  const [selectedVoice, setSelectedVoice] = useState<SpeechSynthesisVoice | null>(null);
+  const [selectedVoiceIndex, setSelectedVoiceIndex] = useState<number>(-1);
   const utteranceRef = useRef<SpeechSynthesisUtterance | null>(null);
   const { isDark } = useTheme();
 
@@ -27,12 +27,12 @@ export default function AudioPlayer({ arabicText, language }: AudioPlayerProps) 
       setVoices(availableVoices);
       
       // Find best Arabic voice
-      const arabicVoice = availableVoices.find(v => v.lang === 'ar-SA') ||
-        availableVoices.find(v => v.lang.startsWith('ar')) ||
-        availableVoices.find(v => v.lang === 'ar');
+      const arabicVoiceIndex = availableVoices.findIndex(v => 
+        v.lang === 'ar-SA' || v.lang === 'ar' || v.lang.startsWith('ar-')
+      );
       
-      if (arabicVoice) {
-        setSelectedVoice(arabicVoice);
+      if (arabicVoiceIndex !== -1) {
+        setSelectedVoiceIndex(arabicVoiceIndex);
       }
     };
 
@@ -59,11 +59,11 @@ export default function AudioPlayer({ arabicText, language }: AudioPlayerProps) 
       const utterance = new SpeechSynthesisUtterance(arabicText);
       utterance.lang = 'ar-SA';
       utterance.rate = speed;
-      utterance.pitch = 1;
-      utterance.volume = 1;
+      utterance.pitch = 1.0;
+      utterance.volume = 1.0;
 
-      if (selectedVoice) {
-        utterance.voice = selectedVoice;
+      if (selectedVoiceIndex >= 0 && voices[selectedVoiceIndex]) {
+        utterance.voice = voices[selectedVoiceIndex];
       }
 
       utterance.onstart = () => setIsPlaying(true);
@@ -76,7 +76,7 @@ export default function AudioPlayer({ arabicText, language }: AudioPlayerProps) 
       utteranceRef.current = utterance;
       window.speechSynthesis.speak(utterance);
     }, 100);
-  }, [arabicText, speed, selectedVoice, isSupported]);
+  }, [arabicText, speed, selectedVoiceIndex, voices, isSupported]);
 
   const pauseAudio = () => {
     window.speechSynthesis.cancel();
@@ -92,7 +92,8 @@ export default function AudioPlayer({ arabicText, language }: AudioPlayerProps) 
   };
 
   const increaseSpeed = () => {
-    setSpeed(prev => Math.min(prev + 0.1, 1.5));
+    const newSpeed = Math.min(speed + 0.1, 1.5);
+    setSpeed(newSpeed);
     if (isPlaying) {
       pauseAudio();
       setTimeout(() => playAudio(), 150);
@@ -100,7 +101,8 @@ export default function AudioPlayer({ arabicText, language }: AudioPlayerProps) 
   };
 
   const decreaseSpeed = () => {
-    setSpeed(prev => Math.max(prev - 0.1, 0.3));
+    const newSpeed = Math.max(speed - 0.1, 0.3);
+    setSpeed(newSpeed);
     if (isPlaying) {
       pauseAudio();
       setTimeout(() => playAudio(), 150);
@@ -120,19 +122,22 @@ export default function AudioPlayer({ arabicText, language }: AudioPlayerProps) 
   }
 
   const labels: Record<string, Record<string, string>> = {
-    en: { listen: 'Listen', play: 'Play', pause: 'Pause', speed: 'Speed', note: 'Uses browser speech synthesis' },
-    ar: { listen: 'استمع', play: 'تشغيل', pause: 'إيقاف', speed: 'السرعة', note: 'يستخدم تخليق كلام المتصفح' },
-    ur: { listen: 'سنیں', play: 'چلائیں', pause: 'روکیں', speed: 'رفتار', note: 'براؤزر اسپیچ سنتھیسس استعمال کرتا ہے' },
-    fr: { listen: 'Écouter', play: 'Lecture', pause: 'Pause', speed: 'Vitesse', note: 'Utilise la synthèse vocale du navigateur' },
-    tr: { listen: 'Dinle', play: 'Oynat', pause: 'Duraklat', speed: 'Hız', note: 'Tarayıcı konuşma sentezini kullanır' },
-    id: { listen: 'Dengarkan', play: 'Putar', pause: 'Jeda', speed: 'Kecepatan', note: 'Menggunakan sintesis ucapan browser' },
-    bn: { listen: 'শুনুন', play: 'চালান', pause: 'বিরতি', speed: 'গতি', note: 'ব্রাউজার স্পিচ সিন্থেসিস ব্যবহার করে' },
-    ms: { listen: 'Dengar', play: 'Main', pause: 'Jeda', speed: 'Kelajuan', note: 'Menggunakan sintesis ucapan pelayar' },
-    ta: { listen: 'கேளுங்கள்', play: 'இயக்கு', pause: 'இடைநிறுத்து', speed: 'வேகம்', note: 'உலாவி பேச்சு தொகுப்பைப் பயன்படுத்துகிறது' },
-    ml: { listen: 'കേൾക്കുക', play: 'പ്ലേ', pause: 'നിർത്തുക', speed: 'വേഗത', note: 'ബ്രൗസർ സ്പീച്ച് സിന്തസിസ് ഉപയോഗിക്കുന്നു' },
+    en: { listen: 'Listen', play: 'Play', pause: 'Pause', speed: 'Speed', note: 'Uses browser speech synthesis', voice: 'Voice' },
+    ar: { listen: 'استمع', play: 'تشغيل', pause: 'إيقاف', speed: 'السرعة', note: 'يستخدم تخليق كلام المتصفح', voice: 'الصوت' },
+    ur: { listen: 'سنیں', play: 'چلائیں', pause: 'روکیں', speed: 'رفتار', note: 'براؤزر اسپیچ سنتھیسس استعمال کرتا ہے', voice: 'آواز' },
+    fr: { listen: 'Écouter', play: 'Lecture', pause: 'Pause', speed: 'Vitesse', note: 'Utilise la synthèse vocale du navigateur', voice: 'Voix' },
+    tr: { listen: 'Dinle', play: 'Oynat', pause: 'Duraklat', speed: 'Hız', note: 'Tarayıcı konuşma sentezini kullanır', voice: 'Ses' },
+    id: { listen: 'Dengarkan', play: 'Putar', pause: 'Jeda', speed: 'Kecepatan', note: 'Menggunakan sintesis ucapan browser', voice: 'Suara' },
+    bn: { listen: 'শুনুন', play: 'চালান', pause: 'বিরতি', speed: 'গতি', note: 'ব্রাউজার স্পিচ সিন্থেসিস ব্যবহার করে', voice: 'কণ্ঠ' },
+    ms: { listen: 'Dengar', play: 'Main', pause: 'Jeda', speed: 'Kelajuan', note: 'Menggunakan sintesis ucapan pelayar', voice: 'Suara' },
+    ta: { listen: 'கேளுங்கள்', play: 'இயக்கு', pause: 'இடைநிறுத்து', speed: 'வேகம்', note: 'உலாவி பேச்சு தொகுப்பைப் பயன்படுத்துகிறது', voice: 'குரல்' },
+    ml: { listen: 'കേൾക്കുക', play: 'പ്ലേ', pause: 'നിർത്തുക', speed: 'വേഗത', note: 'ബ്രൗസർ സ്പീച്ച് സിന്തസിസ് ഉപയോഗിക്കുന്നു', voice: 'ശബ്ദം' },
   };
 
   const label = labels[language] || labels.en;
+
+  // Filter Arabic voices for the dropdown
+  const arabicVoices = voices.filter(v => v.lang.startsWith('ar'));
 
   return (
     <div className={`mt-4 p-4 rounded-xl border ${isDark ? 'bg-slate-800 border-slate-700' : 'bg-gray-50 border-gray-200'}`}>
@@ -168,6 +173,31 @@ export default function AudioPlayer({ arabicText, language }: AudioPlayerProps) 
           </button>
         </div>
       </div>
+
+      {/* Voice Selection */}
+      {arabicVoices.length > 1 && (
+        <div className="mb-3">
+          <label className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>{label.voice}:</label>
+          <select
+            value={selectedVoiceIndex}
+            onChange={(e) => setSelectedVoiceIndex(Number(e.target.value))}
+            className={`ml-2 text-xs px-2 py-1 rounded border ${
+              isDark 
+                ? 'bg-slate-700 border-slate-600 text-gray-300' 
+                : 'bg-white border-gray-300 text-gray-700'
+            }`}
+          >
+            {arabicVoices.map((voice, idx) => {
+              const originalIndex = voices.indexOf(voice);
+              return (
+                <option key={idx} value={originalIndex}>
+                  {voice.name} ({voice.lang})
+                </option>
+              );
+            })}
+          </select>
+        </div>
+      )}
 
       <button
         onClick={togglePlay}

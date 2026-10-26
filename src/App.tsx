@@ -2,6 +2,7 @@ import { useState, useMemo } from 'react';
 import expandedData from './data/expanded-duas.json';
 import originalData from './data/duas.json';
 import additionalData from './data/additional-duas.json';
+import prayerDuasData from './data/prayer-duas.json';
 import { ThemeProvider, useTheme } from './contexts/ThemeContext';
 import { BookmarksProvider, useBookmarks } from './contexts/BookmarksContext';
 import { NotificationsProvider } from './contexts/NotificationsContext';
@@ -11,12 +12,16 @@ import Header from './components/Header';
 import SearchBar from './components/SearchBar';
 import Settings from './components/Settings';
 import BookmarksView from './components/BookmarksView';
+import AsmaUlHusnaView from './components/AsmaUlHusnaView';
+import AsmaUlAnbiyaView from './components/AsmaUlAnbiyaView';
+import DailyProgress from './components/DailyProgress';
 
 // Merge all data sources
 const mergedCategories = [
   ...(originalData.categories || []), 
   ...(expandedData.categories || []),
-  ...(additionalData.categories || [])
+  ...(additionalData.categories || []),
+  ...(prayerDuasData.categories || [])
 ];
 const duasData = { categories: mergedCategories, languages: originalData.languages };
 
@@ -129,6 +134,13 @@ function AppContent() {
           </div>
         )}
 
+        {/* Daily Progress Tracker */}
+        {viewMode === 'categories' && !selectedCategory && !selectedDua && (
+          <div className="mb-8">
+            <DailyProgress language={language} />
+          </div>
+        )}
+
         {/* Categories Grid */}
         {viewMode === 'categories' && !selectedCategory && !selectedDua && (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
@@ -148,8 +160,17 @@ function AppContent() {
           <BookmarksView language={language} onDuaClick={handleDuaClickFromBookmarks} />
         )}
 
-        {/* Category View */}
-        {selectedCategory && !selectedDua && (
+        {/* Special Views for Asma ul Husna and Asma ul Anbiya */}
+        {selectedCategory && !selectedDua && selectedCategory.id === 'asma-ul-husna-complete' && (
+          <AsmaUlHusnaView language={language} onBack={() => setSelectedCategory(null)} />
+        )}
+
+        {selectedCategory && !selectedDua && selectedCategory.id === 'asma-ul-anbiya-complete' && (
+          <AsmaUlAnbiyaView language={language} onBack={() => setSelectedCategory(null)} />
+        )}
+
+        {/* Regular Category View */}
+        {selectedCategory && !selectedDua && selectedCategory.id !== 'asma-ul-husna-complete' && selectedCategory.id !== 'asma-ul-anbiya-complete' && (
           <div>
             <button
               onClick={() => setSelectedCategory(null)}
