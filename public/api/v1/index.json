@@ -1,0 +1,306 @@
+{
+  "api_version": "1.0.0",
+  "description": "Comprehensive Islamic Duas API - Authentic supplications from Quran & Sunnah for every situation",
+  "base_url": "https://raw.githubusercontent.com/your-username/duas-api/main/public/api/v1",
+  "endpoints": {
+    "all_duas": "/duas.json",
+    "categories": "/categories.json",
+    "by_category": "/categories/{category_id}.json",
+    "by_language": "/duas/{language_code}.json"
+  },
+  "supported_languages": ["en", "ar", "ur", "fr", "tr", "id", "bn", "ms"],
+  "categories": [
+    {
+      "id": "morning-evening",
+      "icon": "🌅",
+      "color": "#f59e0b",
+      "name": {
+        "en": "Morning & Evening",
+        "ar": "الصباح والمساء",
+        "ur": "صبح و شام",
+        "fr": "Matin et Soir",
+        "tr": "Sabah ve Akşam",
+        "id": "Pagi dan Sore",
+        "bn": "সকাল ও সন্ধ্যা",
+        "ms": "Pagi dan Petang"
+      },
+      "duas_count": 3
+    },
+    {
+      "id": "eating",
+      "icon": "🍽️",
+      "color": "#10b981",
+      "name": {
+        "en": "Before & After Eating",
+        "ar": "قبل وبعد الطعام",
+        "ur": "کھانے سے پہلے اور بعد",
+        "fr": "Avant et Après le Repas",
+        "tr": "Yemekten Önce ve Sonra",
+        "id": "Sebelum dan Sesudah Makan",
+        "bn": "খাওয়ার আগে ও পরে",
+        "ms": "Sebelum dan Selepas Makan"
+      },
+      "duas_count": 4
+    },
+    {
+      "id": "sleep-wake",
+      "icon": "🌙",
+      "color": "#6366f1",
+      "name": {
+        "en": "Sleep & Waking Up",
+        "ar": "النوم والاستيقاظ",
+        "ur": "سونے اور جاگنے",
+        "fr": "Sommeil et Réveil",
+        "tr": "Uyku ve Uyanma",
+        "id": "Tidur dan Bangun",
+        "bn": "ঘুম ও জাগরণ",
+        "ms": "Tidur dan Bangun"
+      },
+      "duas_count": 3
+    },
+    {
+      "id": "mosque",
+      "icon": "🕌",
+      "color": "#14b8a6",
+      "name": {
+        "en": "Mosque",
+        "ar": "المسجد",
+        "ur": "مسجد",
+        "fr": "Mosquée",
+        "tr": "Cami",
+        "id": "Masjid",
+        "bn": "মসজিদ",
+        "ms": "Masjid"
+      },
+      "duas_count": 2
+    },
+    {
+      "id": "home",
+      "icon": "🏠",
+      "color": "#3b82f6",
+      "name": {
+        "en": "Home",
+        "ar": "البيت",
+        "ur": "گھر",
+        "fr": "Maison",
+        "tr": "Ev",
+        "id": "Rumah",
+        "bn": "ঘর",
+        "ms": "Rumah"
+      },
+      "duas_count": 2
+    },
+    {
+      "id": "bathroom",
+      "icon": "🚿",
+      "color": "#64748b",
+      "name": {
+        "en": "Bathroom",
+        "ar": "دخول الخلاء",
+        "ur": "بیت الخلا",
+        "fr": "Toilettes",
+        "tr": "Tuvalet",
+        "id": "Kamar Mandi",
+        "bn": "বাথরুম",
+        "ms": "Tandas"
+      },
+      "duas_count": 1
+    },
+    {
+      "id": "travel",
+      "icon": "✈️",
+      "color": "#06b6d4",
+      "name": {
+        "en": "Travel",
+        "ar": "السفر",
+        "ur": "سفر",
+        "fr": "Voyage",
+        "tr": "Yolculuk",
+        "id": "Perjalanan",
+        "bn": "ভ্রমণ",
+        "ms": "Perjalanan"
+      },
+      "duas_count": 2
+    },
+    {
+      "id": "hardship",
+      "icon": "😢",
+      "color": "#f43f5e",
+      "name": {
+        "en": "Hardship & Distress",
+        "ar": "الكرب والشدائد",
+        "ur": "مشکلات اور پریشانی",
+        "fr": "Difficulté et Détresse",
+        "tr": "Zorluk ve Sıkıntı",
+        "id": "Kesulitan dan Kesusahan",
+        "bn": "কষ্ট ও দুর্দশা",
+        "ms": "Kesukaran dan Kesedihan"
+      },
+      "duas_count": 3
+    },
+    {
+      "id": "forgiveness",
+      "icon": "🤲",
+      "color": "#a855f7",
+      "name": {
+        "en": "Forgiveness & Repentance",
+        "ar": "المغفرة والتوبة",
+        "ur": "مغفرت اور توبہ",
+        "fr": "Pardon et Repentance",
+        "tr": "Mağfiret ve Tövbe",
+        "id": "Pengampunan dan Taubat",
+        "bn": "ক্ষমা ও তাওবা",
+        "ms": "Keampunan dan Taubat"
+      },
+      "duas_count": 2
+    },
+    {
+      "id": "protection",
+      "icon": "🛡️",
+      "color": "#ef4444",
+      "name": {
+        "en": "Protection",
+        "ar": "الحماية",
+        "ur": "حفاظت",
+        "fr": "Protection",
+        "tr": "Koruma",
+        "id": "Perlindungan",
+        "bn": "সুরক্ষা",
+        "ms": "Perlindungan"
+      },
+      "duas_count": 2
+    },
+    {
+      "id": "parents",
+      "icon": "❤️",
+      "color": "#ec4899",
+      "name": {
+        "en": "For Parents",
+        "ar": "للوالدين",
+        "ur": "والدین کے لیے",
+        "fr": "Pour les Parents",
+        "tr": "Anne Baba İçin",
+        "id": "Untuk Orang Tua",
+        "bn": "পিতা-মাতার জন্য",
+        "ms": "Untuk Ibu Bapa"
+      },
+      "duas_count": 2
+    },
+    {
+      "id": "knowledge",
+      "icon": "📚",
+      "color": "#8b5cf6",
+      "name": {
+        "en": "Knowledge & Study",
+        "ar": "العلم والدراسة",
+        "ur": "علم اور مطالعہ",
+        "fr": "Connaissance et Étude",
+        "tr": "İlim ve Çalışma",
+        "id": "Ilmu dan Belajar",
+        "bn": "জ্ঞান ও পড়াশোনা",
+        "ms": "Ilmu dan Pembelajaran"
+      },
+      "duas_count": 3
+    },
+    {
+      "id": "sickness",
+      "icon": "🏥",
+      "color": "#0ea5e9",
+      "name": {
+        "en": "Sickness & Healing",
+        "ar": "المرض والشفاء",
+        "ur": "بیماری اور شفا",
+        "fr": "Maladie et Guérison",
+        "tr": "Hastalık ve Şifa",
+        "id": "Penyakit dan Kesembuhan",
+        "bn": "অসুস্থতা ও আরোগ্য",
+        "ms": "Penyakit dan Kesembuhan"
+      },
+      "duas_count": 2
+    },
+    {
+      "id": "rain",
+      "icon": "🌧️",
+      "color": "#059669",
+      "name": {
+        "en": "Rain & Weather",
+        "ar": "المطر والطقس",
+        "ur": "بارش اور موسم",
+        "fr": "Pluie et Météo",
+        "tr": "Yağmur ve Hava",
+        "id": "Hujan dan Cuaca",
+        "bn": "বৃষ্টি ও আবহাওয়া",
+        "ms": "Hujan dan Cuaca"
+      },
+      "duas_count": 2
+    },
+    {
+      "id": "anger",
+      "icon": "😤",
+      "color": "#f97316",
+      "name": {
+        "en": "Anger & Calm",
+        "ar": "الغضب والهدوء",
+        "ur": "غصہ اور سکون",
+        "fr": "Colère et Calme",
+        "tr": "Öfke ve Sakinlik",
+        "id": "Marah dan Ketenangan",
+        "bn": "রাগ ও শান্তি",
+        "ms": "Marah dan Ketenangan"
+      },
+      "duas_count": 1
+    },
+    {
+      "id": "friday",
+      "icon": "🕌",
+      "color": "#eab308",
+      "name": {
+        "en": "Friday (Jumu'ah)",
+        "ar": "يوم الجمعة",
+        "ur": "جمعہ",
+        "fr": "Vendredi (Jumu'ah)",
+        "tr": "Cuma Günü",
+        "id": "Hari Jumat",
+        "bn": "জুমুআর দিন",
+        "ms": "Hari Jumaat"
+      },
+      "duas_count": 1
+    },
+    {
+      "id": "dua-general",
+      "icon": "🤲",
+      "color": "#d946ef",
+      "name": {
+        "en": "General Good",
+        "ar": "الخير العام",
+        "ur": "عمومی خیر",
+        "fr": "Bien Général",
+        "tr": "Genel Hayır",
+        "id": "Kebaikan Umum",
+        "bn": "সাধারণ কল্যাণ",
+        "ms": "Kebaikan Umum"
+      },
+      "duas_count": 3
+    }
+  ],
+  "usage": {
+    "description": "This API provides authentic Islamic duas (supplications) organized by situation/category with translations in multiple languages.",
+    "authentication": "None required - public API",
+    "rate_limit": "No rate limit for static JSON files",
+    "examples": [
+      "GET /api/v1/duas.json - Get all duas",
+      "GET /api/v1/categories.json - Get all categories",
+      "GET /api/v1/categories/morning-evening.json - Get duas for morning & evening"
+    ]
+  },
+  "license": "Free to use for Islamic apps and projects. Please maintain accuracy of the Arabic text.",
+  "sources": [
+    "Sahih al-Bukhari",
+    "Sahih Muslim",
+    "Sunan Abu Dawud",
+    "Jami' at-Tirmidhi",
+    "Sunan Ibn Majah",
+    "Sunan an-Nasa'i",
+    "The Noble Quran"
+  ]
+}
