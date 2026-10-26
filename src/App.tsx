@@ -6,6 +6,7 @@ import prayerDuasData from './data/prayer-duas.json';
 import importantTextsData from './data/important-texts.json';
 import allRabbanaCategory from './data/allRabbanaCategory.json';
 import allSalawatsCategory from './data/allSalawatsCategory.json';
+import prophetNamesCategory from './data/prophet-names-category.json';
 import { ThemeProvider, useTheme } from './contexts/ThemeContext';
 import { BookmarksProvider, useBookmarks } from './contexts/BookmarksContext';
 import { NotificationsProvider } from './contexts/NotificationsContext';
@@ -22,6 +23,7 @@ import SalahTracker from './components/SalahTracker';
 import DuaReminder from './components/DuaReminder';
 import TasbeehCounter from './components/TasbeehCounter';
 import ImportantTextViews from './components/ImportantTextViews';
+import ProphetNamesView from './components/ProphetNamesView';
 
 // Merge all data sources
 const mergedCategories = [
@@ -31,7 +33,8 @@ const mergedCategories = [
   ...(prayerDuasData.categories || []),
   ...(importantTextsData.categories || []),
   ...(allRabbanaCategory.categories || []),
-  ...(allSalawatsCategory.categories || [])
+  ...(allSalawatsCategory.categories || []),
+  ...(prophetNamesCategory.categories || [])
 ];
 const duasData = { categories: mergedCategories, languages: originalData.languages };
 
@@ -206,8 +209,13 @@ function AppContent() {
           <ImportantTextViews language={language} onBack={() => setSelectedCategory(null)} />
         )}
 
+        {/* Prophet Names with Meanings View */}
+        {selectedCategory && !selectedDua && selectedCategory.id === 'prophet-names-meanings' && (
+          <ProphetNamesView language={language} onBack={() => setSelectedCategory(null)} />
+        )}
+
         {/* Regular Category View */}
-        {selectedCategory && !selectedDua && selectedCategory.id !== 'asma-ul-husna-complete' && selectedCategory.id !== 'asma-ul-anbiya-complete' && selectedCategory.id !== 'important-texts' && (
+        {selectedCategory && !selectedDua && selectedCategory.id !== 'asma-ul-husna-complete' && selectedCategory.id !== 'asma-ul-anbiya-complete' && selectedCategory.id !== 'important-texts' && selectedCategory.id !== 'prophet-names-meanings' && (
           <div>
             <button
               onClick={() => setSelectedCategory(null)}
