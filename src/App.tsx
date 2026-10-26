@@ -6,7 +6,7 @@ import DuaDetail from './components/DuaDetail';
 import Header from './components/Header';
 import SearchBar from './components/SearchBar';
 
-type LanguageCode = 'en' | 'ar' | 'ur' | 'fr' | 'tr' | 'id' | 'bn' | 'ms';
+type LanguageCode = 'en' | 'ar' | 'ur' | 'fr' | 'tr' | 'id' | 'bn' | 'ms' | 'ta' | 'ml';
 
 interface Dua {
   id: string;
@@ -73,7 +73,9 @@ export default function App() {
              language === 'tr' ? 'Duaları görmek için bir kategori seçin' :
              language === 'id' ? 'Pilih kategori untuk melihat doa' :
              language === 'bn' ? 'দোয়া দেখতে একটি বিভাগ নির্বাচন করুন' :
-             'Pilih kategori untuk melihat doa'}
+             language === 'ms' ? 'Pilih kategori untuk melihat doa' :
+             language === 'ta' ? 'துஆக்களைப் பார்க்க ஒரு வகையைத் தேர்ந்தெடுக்கவும்' :
+             'ദുആകൾ കാണാൻ ഒരു വിഭാഗം തിരഞ്ഞെടുക്കുക'}
           </p>
         </div>
 
@@ -101,7 +103,7 @@ export default function App() {
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
-              <span>{language === 'en' ? 'Back to Categories' : language === 'ar' ? 'العودة للفئات' : language === 'ur' ? 'زمرہ جات پر واپس' : language === 'fr' ? 'Retour aux Catégories' : language === 'tr' ? 'Kategorilere Dön' : language === 'id' ? 'Kembali ke Kategori' : language === 'bn' ? 'বিভাগে ফিরে যান' : 'Kembali ke Kategori'}</span>
+              <span>{language === 'en' ? 'Back to Categories' : language === 'ar' ? 'العودة للفئات' : language === 'ur' ? 'زمرہ جات پر واپس' : language === 'fr' ? 'Retour aux Catégories' : language === 'tr' ? 'Kategorilere Dön' : language === 'id' ? 'Kembali ke Kategori' : language === 'bn' ? 'বিভাগে ফিরে যান' : language === 'ms' ? 'Kembali ke Kategori' : language === 'ta' ? 'வகைகளுக்குத் திரும்பு' : 'വിഭാഗങ്ങളിലേക്ക് മടങ്ങുക'}</span>
             </button>
             
             {/* Category Header */}
@@ -110,7 +112,7 @@ export default function App() {
                 <span className="text-4xl">{selectedCategory.icon}</span>
                 <div>
                   <h2 className="text-2xl font-bold">{selectedCategory.name[language] || selectedCategory.name.en}</h2>
-                  <p className="text-white/80 text-sm">{selectedCategory.duas.length} {language === 'en' ? 'duas' : language === 'ar' ? 'دعاء' : language === 'ur' ? 'دعائیں' : language === 'fr' ? 'duas' : language === 'tr' ? 'dua' : language === 'id' ? 'doa' : language === 'bn' ? 'দোয়া' : 'doa'}</p>
+                  <p className="text-white/80 text-sm">{selectedCategory.duas.length} {language === 'en' ? 'duas' : language === 'ar' ? 'دعاء' : language === 'ur' ? 'دعائیں' : language === 'fr' ? 'duas' : language === 'tr' ? 'dua' : language === 'id' ? 'doa' : language === 'bn' ? 'দোয়া' : language === 'ms' ? 'doa' : language === 'ta' ? 'துஆ' : 'ദുആ'}</p>
                 </div>
               </div>
             </div>
@@ -175,7 +177,9 @@ export default function App() {
              language === 'tr' ? 'Tüm dualar sahih kaynaklardandır (Kur\'an ve Sünnet)' :
              language === 'id' ? 'Semua doa dari sumber yang shahih (Al-Quran & Sunnah)' :
              language === 'bn' ? 'সকল দোয়া সহীহ উৎস থেকে (কুরআন ও সুন্নাহ)' :
-             'Semua doa dari sumber yang sahih (Al-Quran & Sunnah)'}
+             language === 'ms' ? 'Semua doa dari sumber yang sahih (Al-Quran & Sunnah)' :
+             language === 'ta' ? 'அனைத்து துஆக்களும் நம்பகமான ஆதாரங்களிலிருந்து (குர்ஆன் & சுன்னா)' :
+             'എല്ലാ ദുആകളും ആധികാരികമായ ഉറവിടങ്ങളിൽ നിന്നാണ് (ഖുർആനും സുന്നത്തും)'}
           </p>
           <p className="text-gray-300 text-xs mt-2">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ</p>
         </div>

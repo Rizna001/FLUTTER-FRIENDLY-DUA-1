@@ -35,7 +35,9 @@ export default function DuaDetail({
     language === 'tr' ? 'Oku' :
     language === 'id' ? 'Baca' :
     language === 'bn' ? 'পড়ুন' :
-    'Baca';
+    language === 'ms' ? 'Baca' :
+    language === 'ta' ? 'படிக்கவும்' :
+    'വായിക്കുക';
 
   const referenceLabel = language === 'en' ? 'Reference' :
     language === 'ar' ? 'المصدر' :
@@ -44,7 +46,9 @@ export default function DuaDetail({
     language === 'tr' ? 'Kaynak' :
     language === 'id' ? 'Referensi' :
     language === 'bn' ? 'সূত্র' :
-    'Rujukan';
+    language === 'ms' ? 'Rujukan' :
+    language === 'ta' ? 'ஆதாரம்' :
+    'അവലംബം';
 
   const timesLabel = language === 'en' ? 'times' :
     language === 'ar' ? 'مرات' :
@@ -53,7 +57,9 @@ export default function DuaDetail({
     language === 'tr' ? 'kez' :
     language === 'id' ? 'kali' :
     language === 'bn' ? 'বার' :
-    'kali';
+    language === 'ms' ? 'kali' :
+    language === 'ta' ? 'முறை' :
+    'തവണ';
 
   return (
     <div className="max-w-3xl mx-auto">
@@ -65,7 +71,7 @@ export default function DuaDetail({
         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
         </svg>
-        <span>{language === 'en' ? 'Back' : language === 'ar' ? 'رجوع' : language === 'ur' ? 'واپس' : language === 'fr' ? 'Retour' : language === 'tr' ? 'Geri' : language === 'id' ? 'Kembali' : language === 'bn' ? 'পিছনে' : 'Kembali'}</span>
+        <span>{language === 'en' ? 'Back' : language === 'ar' ? 'رجوع' : language === 'ur' ? 'واپس' : language === 'fr' ? 'Retour' : language === 'tr' ? 'Geri' : language === 'id' ? 'Kembali' : language === 'bn' ? 'পিছনে' : language === 'ms' ? 'Kembali' : language === 'ta' ? 'பின்' : 'തിരികെ'}</span>
       </button>
 
       {/* Dua Card */}
@@ -87,7 +93,7 @@ export default function DuaDetail({
         <div className="p-6 border-b border-gray-100">
           <div className="flex items-center justify-between mb-4">
             <span className="text-xs font-medium text-gray-400 uppercase tracking-wider">
-              {language === 'en' ? 'Arabic Text' : language === 'ar' ? 'النص العربي' : language === 'ur' ? 'عربی متن' : language === 'fr' ? 'Texte Arabe' : language === 'tr' ? 'Arapça Metin' : language === 'id' ? 'Teks Arab' : language === 'bn' ? 'আরবি টেক্সট' : 'Teks Arab'}
+              {language === 'en' ? 'Arabic Text' : language === 'ar' ? 'النص العربي' : language === 'ur' ? 'عربی متن' : language === 'fr' ? 'Texte Arabe' : language === 'tr' ? 'Arapça Metin' : language === 'id' ? 'Teks Arab' : language === 'bn' ? 'আরবি টেক্সট' : language === 'ms' ? 'Teks Arab' : language === 'ta' ? 'அரபி உரை' : 'അറബിക് പാഠം'}
             </span>
             {/* Font Size Controls */}
             <div className="flex items-center gap-1">
@@ -119,7 +125,7 @@ export default function DuaDetail({
         {/* Translation */}
         <div className="p-6 border-b border-gray-100 bg-gray-50/50">
           <span className="text-xs font-medium text-gray-400 uppercase tracking-wider mb-3 block">
-            {language === 'en' ? 'Translation' : language === 'ar' ? 'الترجمة' : language === 'ur' ? 'ترجمہ' : language === 'fr' ? 'Traduction' : language === 'tr' ? 'Çeviri' : language === 'id' ? 'Terjemahan' : language === 'bn' ? 'অনুবাদ' : 'Terjemahan'}
+            {language === 'en' ? 'Translation' : language === 'ar' ? 'الترجمة' : language === 'ur' ? 'ترجمہ' : language === 'fr' ? 'Traduction' : language === 'tr' ? 'Çeviri' : language === 'id' ? 'Terjemahan' : language === 'bn' ? 'অনুবাদ' : language === 'ms' ? 'Terjemahan' : language === 'ta' ? 'மொழிபெயர்ப்பு' : 'വിവർത്തനം'}
           </span>
           <p className="text-gray-700 text-lg leading-relaxed">
             {dua.translation[language] || dua.translation.en}
@@ -144,14 +150,14 @@ export default function DuaDetail({
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                 </svg>
-                {language === 'en' ? 'Copied!' : language === 'ar' ? 'تم النسخ!' : language === 'ur' ? 'کاپی ہو گیا!' : language === 'fr' ? 'Copié!' : language === 'tr' ? 'Kopyalandı!' : language === 'id' ? 'Disalin!' : language === 'bn' ? 'কপি হয়েছে!' : 'Disalin!'}
+                {language === 'en' ? 'Copied!' : language === 'ar' ? 'تم النسخ!' : language === 'ur' ? 'کاپی ہو گیا!' : language === 'fr' ? 'Copié!' : language === 'tr' ? 'Kopyalandı!' : language === 'id' ? 'Disalin!' : language === 'bn' ? 'কপি হয়েছে!' : language === 'ms' ? 'Disalin!' : language === 'ta' ? 'நகலெடுக்கப்பட்டது!' : 'പകർത്തി!'}
               </>
             ) : (
               <>
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
                 </svg>
-                {language === 'en' ? 'Copy' : language === 'ar' ? 'نسخ' : language === 'ur' ? 'کاپی' : language === 'fr' ? 'Copier' : language === 'tr' ? 'Kopyala' : language === 'id' ? 'Salin' : language === 'bn' ? 'কপি' : 'Salin'}
+                {language === 'en' ? 'Copy' : language === 'ar' ? 'نسخ' : language === 'ur' ? 'کاپی' : language === 'fr' ? 'Copier' : language === 'tr' ? 'Kopyala' : language === 'id' ? 'Salin' : language === 'bn' ? 'কপি' : language === 'ms' ? 'Salin' : language === 'ta' ? 'நகலெடு' : 'പകർത്തുക'}
               </>
             )}
           </button>
@@ -174,7 +180,9 @@ function DuaCounter({ language, targetTimes }: { language: string; targetTimes: 
     language === 'tr' ? 'Dua Sayacı' :
     language === 'id' ? 'Penghitung Doa' :
     language === 'bn' ? 'দোয়া কাউন্টার' :
-    'Penghitung Doa';
+    language === 'ms' ? 'Penghitung Doa' :
+    language === 'ta' ? 'துஆ எண்ணிக்கை' :
+    'ദുആ എണ്ണി';
 
   return (
     <div className="mt-6 bg-white rounded-2xl shadow-lg border border-gray-100 p-6 text-center">
@@ -210,12 +218,12 @@ function DuaCounter({ language, targetTimes }: { language: string; targetTimes: 
         onClick={() => setCount(0)}
         className="mt-4 text-xs text-gray-400 hover:text-gray-600 transition-colors"
       >
-        {language === 'en' ? 'Reset' : language === 'ar' ? 'إعادة' : language === 'ur' ? 'ری سیٹ' : language === 'fr' ? 'Réinitialiser' : language === 'tr' ? 'Sıfırla' : language === 'id' ? 'Reset' : language === 'bn' ? 'রিসেট' : 'Reset'}
+        {language === 'en' ? 'Reset' : language === 'ar' ? 'إعادة' : language === 'ur' ? 'ری سیٹ' : language === 'fr' ? 'Réinitialiser' : language === 'tr' ? 'Sıfırla' : language === 'id' ? 'Reset' : language === 'bn' ? 'রিসেট' : language === 'ms' ? 'Reset' : language === 'ta' ? 'மீட்டமை' : 'പുനഃക്രമീകരിക്കുക'}
       </button>
 
       {count >= targetTimes && (
         <div className="mt-3 text-emerald-500 text-sm font-medium animate-pulse">
-          ✓ {language === 'en' ? 'Completed!' : language === 'ar' ? 'تم!' : language === 'ur' ? 'مکمل!' : language === 'fr' ? 'Terminé!' : language === 'tr' ? 'Tamamlandı!' : language === 'id' ? 'Selesai!' : language === 'bn' ? 'সম্পন্ন!' : 'Selesai!'}
+          ✓ {language === 'en' ? 'Completed!' : language === 'ar' ? 'تم!' : language === 'ur' ? 'مکمل!' : language === 'fr' ? 'Terminé!' : language === 'tr' ? 'Tamamlandı!' : language === 'id' ? 'Selesai!' : language === 'bn' ? 'সম্পন্ন!' : language === 'ms' ? 'Selesai!' : language === 'ta' ? 'முடிந்தது!' : 'പൂർത്തിയായി!'}
         </div>
       )}
     </div>

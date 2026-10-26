@@ -20,7 +20,9 @@ export default function Header({
     language === 'tr' ? 'Dua Koleksiyonu' :
     language === 'id' ? 'Koleksi Doa' :
     language === 'bn' ? 'দোয়া সংকলন' :
-    'Koleksi Doa';
+    language === 'ms' ? 'Koleksi Doa' :
+    language === 'ta' ? 'துஆ தொகுப்பு' :
+    'ദുആ ശേഖരം';
 
   const subtitle = language === 'en' ? 'Authentic supplications for every occasion' :
     language === 'ar' ? 'أدعية صحيحة لكل مناسبة' :
@@ -29,7 +31,9 @@ export default function Header({
     language === 'tr' ? 'Her durum için sahih dualar' :
     language === 'id' ? 'Doa-doa shahih untuk setiap keadaan' :
     language === 'bn' ? 'প্রতিটি উপলক্ষ্যের জন্য সহীহ দোয়া' :
-    'Doa-doa sahih untuk setiap keadaan';
+    language === 'ms' ? 'Doa-doa sahih untuk setiap keadaan' :
+    language === 'ta' ? 'ஒவ்வொரு சந்தர்ப்பத்திற்கும் நம்பகமான பிரார்த்தனைகள்' :
+    'ഓരോ സന്ദർഭത്തിനുമുള്ള ആധികാരികമായ പ്രാർത്ഥനകൾ';
 
   return (
     <header className="sticky top-0 z-50 backdrop-blur-xl bg-white/80 border-b border-gray-100 shadow-sm">

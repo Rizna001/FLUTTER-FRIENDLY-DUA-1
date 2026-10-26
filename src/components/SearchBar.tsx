@@ -14,7 +14,9 @@ export default function SearchBar({
     language === 'tr' ? 'İsim veya çeviriye göre dua ara...' :
     language === 'id' ? 'Cari doa berdasarkan nama atau terjemahan...' :
     language === 'bn' ? 'নাম বা অনুবাদ দিয়ে দোয়া খুঁজুন...' :
-    'Cari doa berdasarkan nama atau terjemahan...';
+    language === 'ms' ? 'Cari doa berdasarkan nama atau terjemahan...' :
+    language === 'ta' ? 'பெயர் அல்லது மொழிபெயர்ப்பால் துஆக்களைத் தேடுங்கள்...' :
+    'പേര് അല്ലെങ്കിൽ വിവർത്തനം അനുസരിച്ച് ദുആകൾ തിരയുക...';
 
   return (
     <div className="mb-8">
