@@ -103,7 +103,7 @@ A complete collection of authentic Islamic supplications (Duas) from the Quran a
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/islamic-duas-collection.git
+git clone https://github.com/Rizna001/islamic-duas-collection.git
 
 # Navigate to project directory
 cd islamic-duas-collection

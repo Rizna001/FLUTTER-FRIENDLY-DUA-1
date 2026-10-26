@@ -92,7 +92,7 @@ npm run preview
 1. Push to `main` branch
 2. Go to Settings → Pages
 3. Select `main` branch and `/root`
-4. Site will be available at `https://yourusername.github.io/islamic-duas-collection`
+4. Site will be available at `https://rizna001.github.io/islamic-duas-collection`
 
 ### Vercel
 ```bash
@@ -111,7 +111,7 @@ netlify deploy --prod
 - **Name:** islamic-duas-collection
 - **Version:** 1.0.0
 - **License:** MIT
-- **Repository:** https://github.com/yourusername/islamic-duas-collection
+- **Repository:** https://github.com/Rizna001/islamic-duas-collection
 
 ## 🔗 Important Links
 

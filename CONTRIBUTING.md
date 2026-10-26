@@ -11,7 +11,7 @@ To add a new dua to the collection:
 1. **Fork the repository** on GitHub
 2. **Clone your fork** locally:
    ```bash
-   git clone https://github.com/yourusername/islamic-duas-collection.git
+   git clone https://github.com/Rizna001/islamic-duas-collection.git
    cd islamic-duas-collection
    ```
 

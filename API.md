@@ -7,7 +7,7 @@ The Islamic Duas Collection provides a comprehensive JSON API for accessing auth
 ## Base URL
 
 ```
-https://yourusername.github.io/islamic-duas-collection/api/v1/
+https://rizna001.github.io/islamic-duas-collection/api/v1/
 ```
 
 Or for local development:
@@ -147,7 +147,7 @@ interface Language {
 
 ```javascript
 // Get all duas
-fetch('https://yourusername.github.io/islamic-duas-collection/api/v1/duas.json')
+fetch('https://rizna001.github.io/islamic-duas-collection/api/v1/duas.json')
   .then(response => response.json())
   .then(data => {
     console.log('Total categories:', data.categories.length);
@@ -155,7 +155,7 @@ fetch('https://yourusername.github.io/islamic-duas-collection/api/v1/duas.json')
   });
 
 // Get specific category
-fetch('https://yourusername.github.io/islamic-duas-collection/api/v1/duas.json')
+fetch('https://rizna001.github.io/islamic-duas-collection/api/v1/duas.json')
   .then(response => response.json())
   .then(data => {
     const morningEvening = data.categories.find(cat => cat.id === 'morning-evening');
@@ -163,7 +163,7 @@ fetch('https://yourusername.github.io/islamic-duas-collection/api/v1/duas.json')
   });
 
 // Get dua in specific language
-fetch('https://yourusername.github.io/islamic-duas-collection/api/v1/duas.json')
+fetch('https://rizna001.github.io/islamic-duas-collection/api/v1/duas.json')
   .then(response => response.json())
   .then(data => {
     const dua = data.categories[0].duas[0];
@@ -220,7 +220,7 @@ import requests
 import json
 
 # Get all duas
-response = requests.get('https://yourusername.github.io/islamic-duas-collection/api/v1/duas.json')
+response = requests.get('https://rizna001.github.io/islamic-duas-collection/api/v1/duas.json')
 data = response.json()
 
 # Print all categories
@@ -241,13 +241,13 @@ for dua in morning_duas['duas']:
 
 ```bash
 # Get all duas
-curl https://yourusername.github.io/islamic-duas-collection/api/v1/duas.json
+curl https://rizna001.github.io/islamic-duas-collection/api/v1/duas.json
 
 # Get API index
-curl https://yourusername.github.io/islamic-duas-collection/api/v1/index.json
+curl https://rizna001.github.io/islamic-duas-collection/api/v1/index.json
 
 # Save to file
-curl -o duas.json https://yourusername.github.io/islamic-duas-collection/api/v1/duas.json
+curl -o duas.json https://rizna001.github.io/islamic-duas-collection/api/v1/duas.json
 ```
 
 ## Rate Limiting

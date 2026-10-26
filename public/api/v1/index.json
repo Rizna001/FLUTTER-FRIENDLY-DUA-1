@@ -1,8 +1,8 @@
 {
   "api_version": "1.0.0",
   "description": "Comprehensive Islamic Duas API - Authentic supplications from Quran and Sahih Hadith",
-  "base_url": "https://yourusername.github.io/islamic-duas-collection/api/v1",
-  "documentation": "https://github.com/yourusername/islamic-duas-collection/blob/main/API.md",
+  "base_url": "https://rizna001.github.io/islamic-duas-collection/api/v1",
+  "documentation": "https://github.com/Rizna001/islamic-duas-collection/blob/main/API.md",
   "endpoints": {
     "all_duas": "/duas.json",
     "api_index": "/index.json"
@@ -79,10 +79,10 @@
   "examples": {
     "javascript": "fetch('/api/v1/duas.json').then(res => res.json()).then(data => console.log(data))",
     "python": "import requests; data = requests.get('/api/v1/duas.json').json()",
-    "curl": "curl https://yourusername.github.io/islamic-duas-collection/api/v1/duas.json"
+    "curl": "curl https://rizna001.github.io/islamic-duas-collection/api/v1/duas.json"
   },
   "license": "MIT",
-  "repository": "https://github.com/yourusername/islamic-duas-collection",
-  "issues": "https://github.com/yourusername/islamic-duas-collection/issues",
-  "contributing": "https://github.com/yourusername/islamic-duas-collection/blob/main/CONTRIBUTING.md"
+  "repository": "https://github.com/Rizna001/islamic-duas-collection",
+  "issues": "https://github.com/Rizna001/islamic-duas-collection/issues",
+  "contributing": "https://github.com/Rizna001/islamic-duas-collection/blob/main/CONTRIBUTING.md"
 }
