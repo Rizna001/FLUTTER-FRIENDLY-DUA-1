@@ -1,5 +1,10 @@
 import { useState, useMemo } from 'react';
-import duasData from './data/duas.json';
+import expandedData from './data/expanded-duas.json';
+import originalData from './data/duas.json';
+
+// Merge both data sources
+const mergedCategories = [...(originalData.categories || []), ...(expandedData.categories || [])];
+const duasData = { categories: mergedCategories, languages: originalData.languages };
 import CategoryCard from './components/CategoryCard';
 import DuaDetail from './components/DuaDetail';
 
