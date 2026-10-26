@@ -1,5 +1,27 @@
 import { createContext, useContext, useEffect, useState, ReactNode } from 'react';
 
+const NOTIFICATION_SOUNDS = [
+  { id: 'adhan', name: 'Adhan', emoji: '🕌' },
+  { id: 'bell', name: 'Bell', emoji: '🔔' },
+  { id: 'chime', name: 'Chime', emoji: '🎵' },
+  { id: 'gentle', name: 'Gentle', emoji: '🎶' },
+  { id: 'none', name: 'No Sound', emoji: '🔇' },
+];
+
+interface CustomReminder {
+  id: string;
+  duaId: string;
+  duaTitle: string;
+  duaArabic: string;
+  times: number;
+  frequency: string; // 'daily', 'specific_days', 'custom'
+  time: string;
+  days: string[]; // ['mon', 'tue', etc.]
+  sound: string;
+  enabled: boolean;
+  lastTriggered: string | null;
+}
+
 interface NotificationsContextType {
   notificationsEnabled: boolean;
   toggleNotifications: () => void;
@@ -9,19 +31,78 @@ interface NotificationsContextType {
   setNotificationSound: (sound: string) => void;
   lastNotification: string | null;
   requestPermission: () => Promise<boolean>;
-  playSound: () => void;
+  playSound: (soundId?: string) => void;
+  customReminders: CustomReminder[];
+  addReminder: (reminder: Omit<CustomReminder, 'id' | 'lastTriggered'>) => void;
+  removeReminder: (id: string) => void;
+  toggleReminder: (id: string) => void;
+  updateReminder: (id: string, updates: Partial<CustomReminder>) => void;
+  sounds: typeof NOTIFICATION_SOUNDS;
 }
 
-const NOTIFICATION_SOUNDS = [
-  { id: 'adhan', name: 'Adhan', file: 'adhan.mp3' },
-  { id: 'bell', name: 'Bell', file: 'bell.mp3' },
-  { id: 'chime', name: 'Chime', file: 'chime.mp3' },
-  { id: 'default', name: 'Default', file: 'default.mp3' },
-  { id: 'gentle', name: 'Gentle', file: 'gentle.mp3' },
-  { id: 'none', name: 'No Sound', file: '' },
-];
-
 const NotificationsContext = createContext<NotificationsContextType | undefined>(undefined);
+
+// Generate sound using Web Audio API
+function generateTone(type: string, duration: number = 1) {
+  try {
+    const AudioCtx = window.AudioContext || (window as any).webkitAudioContext;
+    const ctx = new AudioCtx();
+    
+    if (type === 'adhan') {
+      // Adhan-like melody
+      const notes = [440, 494, 523, 587, 523, 494, 440];
+      notes.forEach((freq, i) => {
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.frequency.value = freq;
+        osc.type = 'sine';
+        gain.gain.setValueAtTime(0.3, ctx.currentTime + i * 0.3);
+        gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + i * 0.3 + 0.28);
+        osc.start(ctx.currentTime + i * 0.3);
+        osc.stop(ctx.currentTime + i * 0.3 + 0.3);
+      });
+    } else if (type === 'bell') {
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      osc.frequency.value = 800;
+      osc.type = 'triangle';
+      gain.gain.setValueAtTime(0.4, ctx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + duration);
+      osc.start();
+      osc.stop(ctx.currentTime + duration);
+    } else if (type === 'chime') {
+      [523, 659, 784].forEach((freq, i) => {
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.frequency.value = freq;
+        osc.type = 'sine';
+        gain.gain.setValueAtTime(0.3, ctx.currentTime + i * 0.2);
+        gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + i * 0.2 + 0.4);
+        osc.start(ctx.currentTime + i * 0.2);
+        osc.stop(ctx.currentTime + i * 0.2 + 0.5);
+      });
+    } else if (type === 'gentle') {
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      osc.frequency.value = 350;
+      osc.type = 'sine';
+      gain.gain.setValueAtTime(0.2, ctx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + duration * 1.5);
+      osc.start();
+      osc.stop(ctx.currentTime + duration * 1.5);
+    }
+  } catch (e) {
+    console.log('Audio not supported');
+  }
+}
 
 export function NotificationsProvider({ children }: { children: ReactNode }) {
   const [notificationsEnabled, setNotificationsEnabled] = useState(() => {
@@ -52,91 +133,80 @@ export function NotificationsProvider({ children }: { children: ReactNode }) {
     return null;
   });
 
-  useEffect(() => {
-    localStorage.setItem('notificationsEnabled', String(notificationsEnabled));
-  }, [notificationsEnabled]);
-
-  useEffect(() => {
-    localStorage.setItem('notificationTime', notificationTime);
-  }, [notificationTime]);
-
-  useEffect(() => {
-    localStorage.setItem('notificationSound', notificationSound);
-  }, [notificationSound]);
-
-  useEffect(() => {
-    if (lastNotification) {
-      localStorage.setItem('lastNotification', lastNotification);
+  const [customReminders, setCustomReminders] = useState<CustomReminder[]>(() => {
+    if (typeof window !== 'undefined') {
+      const saved = localStorage.getItem('customReminders');
+      return saved ? JSON.parse(saved) : [];
     }
-  }, [lastNotification]);
+    return [];
+  });
+
+  useEffect(() => { localStorage.setItem('notificationsEnabled', String(notificationsEnabled)); }, [notificationsEnabled]);
+  useEffect(() => { localStorage.setItem('notificationTime', notificationTime); }, [notificationTime]);
+  useEffect(() => { localStorage.setItem('notificationSound', notificationSound); }, [notificationSound]);
+  useEffect(() => { if (lastNotification) localStorage.setItem('lastNotification', lastNotification); }, [lastNotification]);
+  useEffect(() => { localStorage.setItem('customReminders', JSON.stringify(customReminders)); }, [customReminders]);
 
   // Check for daily notification
   useEffect(() => {
     if (!notificationsEnabled) return;
-
     const checkNotification = () => {
       const now = new Date();
       const currentTime = `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`;
       const today = now.toDateString();
-
       if (currentTime === notificationTime && lastNotification !== today) {
         sendDailyNotification();
         setLastNotification(today);
       }
+      // Check custom reminders
+      checkCustomReminders(currentTime, today);
     };
-
-    const interval = setInterval(checkNotification, 60000);
+    const interval = setInterval(checkNotification, 30000);
     return () => clearInterval(interval);
-  }, [notificationsEnabled, notificationTime, lastNotification]);
+  }, [notificationsEnabled, notificationTime, lastNotification, customReminders]);
 
-  const playSound = () => {
-    // Play notification sound using Web Audio API
-    const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
-    const oscillator = audioContext.createOscillator();
-    const gainNode = audioContext.createGain();
+  const checkCustomReminders = (currentTime: string, today: string) => {
+    const dayNames = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
+    const currentDay = dayNames[new Date().getDay()];
     
-    oscillator.connect(gainNode);
-    gainNode.connect(audioContext.destination);
-    
-    // Different sounds based on selection
-    if (notificationSound === 'adhan') {
-      oscillator.frequency.value = 440;
-      oscillator.type = 'sine';
-    } else if (notificationSound === 'bell') {
-      oscillator.frequency.value = 800;
-      oscillator.type = 'triangle';
-    } else if (notificationSound === 'chime') {
-      oscillator.frequency.value = 600;
-      oscillator.type = 'sine';
-    } else if (notificationSound === 'gentle') {
-      oscillator.frequency.value = 300;
-      oscillator.type = 'sine';
-    } else {
-      oscillator.frequency.value = 440;
-      oscillator.type = 'sine';
+    setCustomReminders(prev => prev.map(reminder => {
+      if (!reminder.enabled) return reminder;
+      if (reminder.time !== currentTime) return reminder;
+      if (reminder.lastTriggered === today) return reminder;
+      
+      // Check if today matches the reminder's days
+      if (reminder.frequency === 'specific_days' && !reminder.days.includes(currentDay)) {
+        return reminder;
+      }
+      
+      // Trigger notification
+      showNotification(
+        `🤲 ${reminder.duaTitle}`,
+        reminder.duaArabic.substring(0, 100) + '...',
+        '🤲'
+      );
+      if (reminder.sound !== 'none') {
+        playSound(reminder.sound);
+      }
+      
+      return { ...reminder, lastTriggered: today };
+    }));
+  };
+
+  const playSound = (soundId?: string) => {
+    const sound = soundId || notificationSound;
+    if (sound !== 'none') {
+      generateTone(sound);
     }
-    
-    gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
-    gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.5);
-    
-    oscillator.start(audioContext.currentTime);
-    oscillator.stop(audioContext.currentTime + 0.5);
   };
 
   const requestPermission = async (): Promise<boolean> => {
-    if (!('Notification' in window)) {
-      return false;
-    }
-
-    if (Notification.permission === 'granted') {
-      return true;
-    }
-
+    if (!('Notification' in window)) return false;
+    if (Notification.permission === 'granted') return true;
     if (Notification.permission !== 'denied') {
       const permission = await Notification.requestPermission();
       return permission === 'granted';
     }
-
     return false;
   };
 
@@ -145,11 +215,8 @@ export function NotificationsProvider({ children }: { children: ReactNode }) {
       const granted = await requestPermission();
       if (granted) {
         setNotificationsEnabled(true);
-        showNotification(
-          'Notifications Enabled',
-          'You will receive daily duas at your scheduled time.',
-          '🔔'
-        );
+        showNotification('Notifications Enabled', 'You will receive daily duas at your scheduled time.', '🔔');
+        playSound();
       }
     } else {
       setNotificationsEnabled(false);
@@ -159,19 +226,36 @@ export function NotificationsProvider({ children }: { children: ReactNode }) {
   const setNotificationTime = (time: string) => {
     setNotificationTimeState(time);
     if (notificationsEnabled) {
-      showNotification(
-        'Time Updated',
-        `Daily duas will be sent at ${time}`,
-        '⏰'
-      );
+      showNotification('Time Updated', `Daily duas will be sent at ${time}`, '⏰');
     }
   };
 
   const setNotificationSound = (sound: string) => {
     setNotificationSoundState(sound);
     if (sound !== 'none') {
-      playSound();
+      generateTone(sound);
     }
+  };
+
+  const addReminder = (reminder: Omit<CustomReminder, 'id' | 'lastTriggered'>) => {
+    const newReminder: CustomReminder = {
+      ...reminder,
+      id: `reminder-${Date.now()}`,
+      lastTriggered: null,
+    };
+    setCustomReminders(prev => [...prev, newReminder]);
+  };
+
+  const removeReminder = (id: string) => {
+    setCustomReminders(prev => prev.filter(r => r.id !== id));
+  };
+
+  const toggleReminder = (id: string) => {
+    setCustomReminders(prev => prev.map(r => r.id === id ? { ...r, enabled: !r.enabled } : r));
+  };
+
+  const updateReminder = (id: string, updates: Partial<CustomReminder>) => {
+    setCustomReminders(prev => prev.map(r => r.id === id ? { ...r, ...updates } : r));
   };
 
   const sendDailyNotification = () => {
@@ -182,42 +266,23 @@ export function NotificationsProvider({ children }: { children: ReactNode }) {
       { title: 'Guidance', text: 'رَبِّ زِدْنِي عِلْمًا' },
       { title: 'Gratitude', text: 'الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ' },
     ];
-
     const randomDua = duas[Math.floor(Math.random() * duas.length)];
-    showNotification(
-      `Daily Dua: ${randomDua.title}`,
-      randomDua.text,
-      '🤲'
-    );
-    
-    if (notificationSound !== 'none') {
-      playSound();
-    }
+    showNotification(`Daily Dua: ${randomDua.title}`, randomDua.text, '🤲');
+    if (notificationSound !== 'none') playSound();
   };
 
   const showNotification = (title: string, body: string, icon: string = '🤲') => {
     if ('Notification' in window && Notification.permission === 'granted') {
-      new Notification(`${icon} ${title}`, {
-        body,
-        icon: '/favicon.ico',
-        badge: '/favicon.ico',
-        tag: 'daily-dua',
-        requireInteraction: false,
-      });
+      new Notification(`${icon} ${title}`, { body, tag: 'daily-dua', requireInteraction: false });
     }
   };
 
   return (
     <NotificationsContext.Provider value={{
-      notificationsEnabled,
-      toggleNotifications,
-      notificationTime,
-      setNotificationTime,
-      notificationSound,
-      setNotificationSound,
-      lastNotification,
-      requestPermission,
-      playSound,
+      notificationsEnabled, toggleNotifications, notificationTime, setNotificationTime,
+      notificationSound, setNotificationSound, lastNotification, requestPermission,
+      playSound, customReminders, addReminder, removeReminder, toggleReminder, updateReminder,
+      sounds: NOTIFICATION_SOUNDS,
     }}>
       {children}
     </NotificationsContext.Provider>

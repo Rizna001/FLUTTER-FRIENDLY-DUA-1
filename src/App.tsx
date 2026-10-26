@@ -15,6 +15,8 @@ import BookmarksView from './components/BookmarksView';
 import AsmaUlHusnaView from './components/AsmaUlHusnaView';
 import AsmaUlAnbiyaView from './components/AsmaUlAnbiyaView';
 import DailyProgress from './components/DailyProgress';
+import SalahTracker from './components/SalahTracker';
+import DuaReminder from './components/DuaReminder';
 
 // Merge all data sources
 const mergedCategories = [
@@ -138,6 +140,20 @@ function AppContent() {
         {viewMode === 'categories' && !selectedCategory && !selectedDua && (
           <div className="mb-8">
             <DailyProgress language={language} />
+          </div>
+        )}
+
+        {/* Salah Tracker */}
+        {viewMode === 'categories' && !selectedCategory && !selectedDua && (
+          <div className="mb-8">
+            <SalahTracker language={language} />
+          </div>
+        )}
+
+        {/* Dua Reminder */}
+        {viewMode === 'categories' && !selectedCategory && !selectedDua && (
+          <div className="mb-8">
+            <DuaReminder language={language} />
           </div>
         )}
 
@@ -266,7 +282,7 @@ function AppContent() {
       </footer>
 
       {/* Settings Modal */}
-      <Settings isOpen={showSettings} onClose={() => setShowSettings(false)} language={language} />
+      <Settings language={language} />
     </div>
   );
 }
