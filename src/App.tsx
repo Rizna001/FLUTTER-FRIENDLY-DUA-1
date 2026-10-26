@@ -4,6 +4,8 @@ import originalData from './data/duas.json';
 import additionalData from './data/additional-duas.json';
 import prayerDuasData from './data/prayer-duas.json';
 import importantTextsData from './data/important-texts.json';
+import allRabbanaCategory from './data/allRabbanaCategory.json';
+import allSalawatsCategory from './data/allSalawatsCategory.json';
 import { ThemeProvider, useTheme } from './contexts/ThemeContext';
 import { BookmarksProvider, useBookmarks } from './contexts/BookmarksContext';
 import { NotificationsProvider } from './contexts/NotificationsContext';
@@ -27,7 +29,9 @@ const mergedCategories = [
   ...(expandedData.categories || []),
   ...(additionalData.categories || []),
   ...(prayerDuasData.categories || []),
-  ...(importantTextsData.categories || [])
+  ...(importantTextsData.categories || []),
+  ...(allRabbanaCategory.categories || []),
+  ...(allSalawatsCategory.categories || [])
 ];
 const duasData = { categories: mergedCategories, languages: originalData.languages };
 

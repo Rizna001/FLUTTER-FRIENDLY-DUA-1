@@ -1,0 +1,117 @@
+{
+  "categories": [
+    {
+      "id": "all-rabbana-duas",
+      "icon": "📿",
+      "color": "emerald",
+      "gradient": "from-emerald-500 to-teal-600",
+      "bg": "bg-emerald-50",
+      "border": "border-emerald-200",
+      "text": "text-emerald-700",
+      "name": {
+        "en": "Complete 40 Rabbana Duas",
+        "ar": "الأدعية الأربعون الكاملة - ربنا",
+        "ur": "مکمل 40 ربنا دعائیں",
+        "fr": "40 Duas Rabbana Complets",
+        "tr": "Tam 40 Rabbana Duası",
+        "id": "40 Doa Rabbana Lengkap",
+        "bn": "সম্পূর্ণ ৪০ রাব্বানা দোয়া",
+        "ms": "40 Doa Rabbana Lengkap",
+        "ta": "முழுமையான 40 ரப்பனா துஆக்கள்",
+        "ml": "പൂർണ്ണമായ 40 റബ്ബനാ ദുആകൾ"
+      },
+      "duas": [
+        {
+          "id": "rabbana-complete-1",
+          "title": {
+            "en": "Rabbana #1: Accept from us",
+            "ar": "ربنا #1: تقبل منا",
+            "ur": "ربنا #1: ہم سے قبول فرما",
+            "fr": "Rabbana #1: Accepte de nous",
+            "tr": "Rabbana #1: Bizden kabul et",
+            "id": "Rabbana #1: Terimalah dari kami",
+            "bn": "রাব্বানা #1: আমাদের থেকে কবুল করো",
+            "ms": "Rabbana #1: Terimalah dari kami",
+            "ta": "ரப்பனா #1: எங்களிடமிருந்து ஏற்றுக்கொள்",
+            "ml": "റബ്ബനാ #1: ഞങ്ങളിൽ നിന്ന് സ്വീകരിക്കണമേ"
+          },
+          "arabic": "رَبَّنَا تَقَبَّلْ مِنَّا ۖ إِنَّكَ أَنتَ السَّمِيعُ الْعَلِيمُ",
+          "translation": {
+            "en": "Our Lord, accept [this] from us. Indeed You are the Hearing, the Knowing.",
+            "ar": "ربنا تقبل منا إنك أنت السميع العليم",
+            "ur": "اے ہمارے رب! ہم سے (یہ) قبول فرما، بے شک تو سننے والا، جاننے والا ہے۔",
+            "fr": "Notre Seigneur, accepte [ceci] de nous. Certes, Tu es l'Audient, l'Omniscient.",
+            "tr": "Rabbimiz! Bunu bizden kabul et. Şüphesiz Sen işitensin, bilensin.",
+            "id": "Ya Tuhan kami, terimalah (amalan) dari kami. Sesungguhnya Engkau Maha Mendengar lagi Maha Mengetahui.",
+            "bn": "হে আমাদের রব, আমাদের থেকে (এটি) কবুল করুন। নিশ্চয়ই আপনি শ্রবণকারী, জ্ঞানী।",
+            "ms": "Wahai Tuhan kami, terimalah (amal) dari kami. Sesungguhnya Engkau Maha Mendengar lagi Maha Mengetahui.",
+            "ta": "எங்கள் இறைவா, எங்களிடமிருந்து [இதை] ஏற்றுக்கொள்வாயாக. நிச்சயமாக நீ கேட்பவன், அறிபவன்.",
+            "ml": "ഞങ്ങളുടെ രക്ഷിതാവേ, ഞങ്ങളിൽ നിന്ന് [ഇത്] സ്വീകരിക്കണമേ. തീർച്ചയായും നീ കേൾക്കുന്നവനും അറിയുന്നവനുമാണ്."
+          },
+          "reference": "Quran 2:127",
+          "times": 1
+        },
+        {
+          "id": "rabbana-complete-2",
+          "title": {
+            "en": "Rabbana #2: Make us Muslims",
+            "ar": "ربنا #2: اجعلنا مسلمين",
+            "ur": "ربنا #2: ہمیں مسلمان بنا",
+            "fr": "Rabbana #2: Fais de nous des Musulmans",
+            "tr": "Rabbana #2: Bizi Müslüman kıl",
+            "id": "Rabbana #2: Jadikanlah kami Muslim",
+            "bn": "রাব্বানা #2: আমাদের মুসলিম বানাও",
+            "ms": "Rabbana #2: Jadikanlah kami Muslim",
+            "ta": "ரப்பனா #2: எங்களை முஸ்லிம்களாக ஆக்கு",
+            "ml": "റബ്ബനാ #2: ഞങ്ങളെ മുസ്ലിങ്ങളാക്കണമേ"
+          },
+          "arabic": "رَبَّنَا وَاجْعَلْنَا مُسْلِمَيْنِ لَكَ وَمِن ذُرِّيَّتِنَا أُمَّةً مُّسْلِمَةً لَّكَ وَأَرِنَا مَنَاسِكَنَا وَتُبْ عَلَيْنَا ۖ إِنَّكَ أَنتَ التَّوَّابُ الرَّحِيمُ",
+          "translation": {
+            "en": "Our Lord, and make us Muslims [in submission] to You and from our descendants a Muslim nation [in submission] to You. And show us our rites [of worship] and accept our repentance. Indeed, You are the Accepting of repentance, the Merciful.",
+            "ar": "ربنا واجعلنا مسلمين لك ومن ذريتنا أمة مسلمة لك وأرنا مناسكنا وتب علينا إنك أنت التواب الرحيم",
+            "ur": "اے ہمارے رب! اور ہمیں اپنا فرمانبردار بنا اور ہماری اولاد سے بھی ایک فرمانبردار امت بنا، اور ہمیں ہمارے مناسک بتا اور ہماری توبہ قبول فرما، بے شک تو توبہ قبول کرنے والا، مہربان ہے۔",
+            "fr": "Notre Seigneur, fais de nous des Musulmans [soumis] à Toi, et de notre descendance une nation musulmane [soumise] à Toi. Et montre-nous nos rites et accepte notre repentir. Certes, Tu es l'Acceptant du repentir, le Miséricordieux.",
+            "tr": "Rabbimiz! Bizi sana teslim olmuş kıl, soyumuzdan da sana teslim olmuş bir ümmet kıl. Bize ibadet yerlerimizi göster ve tövbemizi kabul et. Şüphesiz Sen tövbeleri çok kabul edensin, çok merhamet edensin.",
+            "id": "Ya Tuhan kami, jadikanlah kami berdua orang yang tunduk patuh kepada Engkau dan (jadikanlah) di antara anak cucu kami umat yang tunduk patuh kepada Engkau dan tunjukkanlah kepada kami cara-cara dan tempat-tempat ibadat haji kami, dan terimalah taubat kami. Sesungguhnya Engkaulah Yang Maha Penerima taubat lagi Maha Penyayang.",
+            "bn": "হে আমাদের রব, এবং আমাদেরকে তোমার আজ্ঞাবহ করো এবং আমাদের বংশধরদের মধ্য থেকে তোমার আজ্ঞাবহ একটি উম্মত বানাও, এবং আমাদের হজ্বের স্থানগুলো দেখাও এবং আমাদের তাওবা কবুল করো। নিশ্চয়ই তুমি তাওবা কবুলকারী, দয়ালু।",
+            "ms": "Wahai Tuhan kami, jadikanlah kami berdua orang yang tunduk patuh kepada Engkau dan (jadikanlah) di antara anak cucu kami umat yang tunduk patuh kepada Engkau dan tunjukkanlah kepada kami cara-cara dan tempat-tempat ibadat haji kami, dan terimalah taubat kami. Sesungguhnya Engkaulah Yang Maha Penerima taubat lagi Maha Penyayang.",
+            "ta": "எங்கள் இறைவா, மேலும் எங்களை உனக்கு கீழ்ப்படிந்தவர்களாக ஆக்குவாயாக, எங்கள் சந்ததியிலிருந்தும் உனக்கு கீழ்ப்படிந்த ஒரு உம்மத்தை ஆக்குவாயாக, மேலும் எங்கள் வணக்க வழிபாடுகளை எங்களுக்கு காட்டுவாயாக, எங்கள் பாவமன்னிப்பை ஏற்றுக்கொள்வாயாக. நிச்சயமாக நீ பாவமன்னிப்பு ஏற்பவன், கருணையுள்ளவன்.",
+            "ml": "ഞങ്ങളുടെ രക്ഷിതാവേ, ഞങ്ങളെ നിനക്ക് കീഴ്പ്പെട്ടവരാക്കണമേ, ഞങ്ങളുടെ സന്തതിയിൽ നിന്ന് നിനക്ക് കീഴ്പ്പെട്ട ഒരു ഉമ്മത്തെ ഉണ്ടാക്കണമേ, ഞങ്ങളുടെ ആരാധനാചടങ്ങുകൾ ഞങ്ങൾക്ക് കാണിച്ചുതരണമേ, ഞങ്ങളുടെ പശ്ചാത്താപം സ്വീകരിക്കണമേ. തീർച്ചയായും നീ പശ്ചാത്താപം സ്വീകരിക്കുന്നവനും കാരുണ്യവാനുമാണ്."
+          },
+          "reference": "Quran 2:128",
+          "times": 1
+        },
+        {
+          "id": "rabbana-complete-3",
+          "title": {
+            "en": "Rabbana #3: Good in this world and Hereafter",
+            "ar": "ربنا #3: حسنة في الدنيا والآخرة",
+            "ur": "ربنا #3: دنیا اور آخرت میں بھلائی",
+            "fr": "Rabbana #3: Bien dans ce monde et l'Au-delà",
+            "tr": "Rabbana #3: Dünyada ve Ahirette iyilik",
+            "id": "Rabbana #3: Kebaikan di dunia dan akhirat",
+            "bn": "রাব্বানা #3: দুনিয়া ও আখিরাতে কল্যাণ",
+            "ms": "Rabbana #3: Kebaikan di dunia dan akhirat",
+            "ta": "ரப்பனா #3: இவ்வுலகிலும் மறுமையிலும் நன்மை",
+            "ml": "റബ്ബനാ #3: ഈ ലോകത്തും പരലോകത്തും നന്മ"
+          },
+          "arabic": "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ",
+          "translation": {
+            "en": "Our Lord, give us in this world [that which is] good and in the Hereafter [that which is] good and protect us from the punishment of the Fire.",
+            "ar": "ربنا آتنا في الدنيا حسنة وفي الآخرة حسنة وقنا عذاب النار",
+            "ur": "اے ہمارے رب! ہمیں دنیا میں بھی بھلائی عطا فرما اور آخرت میں بھی بھلائی عطا فرما اور ہمیں آگ کے عذاب سے بچا۔",
+            "fr": "Notre Seigneur, accorde-nous dans ce monde ce qui est bien et dans l'au-delà ce qui est bien, et protège-nous du châtiment du Feu.",
+            "tr": "Rabbimiz! Bize dünyada da iyilik ver, ahirette de iyilik ver ve bizi ateş azabından koru.",
+            "id": "Ya Tuhan kami, berilah kami kebaikan di dunia dan kebaikan di akhirat dan peliharalah kami dari siksa neraka.",
+            "bn": "হে আমাদের রব, আমাদের দুনিয়াতে কল্যাণ দান করো এবং আখিরাতেও কল্যাণ দান করো এবং আমাদেরকে আগুনের শাস্তি থেকে রক্ষা করো।",
+            "ms": "Wahai Tuhan kami, berilah kami kebaikan di dunia dan kebaikan di akhirat dan peliharalah kami dari siksa neraka.",
+            "ta": "எங்கள் இறைவா, இவ்வுலகில் நன்மையை எங்களுக்கு அளிப்பாயாக, மறுமையிலும் நன்மையை அளிப்பாயாக, நரகத்தின் வேதனையிலிருந்து எங்களை காப்பாற்றுவாயாக.",
+            "ml": "ഞങ്ങളുടെ രക്ഷിതാവേ, ഈ ലോകത്ത് നന്മ ഞങ്ങൾക്ക് നൽകണമേ, പരലോകത്തും നന്മ നൽകണമേ, നരകശിക്ഷയിൽ നിന്ന് ഞങ്ങളെ സംരക്ഷിക്കണമേ."
+          },
+          "reference": "Quran 2:201",
+          "times": 1
+        }
+      ]
+    }
+  ]
+}

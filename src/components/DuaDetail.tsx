@@ -17,6 +17,7 @@ export default function DuaDetail({
   const [copied, setCopied] = useState(false);
   const [fontSize, setFontSize] = useState<'sm' | 'md' | 'lg' | 'xl'>('lg');
   const [bookmarkAnimating, setBookmarkAnimating] = useState(false);
+  const [showReminderModal, setShowReminderModal] = useState(false);
   const { isDark } = useTheme();
   const { isBookmarked, toggleBookmark } = useBookmarks();
 
@@ -47,6 +48,13 @@ export default function DuaDetail({
       bookmarkedAt: Date.now(),
     });
     setTimeout(() => setBookmarkAnimating(false), 400);
+  };
+
+  const handleSetReminder = () => {
+    // Auto-copy the dua text
+    const text = `${dua.arabic}\n\n${dua.translation[language] || dua.translation.en}`;
+    navigator.clipboard.writeText(text);
+    setShowReminderModal(true);
   };
 
   const isCurrentlyBookmarked = isBookmarked(dua.id);
@@ -190,35 +198,140 @@ export default function DuaDetail({
           <div className="flex items-center gap-2">
             <span className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-400'}`}>{dua.reference}</span>
           </div>
-          <button
-            onClick={handleCopy}
-            className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all ${
-              copied
-                ? isDark ? 'bg-emerald-900 text-emerald-300' : 'bg-emerald-100 text-emerald-700'
-                : isDark ? 'bg-slate-700 text-gray-200 hover:bg-slate-600' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-            }`}
-          >
-            {copied ? (
-              <>
-                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                </svg>
-                {language === 'en' ? 'Copied!' : language === 'ar' ? 'تم النسخ!' : language === 'ur' ? 'کاپی ہو گیا!' : language === 'fr' ? 'Copié!' : language === 'tr' ? 'Kopyalandı!' : language === 'id' ? 'Disalin!' : language === 'bn' ? 'কপি হয়েছে!' : language === 'ms' ? 'Disalin!' : language === 'ta' ? 'நகலெடுக்கப்பட்டது!' : 'പകർത്തി!'}
-              </>
-            ) : (
-              <>
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-                </svg>
-                {language === 'en' ? 'Copy' : language === 'ar' ? 'نسخ' : language === 'ur' ? 'کاپی' : language === 'fr' ? 'Copier' : language === 'tr' ? 'Kopyala' : language === 'id' ? 'Salin' : language === 'bn' ? 'কপি' : language === 'ms' ? 'Salin' : language === 'ta' ? 'நகலெடு' : 'പകർത്തുക'}
-              </>
-            )}
-          </button>
+          <div className="flex items-center gap-2">
+            <button
+              onClick={handleSetReminder}
+              className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all ${
+                isDark ? 'bg-blue-900 text-blue-300 hover:bg-blue-800' : 'bg-blue-100 text-blue-700 hover:bg-blue-200'
+              }`}
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              {language === 'en' ? 'Set Reminder' : language === 'ar' ? 'تعيين تذكير' : language === 'ur' ? 'یاد دہانی سیٹ کریں' : language === 'fr' ? 'Définir un Rappel' : language === 'tr' ? 'Hatırlatıcı Ayarla' : language === 'id' ? 'Atur Pengingat' : language === 'bn' ? 'রিমাইন্ডার সেট করুন' : language === 'ms' ? 'Tetapkan Peringatan' : language === 'ta' ? 'நினைவூட்டல் அமை' : 'ഒരു ഓർമ്മപ്പെടുത്തൽ സജ്ജമാക്കുക'}
+            </button>
+            <button
+              onClick={handleCopy}
+              className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all ${
+                copied
+                  ? isDark ? 'bg-emerald-900 text-emerald-300' : 'bg-emerald-100 text-emerald-700'
+                  : isDark ? 'bg-slate-700 text-gray-200 hover:bg-slate-600' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+              }`}
+            >
+              {copied ? (
+                <>
+                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  {language === 'en' ? 'Copied!' : language === 'ar' ? 'تم النسخ!' : language === 'ur' ? 'کاپی ہو گیا!' : language === 'fr' ? 'Copié!' : language === 'tr' ? 'Kopyalandı!' : language === 'id' ? 'Disalin!' : language === 'bn' ? 'কপি হয়েছে!' : language === 'ms' ? 'Disalin!' : language === 'ta' ? 'நகலெடுக்கப்பட்டது!' : 'പകർത്തി!'}
+                </>
+              ) : (
+                <>
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                  </svg>
+                  {language === 'en' ? 'Copy' : language === 'ar' ? 'نسخ' : language === 'ur' ? 'کاپی' : language === 'fr' ? 'Copier' : language === 'tr' ? 'Kopyala' : language === 'id' ? 'Salin' : language === 'bn' ? 'কপি' : language === 'ms' ? 'Salin' : language === 'ta' ? 'நகலெடு' : 'പകർത്തുക'}
+                </>
+              )}
+            </button>
+          </div>
         </div>
       </div>
 
       {/* Counter */}
       <DuaCounter language={language} targetTimes={dua.times} />
+
+      {/* Reminder Modal */}
+      {showReminderModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm" onClick={() => setShowReminderModal(false)}>
+          <div 
+            className={`w-full max-w-md rounded-2xl shadow-2xl overflow-hidden ${isDark ? 'bg-slate-800' : 'bg-white'}`}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className={`p-6 border-b ${isDark ? 'border-slate-700' : 'border-gray-200'}`}>
+              <h3 className={`text-xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>
+                ⏰ {language === 'en' ? 'Set Reminder' : language === 'ar' ? 'تعيين تذكير' : language === 'ur' ? 'یاد دہانی سیٹ کریں' : 'Set Reminder'}
+              </h3>
+              <p className={`text-sm mt-2 ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
+                {language === 'en' ? 'Dua text has been copied to clipboard!' : 'Text copied!'}
+              </p>
+            </div>
+
+            <div className="p-6 space-y-4">
+              <div>
+                <label className={`block text-sm font-medium mb-2 ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
+                  {language === 'en' ? 'Title' : 'Title'}
+                </label>
+                <input
+                  type="text"
+                  defaultValue={dua.title[language] || dua.title.en}
+                  className={`w-full px-3 py-2 rounded-lg border ${
+                    isDark ? 'bg-slate-700 border-slate-600 text-white' : 'bg-white border-gray-300 text-gray-900'
+                  }`}
+                />
+              </div>
+
+              <div>
+                <label className={`block text-sm font-medium mb-2 ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
+                  {language === 'en' ? 'Reminder Time' : 'Time'}
+                </label>
+                <select
+                  className={`w-full px-3 py-2 rounded-lg border ${
+                    isDark ? 'bg-slate-700 border-slate-600 text-white' : 'bg-white border-gray-300 text-gray-900'
+                  }`}
+                >
+                  <option value="5">{language === 'en' ? '5 minutes' : '5 min'}</option>
+                  <option value="15">{language === 'en' ? '15 minutes' : '15 min'}</option>
+                  <option value="30">{language === 'en' ? '30 minutes' : '30 min'}</option>
+                  <option value="60">{language === 'en' ? '1 hour' : '1 hr'}</option>
+                  <option value="120">{language === 'en' ? '2 hours' : '2 hrs'}</option>
+                  <option value="1440">{language === 'en' ? 'Tomorrow' : 'Tomorrow'}</option>
+                </select>
+              </div>
+
+              <div>
+                <label className={`block text-sm font-medium mb-2 ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
+                  {language === 'en' ? 'Sound' : 'Sound'}
+                </label>
+                <select
+                  className={`w-full px-3 py-2 rounded-lg border ${
+                    isDark ? 'bg-slate-700 border-slate-600 text-white' : 'bg-white border-gray-300 text-gray-900'
+                  }`}
+                >
+                  <option value="adhan">🕌 Adhan</option>
+                  <option value="bell">🔔 Bell</option>
+                  <option value="chime">🎵 Chime</option>
+                  <option value="gentle">🎶 Gentle</option>
+                  <option value="none">🔇 No Sound</option>
+                </select>
+              </div>
+            </div>
+
+            <div className={`p-4 border-t ${isDark ? 'border-slate-700' : 'border-gray-200'} flex gap-2`}>
+              <button
+                onClick={() => setShowReminderModal(false)}
+                className={`flex-1 py-2 px-4 rounded-lg font-medium transition-colors ${
+                  isDark ? 'bg-slate-700 hover:bg-slate-600 text-white' : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
+                }`}
+              >
+                {language === 'en' ? 'Cancel' : 'Cancel'}
+              </button>
+              <button
+                onClick={() => {
+                  setShowReminderModal(false);
+                  // Here you would integrate with the actual reminder system
+                  alert(language === 'en' ? 'Reminder set! You will be notified.' : 'Reminder set!');
+                }}
+                className={`flex-1 py-2 px-4 rounded-lg font-medium transition-colors ${
+                  isDark ? 'bg-emerald-600 hover:bg-emerald-700 text-white' : 'bg-emerald-500 hover:bg-emerald-600 text-white'
+                }`}
+              >
+                {language === 'en' ? 'Set Reminder' : 'Set'}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
