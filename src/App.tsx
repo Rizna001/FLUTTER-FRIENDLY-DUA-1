@@ -1,6 +1,5 @@
 import { useState, useMemo } from 'react';
-import expandedData from './data/expanded-duas.json';
-import originalData from './data/duas.json';
+import duasData from './data/duas.json';
 import { ThemeProvider, useTheme } from './contexts/ThemeContext';
 import { BookmarksProvider, useBookmarks } from './contexts/BookmarksContext';
 import { NotificationsProvider } from './contexts/NotificationsContext';
@@ -16,13 +15,6 @@ import DailyProgress from './components/DailyProgress';
 import SalahTracker from './components/SalahTracker';
 import DuaReminder from './components/DuaReminder';
 import TasbeehCounter from './components/TasbeehCounter';
-
-// Merge all data sources
-const mergedCategories = [
-  ...(originalData.categories || []), 
-  ...(expandedData.categories || [])
-];
-const duasData = { categories: mergedCategories, languages: originalData.languages };
 
 type LanguageCode = 'en' | 'ar' | 'ur' | 'fr' | 'tr' | 'id' | 'bn' | 'ms' | 'ta' | 'ml';
 
