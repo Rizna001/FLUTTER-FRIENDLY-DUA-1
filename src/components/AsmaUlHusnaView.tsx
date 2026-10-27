@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { asmaUlHusna } from '../data/completeLists';
+import completeListsData from '../data/completeLists.json';
+const { asmaUlHusna } = completeListsData;
 import { useTheme } from '../contexts/ThemeContext';
 import AudioPlayer from './AudioPlayer';
 

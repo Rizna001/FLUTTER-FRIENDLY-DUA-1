@@ -1,6 +1,8 @@
 import { useState } from 'react';
-import { asmaUlAnbiya } from '../data/completeLists';
-import { prophetsWithDuas } from '../data/prophetsWithDuas';
+import completeListsData from '../data/completeLists.json';
+import prophetsWithDuasData from '../data/prophetsWithDuas.json';
+const { asmaUlAnbiya } = completeListsData;
+const { prophetsWithDuas } = prophetsWithDuasData;
 import { useTheme } from '../contexts/ThemeContext';
 import AudioPlayer from './AudioPlayer';
 
